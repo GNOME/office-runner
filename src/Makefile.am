@@ -16,3 +16,5 @@ stuff_DATA =				\
 stuffdir = $(pkgdatadir)
 
 EXTRA_DIST = $(stuff_DATA)
+
+-include $(top_srcdir)/git.mk

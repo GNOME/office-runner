@@ -49,10 +49,14 @@ typedef struct {
 	GtkWidget *run_button;
 	GtkWidget *notebook;
 	GtkWidget *time_label;
+	GtkWidget *your_time_label;
 
 	GTimer *timer;
 	guint timeout;
+	gdouble elapsed;
 } OfficeRunner;
+
+static void switch_to_page (OfficeRunner *run, int page);
 
 static void
 free_runner (OfficeRunner *run)
@@ -87,21 +91,11 @@ window_delete_event_cb (GtkWidget    *widget,
 	gtk_main_quit ();
 }
 
-static gboolean
-count_timeout (OfficeRunner *run)
+static char *
+elapsed_to_text (gdouble elapsed)
 {
-	gdouble elapsed;
 	int seconds;
 	char *label;
-
-	if (run->timer != NULL) {
-		elapsed = g_timer_elapsed (run->timer, NULL);
-		if (elapsed >= MAX_TIME) {
-			//FIXME bail
-		}
-	} else {
-		elapsed = 0.0;
-	}
 
 	seconds = floorl (elapsed);
 	elapsed = (elapsed - (gdouble) seconds) * 100;
@@ -110,6 +104,28 @@ count_timeout (OfficeRunner *run)
 				 seconds / 60,
 				 seconds % 60,
 				 (int) elapsed);
+
+	return label;
+}
+
+static gboolean
+count_timeout (OfficeRunner *run)
+{
+	gdouble elapsed;
+	char *label;
+
+	if (run->timer != NULL) {
+		run->elapsed = g_timer_elapsed (run->timer, NULL);
+		elapsed = run->elapsed;
+		if (run->elapsed >= MAX_TIME) {
+			switch_to_page (run, SCORES_PAGE);
+			return FALSE;
+		}
+	} else {
+		elapsed = 0.0;
+	}
+
+	label = elapsed_to_text (elapsed);
 	gtk_label_set_text (GTK_LABEL (run->time_label), label);
 	g_free (label);
 
@@ -135,12 +151,29 @@ switch_to_page (OfficeRunner *run,
 		run->timeout = g_timeout_add (80, (GSourceFunc) count_timeout, run);
 		count_timeout (run);
 		break;
-	}
-	case SCORES_PAGE:
+			   }
+	case SCORES_PAGE: {
+		char *text;
+
+		run->elapsed = g_timer_elapsed (run->timer, NULL);
+		g_timer_destroy (run->timer);
+		run->timer = NULL;
+
 		set_running_settings (run, FALSE);
 		g_source_remove (run->timeout);
+		run->timeout = 0;
+
 		label = N_("Try Again");
+		if (run->elapsed > MAX_TIME)
+			text = g_strdup (_("Took too long, sorry!"));
+		else
+			text = elapsed_to_text (run->elapsed);
+		gtk_label_set_text (GTK_LABEL (run->your_time_label), text);
+		g_free (text);
+
+		//FIXME load up records!
 		break;
+			  }
 	}
 
 	gtk_label_set_text (GTK_LABEL (WID ("run_button_label")),
@@ -176,6 +209,7 @@ new_runner (void)
 	run->window = WID ("window1");
 	run->time_label = WID ("time_label");
 	count_timeout (run);
+	run->your_time_label = WID ("your_time_label");
 
 	/* FIXME: No running man for now */
 	gtk_widget_set_no_show_all (WID ("run_image"), TRUE);

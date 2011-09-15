@@ -120,7 +120,7 @@ static void
 switch_to_page (OfficeRunner *run,
 		int           page)
 {
-	const char *label;
+	const char *label = NULL;
 
 	gtk_notebook_set_current_page (GTK_NOTEBOOK (run->notebook), page);
 

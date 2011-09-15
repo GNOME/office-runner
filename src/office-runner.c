@@ -57,10 +57,13 @@ typedef struct {
 } OfficeRunner;
 
 static void switch_to_page (OfficeRunner *run, int page);
+static void set_running_settings (OfficeRunner *run, gboolean running);
 
 static void
 free_runner (OfficeRunner *run)
 {
+	set_running_settings (run, FALSE);
+
 	if (run->timer)
 		g_timer_destroy (run->timer);
 	if (run->timeout)

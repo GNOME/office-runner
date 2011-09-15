@@ -186,6 +186,7 @@
                 <property name="hexpand">True</property>
                 <property name="row_spacing">12</property>
                 <property name="column_spacing">12</property>
+                <property name="column-homogeneous">True</property>
                 <child>
                   <object class="GtkImage" id="bronze_image">
                     <property name="visible">True</property>

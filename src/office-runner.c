@@ -190,7 +190,7 @@ run_button_clicked_cb (GtkWidget    *button,
 	page = gtk_notebook_get_current_page (GTK_NOTEBOOK (run->notebook));
 	page++;
 	if (page > SCORES_PAGE)
-		page = RUN_PAGE;
+		page = RUNNING_PAGE;
 	switch_to_page (run, page);
 }
 

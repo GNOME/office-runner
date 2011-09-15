@@ -201,10 +201,10 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkLabel" id="label9">
+                  <object class="GtkLabel" id="bronze_time_label">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="label" translatable="yes">label</property>
+                    <property name="label" translatable="yes">bronze_time_label</property>
                   </object>
                   <packing>
                     <property name="left_attach">1</property>
@@ -214,10 +214,10 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkLabel" id="label12">
+                  <object class="GtkLabel" id="bronze_date_label">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="label" translatable="yes">label</property>
+                    <property name="label" translatable="yes">bronze_date_label</property>
                   </object>
                   <packing>
                     <property name="left_attach">2</property>
@@ -240,10 +240,10 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkLabel" id="label8">
+                  <object class="GtkLabel" id="silver_time_label">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="label" translatable="yes">label</property>
+                    <property name="label" translatable="yes">silver_time_label</property>
                   </object>
                   <packing>
                     <property name="left_attach">1</property>
@@ -253,10 +253,10 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkLabel" id="label11">
+                  <object class="GtkLabel" id="silver_date_label">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="label" translatable="yes">label</property>
+                    <property name="label" translatable="yes">silver_date_label</property>
                   </object>
                   <packing>
                     <property name="left_attach">2</property>
@@ -282,7 +282,7 @@
                   <object class="GtkLabel" id="gold_time_label">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="label" translatable="yes">label</property>
+                    <property name="label" translatable="yes">gold_time_label</property>
                   </object>
                   <packing>
                     <property name="left_attach">1</property>
@@ -292,10 +292,10 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkLabel" id="label10">
+                  <object class="GtkLabel" id="gold_date_label">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="label" translatable="yes">label</property>
+                    <property name="label" translatable="yes">gold_date_label</property>
                   </object>
                   <packing>
                     <property name="left_attach">2</property>
@@ -303,12 +303,6 @@
                     <property name="width">1</property>
                     <property name="height">1</property>
                   </packing>
-                </child>
-                <child>
-                  <placeholder/>
-                </child>
-                <child>
-                  <placeholder/>
                 </child>
                 <child>
                   <object class="GtkLabel" id="label6">
@@ -362,6 +356,12 @@
                     <property name="width">1</property>
                     <property name="height">1</property>
                   </packing>
+                </child>
+                <child>
+                  <placeholder/>
+                </child>
+                <child>
+                  <placeholder/>
                 </child>
               </object>
               <packing>

@@ -172,7 +172,7 @@ new_runner (void)
 	run->battery_action = g_settings_get_enum (run->settings, BATTERY_ACTION);
 
 	run->ui = gtk_builder_new ();
-	gtk_builder_add_from_file (run->ui, "office-runner.ui", NULL);
+	gtk_builder_add_from_file (run->ui, PKGDATADIR "office-runner.ui", NULL);
 	run->window = WID ("window1");
 	run->time_label = WID ("time_label");
 	count_timeout (run);
@@ -183,9 +183,9 @@ new_runner (void)
 	gtk_widget_set_no_show_all (WID ("time_image"), TRUE);
 	gtk_widget_hide (WID ("time_image"));
 
-	gtk_image_set_from_file (IWID("gold_image"), "gold-cup.png");
-	gtk_image_set_from_file (IWID("silver_image"), "silver-cup.png");
-	gtk_image_set_from_file (IWID("bronze_image"), "bronze-cup.png");
+	gtk_image_set_from_file (IWID("gold_image"), PKGDATADIR "gold-cup.png");
+	gtk_image_set_from_file (IWID("silver_image"), PKGDATADIR "silver-cup.png");
+	gtk_image_set_from_file (IWID("bronze_image"), PKGDATADIR "bronze-cup.png");
 
 	g_signal_connect (run->window, "delete-event",
 			  G_CALLBACK (window_delete_event_cb), run);

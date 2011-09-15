@@ -18,6 +18,7 @@
  *
  */
 
+#include "config.h"
 
 #include <gtk/gtk.h>
 #include <glib/gi18n.h>
@@ -200,6 +201,10 @@ int main (int argc, char **argv)
 {
 	GSettings *settings;
 	OfficeRunner *run;
+
+	bindtextdomain (GETTEXT_PACKAGE, GNOMELOCALEDIR);
+	bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
+	textdomain (GETTEXT_PACKAGE);
 
 	gtk_init (&argc, &argv);
 

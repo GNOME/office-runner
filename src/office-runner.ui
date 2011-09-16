@@ -186,7 +186,6 @@
                 <property name="hexpand">True</property>
                 <property name="row_spacing">12</property>
                 <property name="column_spacing">12</property>
-                <property name="column-homogeneous">True</property>
                 <child>
                   <object class="GtkImage" id="bronze_image">
                     <property name="visible">True</property>
@@ -217,6 +216,7 @@
                   <object class="GtkLabel" id="bronze_date_label">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
+                    <property name="hexpand">True</property>
                     <property name="label" translatable="yes">bronze_date_label</property>
                   </object>
                   <packing>
@@ -256,6 +256,7 @@
                   <object class="GtkLabel" id="silver_date_label">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
+                    <property name="hexpand">True</property>
                     <property name="label" translatable="yes">silver_date_label</property>
                   </object>
                   <packing>
@@ -295,27 +296,12 @@
                   <object class="GtkLabel" id="gold_date_label">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
+                    <property name="hexpand">True</property>
                     <property name="label" translatable="yes">gold_date_label</property>
                   </object>
                   <packing>
                     <property name="left_attach">2</property>
                     <property name="top_attach">2</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
-                  </packing>
-                </child>
-                <child>
-                  <object class="GtkLabel" id="label6">
-                    <property name="visible">True</property>
-                    <property name="can_focus">False</property>
-                    <property name="label" translatable="yes">High scores</property>
-                    <attributes>
-                      <attribute name="scale" value="2"/>
-                    </attributes>
-                  </object>
-                  <packing>
-                    <property name="left_attach">1</property>
-                    <property name="top_attach">1</property>
                     <property name="width">1</property>
                     <property name="height">1</property>
                   </packing>
@@ -362,6 +348,22 @@
                 </child>
                 <child>
                   <placeholder/>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label6">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">High scores</property>
+                    <attributes>
+                      <attribute name="scale" value="2"/>
+                    </attributes>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">1</property>
+                    <property name="width">3</property>
+                    <property name="height">1</property>
+                  </packing>
                 </child>
               </object>
               <packing>

@@ -343,7 +343,7 @@ switch_to_page (OfficeRunner *run,
 		run->timeout = 0;
 
 		label = N_("Try Again");
-		if (run->elapsed > MAX_TIME)
+		if (run->elapsed >= MAX_TIME)
 			text = g_strdup (_("Took too long, sorry!"));
 		else
 			text = elapsed_to_text (run->elapsed);

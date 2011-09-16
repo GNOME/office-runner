@@ -1,2 +1,3 @@
 src/office-runner.c
 [type: gettext/glade] src/office-runner.ui
+[type: gettext/ini] src/office-runner.desktop.in

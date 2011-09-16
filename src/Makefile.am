@@ -15,6 +15,13 @@ stuff_DATA =				\
 	gold-cup.png
 stuffdir = $(pkgdatadir)
 
-EXTRA_DIST = $(stuff_DATA)
+desktop_in_files = office-runner.desktop.in
+desktopdir = $(datadir)/applications
+desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
+@INTLTOOL_DESKTOP_RULE@
+
+EXTRA_DIST = $(stuff_DATA) $(desktop_in_files)
+
+CLEANFILES = $(desktop_DATA)
 
 -include $(top_srcdir)/git.mk

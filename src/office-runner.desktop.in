@@ -1,0 +1,9 @@
+[Desktop Entry]
+_Name=Office Runner
+_Comment=Office game for laptop owners
+Exec=office-runner
+Icon=office-runner
+Terminal=false
+Type=Application
+Categories=GTK;GNOME;Utility;Game;ArcadeGame;SportsGame;
+StartupNotify=true

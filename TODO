@@ -2,6 +2,8 @@
 - Icons that match the license?
   (right now they come from Smash Battle:
   http://happypenguin.org/show?smash+battle)
-- Display person's time in last page
-- Save/restore best times
 - Sound?
+
+Known bugs (aka, can I be bothered?)
+- saving the date/time as a string means it won't get
+  retranslated if we switch languages

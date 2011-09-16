@@ -29,15 +29,34 @@
 #define AC_ACTION "lid-close-ac-action"
 #define BATTERY_ACTION "lid-close-battery-action"
 #define MAX_TIME 600.0
+#define NUM_CUPS 3
 
 #define WID(x) GTK_WIDGET(gtk_builder_get_object (run->ui, x))
 #define IWID(x) GTK_IMAGE(gtk_builder_get_object (run->ui, x))
+#define LWID(x) GTK_LABEL(gtk_builder_get_object (run->ui, x))
 
 enum {
 	RUN_PAGE,
 	RUNNING_PAGE,
 	SCORES_PAGE
 };
+
+enum {
+	GOLD,
+	SILVER,
+	BRONZE
+};
+
+static const char *cups[] = {
+	"gold",
+	"silver",
+	"bronze"
+};
+
+typedef struct {
+	gdouble time;
+	char *date;
+} ORecord;
 
 typedef struct {
 	GSettings *settings;
@@ -51,6 +70,9 @@ typedef struct {
 	GtkWidget *time_label;
 	GtkWidget *your_time_label;
 
+	ORecord records[NUM_CUPS];
+	gboolean dirty_records;
+
 	GTimer *timer;
 	guint timeout;
 	gdouble elapsed;
@@ -59,9 +81,58 @@ typedef struct {
 static void switch_to_page (OfficeRunner *run, int page);
 static void set_running_settings (OfficeRunner *run, gboolean running);
 
+static char *
+get_records_path (void)
+{
+	return g_build_filename (g_get_user_cache_dir (), GETTEXT_PACKAGE, "records.ini", NULL);
+}
+
+static char *
+get_records_dir (void)
+{
+	return g_build_filename (g_get_user_cache_dir (), GETTEXT_PACKAGE, NULL);
+}
+
+static void
+save_records (OfficeRunner *run)
+{
+	GKeyFile *keyfile;
+	char *data, *path;
+	GError *error = NULL;
+	guint i;
+
+	path = get_records_dir ();
+	if (g_mkdir_with_parents (path, 0755) < 0) {
+		g_warning ("Failed to create directory '%s'", path);
+		g_free (path);
+		return;
+	}
+	g_free (path);
+
+	keyfile = g_key_file_new ();
+	for (i = GOLD; i <= BRONZE; i++) {
+		g_key_file_set_double (keyfile, cups[i], "time", run->records[i].time);
+		g_key_file_set_string (keyfile, cups[i], "date", run->records[i].date);
+	}
+
+	data = g_key_file_to_data (keyfile, NULL, NULL);
+	g_key_file_free (keyfile);
+
+	path = get_records_path ();
+
+	if (g_file_set_contents (path, data, -1, &error) == FALSE) {
+		g_warning ("Failed to save records to '%s': %s", path, error->message);
+		g_error_free (error);
+	}
+	g_free (path);
+	g_free (data);
+}
+
 static void
 free_runner (OfficeRunner *run)
 {
+	guint i;
+
 	set_running_settings (run, FALSE);
 
 	if (run->timer)
@@ -70,6 +141,14 @@ free_runner (OfficeRunner *run)
 		g_source_remove (run->timeout);
 	g_object_unref (run->settings);
 	g_object_unref (run->ui);
+
+	if (run->dirty_records) {
+		save_records (run);
+	}
+
+	for (i = GOLD; i <= BRONZE; i++)
+		g_free (run->records[i].date);
+
 	g_free (run);
 }
 
@@ -92,6 +171,43 @@ window_delete_event_cb (GtkWidget    *widget,
 			OfficeRunner *run)
 {
 	gtk_main_quit ();
+}
+
+static void
+load_default_records (OfficeRunner *run)
+{
+	run->records[GOLD].time = MAX_TIME;
+	run->records[GOLD].date = g_strdup (_("Payrise! Ha, no. Severance package!"));
+
+	run->records[SILVER].time = MAX_TIME + 1;
+	run->records[SILVER].date = g_strdup (_("Solving existential questions"));
+
+	run->records[BRONZE].time = MAX_TIME + 2;
+	run->records[BRONZE].date = g_strdup (_("Meeting my soulmate on IRC"));
+}
+
+static void
+load_records (OfficeRunner *run)
+{
+	GKeyFile *keyfile;
+	char *path;
+	guint i;
+
+	path = get_records_path ();
+	keyfile = g_key_file_new ();
+	if (g_key_file_load_from_file (keyfile, path, G_KEY_FILE_NONE, NULL) == FALSE) {
+		g_key_file_free (keyfile);
+		g_free (path);
+		load_default_records (run);
+		return;
+	}
+	g_free (path);
+
+	for (i = GOLD; i <= BRONZE; i++) {
+		run->records[i].time = g_key_file_get_double (keyfile, cups[i], "time", NULL);
+		run->records[i].date = g_key_file_get_string (keyfile, cups[i], "date", NULL);
+	}
+	g_key_file_free (keyfile);
 }
 
 static char *
@@ -136,6 +252,66 @@ count_timeout (OfficeRunner *run)
 }
 
 static void
+set_records_page (OfficeRunner *run)
+{
+	guint i;
+
+	for (i = GOLD; i <= BRONZE; i++) {
+		char *text, *widget;
+
+		widget = g_strdup_printf ("%s_time_label", cups[i]);
+		text = elapsed_to_text (run->records[i].time);
+		gtk_label_set_text (LWID(widget), text);
+		g_free (text);
+		g_free (widget);
+
+		widget = g_strdup_printf ("%s_date_label", cups[i]);
+		gtk_label_set_text (LWID(widget), run->records[i].date);
+		g_free (widget);
+	}
+}
+
+static gboolean
+is_new_record (OfficeRunner *run)
+{
+	guint i, cup;
+	gboolean new_record;
+	GDateTime *dt;
+	GTimeZone *tz;
+
+	new_record = FALSE;
+
+	for (i = GOLD; i <= BRONZE; i++) {
+		if (run->elapsed < run->records[i].time) {
+			new_record = TRUE;
+			cup = i;
+			break;
+		}
+	}
+
+	if (new_record == FALSE)
+		return new_record;
+
+	for (i = BRONZE; i > cup; i--) {
+		run->records[i].time = run->records[i - 1].time;
+		g_free (run->records[i].date);
+		run->records[i].date = g_strdup (run->records[i - 1].date);
+	}
+
+	run->records[cup].time = run->elapsed;
+
+	tz = g_time_zone_new_local ();
+	dt = g_date_time_new_now (tz);
+	run->records[cup].date = g_date_time_format (dt, "%c");
+	g_date_time_unref (dt);
+	g_time_zone_unref (tz);
+
+	run->dirty_records = TRUE;
+
+	return new_record;
+}
+
+static void
 switch_to_page (OfficeRunner *run,
 		int           page)
 {
@@ -174,7 +350,11 @@ switch_to_page (OfficeRunner *run,
 		gtk_label_set_text (GTK_LABEL (run->your_time_label), text);
 		g_free (text);
 
-		//FIXME load up records!
+		if (is_new_record (run))
+			gtk_label_set_text (LWID("mark_label"), _("New Record!"));
+
+		set_records_page (run);
+
 		break;
 			  }
 	}
@@ -230,6 +410,8 @@ new_runner (void)
 	g_signal_connect (run->run_button, "clicked",
 			  G_CALLBACK (run_button_clicked_cb), run);
 	run->notebook = WID ("notebook1");
+
+	load_records (run);
 
 	return run;
 }

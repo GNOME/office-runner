@@ -1,8 +1,6 @@
-- Desktop file
 - Icons that match the license?
-  (right now they come from Smash Battle:
-  http://happypenguin.org/show?smash+battle)
 - Sound?
+- Start the counter when the lid gets closed
 
 Known bugs (aka, can I be bothered?)
 - saving the date/time as a string means it won't get

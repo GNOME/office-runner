@@ -343,15 +343,15 @@ switch_to_page (OfficeRunner *run,
 		run->timeout = 0;
 
 		label = N_("Try Again");
-		if (run->elapsed >= MAX_TIME)
+		if (run->elapsed >= MAX_TIME) {
 			text = g_strdup (_("Took too long, sorry!"));
-		else
+		} else {
 			text = elapsed_to_text (run->elapsed);
+			if (is_new_record (run))
+				gtk_label_set_text (LWID("mark_label"), _("New Record!"));
+		}
 		gtk_label_set_text (GTK_LABEL (run->your_time_label), text);
 		g_free (text);
-
-		if (is_new_record (run))
-			gtk_label_set_text (LWID("mark_label"), _("New Record!"));
 
 		set_records_page (run);
 

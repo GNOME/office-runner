@@ -12,7 +12,9 @@ stuff_DATA =				\
 	office-runner.ui		\
 	bronze-cup.png			\
 	silver-cup.png			\
-	gold-cup.png
+	gold-cup.png			\
+	jump.wav			\
+	pause.wav
 stuffdir = $(pkgdatadir)
 
 desktop_in_files = office-runner.desktop.in

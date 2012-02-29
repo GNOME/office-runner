@@ -1,0 +1,80 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-02-29 23:07+0100\n"
+"PO-Revision-Date: 2012-02-29 23:14+0100\n"
+"Last-Translator: Mario Blättermann <mario.blaettermann@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/office-runner.c:180
+msgid "Payrise! Ha, no. Severance package!"
+msgstr "Gehaltserhöhung! Ätsch, doch nicht. Abfindung!"
+
+#: ../src/office-runner.c:183
+msgid "Solving existential questions"
+msgstr "Lösen existenzieller Probleme"
+
+#: ../src/office-runner.c:186
+msgid "Meeting my soulmate on IRC"
+msgstr "Meinen Seelenverwandten im IRC treffen"
+
+#: ../src/office-runner.c:324
+#: ../src/office-runner.ui.h:7
+msgid "Run!"
+msgstr "Los!"
+
+#: ../src/office-runner.c:329
+msgid "Done!"
+msgstr "Fertig!"
+
+#: ../src/office-runner.c:345
+msgid "Try Again"
+msgstr "Erneut versuchen"
+
+#: ../src/office-runner.c:347
+msgid "Took too long, sorry!"
+msgstr "Das hat zu lange gedauert!"
+
+#: ../src/office-runner.c:351
+msgid "New Record!"
+msgstr "Neuer Rekord!"
+
+#: ../src/office-runner.ui.h:1
+msgid ""
+" • Click the \"Run!\" button, and then dash to your desk or meeting.\n"
+" • You are allowed to close your laptop lid to run faster\n"
+msgstr ""
+" • Klicken Sie auf den »Los«-Knopf und rasen Sie dann zu Ihrem Termin.\n"
+" • Sie dürfen Ihren Laptopdeckel schließen, um schneller laufen zu können\n"
+
+#: ../src/office-runner.ui.h:4
+msgid "High scores"
+msgstr "Ergebnisse"
+
+#: ../src/office-runner.ui.h:5
+#: ../src/office-runner.desktop.in.h:1
+msgid "Office Runner"
+msgstr "Office Runner"
+
+#: ../src/office-runner.ui.h:6
+msgid "Rules"
+msgstr "Regeln"
+
+#: ../src/office-runner.ui.h:8
+msgid "Your time:"
+msgstr "Ihre Zeit:"
+
+#: ../src/office-runner.desktop.in.h:2
+msgid "Office game for laptop owners"
+msgstr "Bürospiel für Laptopbesitzer"
+

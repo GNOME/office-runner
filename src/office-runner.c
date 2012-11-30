@@ -25,9 +25,10 @@
 #include <gnome-settings-daemon/gsd-enums.h>
 #include <math.h>
 
-#define POWER_SETTINGS "org.gnome.settings-daemon.plugins.power"
-#define AC_ACTION "lid-close-ac-action"
-#define BATTERY_ACTION "lid-close-battery-action"
+#define LOGIND_DBUS_NAME                       "org.freedesktop.login1"
+#define LOGIND_DBUS_PATH                       "/org/freedesktop/login1"
+#define LOGIND_DBUS_INTERFACE                  "org.freedesktop.login1.Manager"
+
 #define MAX_TIME 600.0
 #define NUM_CUPS 3
 
@@ -59,9 +60,8 @@ typedef struct {
 } ORecord;
 
 typedef struct {
-	GSettings *settings;
-	GsdPowerActionType ac_action;
-	GsdPowerActionType battery_action;
+	GDBusConnection *connection;
+	int lid_switch_fd;
 
 	GtkBuilder *ui;
 	GtkWidget *window;
@@ -133,14 +133,14 @@ free_runner (OfficeRunner *run)
 {
 	guint i;
 
-	set_running_settings (run, FALSE);
-
 	if (run->timer)
 		g_timer_destroy (run->timer);
 	if (run->timeout)
 		g_source_remove (run->timeout);
-	g_object_unref (run->settings);
 	g_object_unref (run->ui);
+	if (run->lid_switch_fd > 0)
+		close (run->lid_switch_fd);
+	g_object_unref (run->connection);
 
 	if (run->dirty_records) {
 		save_records (run);
@@ -157,11 +157,39 @@ set_running_settings (OfficeRunner *run,
 		      gboolean      running)
 {
 	if (running) {
-		g_settings_set_enum (run->settings, AC_ACTION, GSD_POWER_ACTION_NOTHING);
-		g_settings_set_enum (run->settings, BATTERY_ACTION, GSD_POWER_ACTION_NOTHING);
+		GVariant *ret;
+		GUnixFDList *fd_list;
+		gint idx;
+		GError *error = NULL;
+
+		g_assert (run->lid_switch_fd == -1);
+
+		ret = g_dbus_connection_call_with_unix_fd_list_sync (run->connection,
+								     LOGIND_DBUS_NAME,
+								     LOGIND_DBUS_PATH,
+								     LOGIND_DBUS_INTERFACE,
+								     "Inhibit",
+								     g_variant_new ("(ssss)", "handle-lid-switch", g_get_user_name(), _("Running!"), "block"),
+								     NULL,
+								     G_DBUS_CALL_FLAGS_NONE,
+								     -1,
+								     NULL,
+								     &fd_list,
+								     NULL,
+								     &error);
+
+		if (ret == NULL)
+			g_error ("Failed to inhibit: %s", error->message);
+		g_variant_get (ret, "(h)", &idx);
+		run->lid_switch_fd = g_unix_fd_list_get (fd_list, idx, NULL);
+
+		g_object_unref (fd_list);
+		g_variant_unref (ret);
 	} else {
-		g_settings_set_enum (run->settings, AC_ACTION, run->ac_action);
-		g_settings_set_enum (run->settings, BATTERY_ACTION, run->battery_action);
+		g_assert (run->lid_switch_fd > 0);
+
+		close (run->lid_switch_fd);
+		run->lid_switch_fd = -1;
 	}
 }
 
@@ -383,9 +411,9 @@ new_runner (void)
 	OfficeRunner *run;
 
 	run = g_new0 (OfficeRunner, 1);
-	run->settings = g_settings_new (POWER_SETTINGS);
-	run->ac_action = g_settings_get_enum (run->settings, AC_ACTION);
-	run->battery_action = g_settings_get_enum (run->settings, BATTERY_ACTION);
+	run->connection = g_bus_get_sync (G_BUS_TYPE_SYSTEM,
+					  NULL, NULL);
+	run->lid_switch_fd = -1;
 
 	run->ui = gtk_builder_new ();
 	gtk_builder_add_from_file (run->ui, PKGDATADIR "office-runner.ui", NULL);

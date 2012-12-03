@@ -1,0 +1,89 @@
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+# Aviary.pl
+# Jeśli masz jakiekolwiek uwagi odnoszące się do tłumaczenia lub chcesz
+# pomóc w jego rozwijaniu i pielęgnowaniu, napisz do nas:
+# gnomepl@aviary.pl
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+# Piotr Drąg <piotrdrag@gmail.com>, 2012.
+# Aviary.pl <gnomepl@aviary.pl>, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: office-runner\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-12-04 00:11+0100\n"
+"PO-Revision-Date: 2012-12-04 00:12+0100\n"
+"Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
+"Language-Team: Polish <gnomepl@aviary.pl>\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+"X-Poedit-Language: Polish\n"
+"X-Poedit-Country: Poland\n"
+
+#: ../src/office-runner.c:172
+msgid "Running!"
+msgstr "Bieganie!"
+
+#: ../src/office-runner.c:208
+msgid "Payrise! Ha, no. Severance package!"
+msgstr "Podwyżka! Haha, nie ma mowy. Wypowiedzenie!"
+
+#: ../src/office-runner.c:211
+msgid "Solving existential questions"
+msgstr "Rozwiązywanie problemów egzystencjalnych"
+
+#: ../src/office-runner.c:214
+msgid "Meeting my soulmate on IRC"
+msgstr "Spotkanie bratniej duszy na IRC-u"
+
+#: ../src/office-runner.c:352 ../src/office-runner.ui.h:8
+msgid "Run!"
+msgstr "Biegnij!"
+
+#: ../src/office-runner.c:357
+msgid "Done!"
+msgstr "Skończone!"
+
+#: ../src/office-runner.c:373
+msgid "Try Again"
+msgstr "Spróbuj ponownie"
+
+#: ../src/office-runner.c:375
+msgid "Took too long, sorry!"
+msgstr "Za długo, przepraszamy!"
+
+#: ../src/office-runner.c:379
+msgid "New Record!"
+msgstr "Nowy rekord!"
+
+#: ../src/office-runner.ui.h:1 ../src/office-runner.desktop.in.h:1
+msgid "Office Runner"
+msgstr "Office Runner"
+
+#: ../src/office-runner.ui.h:2
+msgid ""
+" • Click the \"Run!\" button, and then dash to your desk or meeting.\n"
+" • You are allowed to close your laptop lid to run faster\n"
+msgstr ""
+" • Kliknij przycisk \"Biegnij!\", a następnie pomknij do swojego biurka lub "
+"na spotkanie.\n"
+" • Możesz zamknąć pokrywę laptopa, aby biec szybciej\n"
+
+#: ../src/office-runner.ui.h:5
+msgid "Rules"
+msgstr "Zasady"
+
+#: ../src/office-runner.ui.h:6
+msgid "Your time:"
+msgstr "Twój czas:"
+
+#: ../src/office-runner.ui.h:7
+msgid "High scores"
+msgstr "Najlepsze wyniki"
+
+#: ../src/office-runner.desktop.in.h:2
+msgid "Office game for laptop owners"
+msgstr "Gra biurowa dla właścicieli laptopów"

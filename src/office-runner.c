@@ -389,7 +389,6 @@ switch_to_page (OfficeRunner *run,
 
 	gtk_label_set_text (GTK_LABEL (WID ("run_button_label")),
 			    label);
-
 }
 
 static void

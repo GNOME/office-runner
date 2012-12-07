@@ -10,9 +10,6 @@ office_runner_CPPFLAGS =				\
 
 stuff_DATA =				\
 	office-runner.ui		\
-	bronze-cup.png			\
-	silver-cup.png			\
-	gold-cup.png			\
 	jump.wav			\
 	pause.wav
 stuffdir = $(pkgdatadir)

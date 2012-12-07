@@ -347,9 +347,9 @@ is_new_record (OfficeRunner *run,
 #endif
 	o = new_orecord (run->elapsed);
 	run->records = g_list_insert_sorted (run->records, o, (GCompareFunc) record_compare_func);
-	g_message ("Elapsed: %lf", o->time);
+	g_debug ("Elapsed: %lf", o->time);
 	for (l = run->records, i = GOLD; l != NULL; l = l->next, i++)
-		g_message ("\t%d = %lf", i, ((ORecord *) l->data)->time);
+		g_debug ("\t%d = %lf", i, ((ORecord *) l->data)->time);
 
 	*new_pos = 0;
 	for (l = run->records, i = GOLD; i <= BRONZE; l = l->next, i++) {

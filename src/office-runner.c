@@ -428,9 +428,9 @@ new_runner (void)
 	gtk_widget_set_no_show_all (WID ("time_image"), TRUE);
 	gtk_widget_hide (WID ("time_image"));
 
-	gtk_image_set_from_file (IWID("gold_image"), PKGDATADIR "gold-cup.png");
-	gtk_image_set_from_file (IWID("silver_image"), PKGDATADIR "silver-cup.png");
-	gtk_image_set_from_file (IWID("bronze_image"), PKGDATADIR "bronze-cup.png");
+	gtk_image_set_from_icon_name (IWID("gold_image"), "trophy-gold", GTK_ICON_SIZE_DIALOG);
+	gtk_image_set_from_icon_name (IWID("silver_image"), "trophy-silver", GTK_ICON_SIZE_DIALOG);
+	gtk_image_set_from_icon_name (IWID("bronze_image"), "trophy-bronze", GTK_ICON_SIZE_DIALOG);
 
 	g_signal_connect (run->window, "delete-event",
 			  G_CALLBACK (window_delete_event_cb), run);

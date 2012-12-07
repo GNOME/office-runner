@@ -54,6 +54,18 @@ static const char *cups[] = {
 	"bronze"
 };
 
+static gdouble cup_times[] = {
+	MAX_TIME,
+	MAX_TIME + 1,
+	MAX_TIME + 2
+};
+
+static const char *cup_str[] = {
+	N_("Gold Trophy!"),
+	N_("Silver Trophy!"),
+	N_("Bronze Trophy!")
+};
+
 typedef struct {
 	gdouble time;
 	char *date;
@@ -69,8 +81,9 @@ typedef struct {
 	GtkWidget *notebook;
 	GtkWidget *time_label;
 	GtkWidget *your_time_label;
+	GtkIconSize large_icon_size;
 
-	ORecord records[NUM_CUPS];
+	GList *records; /* of ORecords */
 	gboolean dirty_records;
 
 	GTimer *timer;
@@ -93,10 +106,27 @@ get_records_dir (void)
 	return g_build_filename (g_get_user_cache_dir (), GETTEXT_PACKAGE, NULL);
 }
 
+static ORecord *
+new_orecord (gdouble time)
+{
+	ORecord *o;
+	o = g_new0 (ORecord, 1);
+	o->time = time;
+	return o;
+}
+
+static void
+free_orecord (ORecord *o)
+{
+	g_free (o->date);
+	g_free (o);
+}
+
 static void
 save_records (OfficeRunner *run)
 {
 	GKeyFile *keyfile;
+	GList *l;
 	char *data, *path;
 	GError *error = NULL;
 	guint i;
@@ -110,9 +140,9 @@ save_records (OfficeRunner *run)
 	g_free (path);
 
 	keyfile = g_key_file_new ();
-	for (i = GOLD; i <= BRONZE; i++) {
-		g_key_file_set_double (keyfile, cups[i], "time", run->records[i].time);
-		g_key_file_set_string (keyfile, cups[i], "date", run->records[i].date);
+	for (l = run->records, i = 0; l != NULL; l = l->next, i++) {
+		ORecord *o = l->data;
+		g_key_file_set_double (keyfile, cups[i], "time", o->time);
 	}
 
 	data = g_key_file_to_data (keyfile, NULL, NULL);
@@ -146,8 +176,7 @@ free_runner (OfficeRunner *run)
 		save_records (run);
 	}
 
-	for (i = GOLD; i <= BRONZE; i++)
-		g_free (run->records[i].date);
+	g_list_free_full (run->records, (GDestroyNotify) free_orecord);
 
 	g_free (run);
 }
@@ -204,14 +233,13 @@ window_delete_event_cb (GtkWidget    *widget,
 static void
 load_default_records (OfficeRunner *run)
 {
-	run->records[GOLD].time = MAX_TIME;
-	run->records[GOLD].date = g_strdup (_("Payrise! Ha, no. Severance package!"));
+	GList *l;
 
-	run->records[SILVER].time = MAX_TIME + 1;
-	run->records[SILVER].date = g_strdup (_("Solving existential questions"));
+	l = g_list_prepend (NULL, new_orecord (cup_times[BRONZE]));
+	l = g_list_prepend (l, new_orecord (cup_times[SILVER]));
+	l = g_list_prepend (l, new_orecord (cup_times[GOLD]));
 
-	run->records[BRONZE].time = MAX_TIME + 2;
-	run->records[BRONZE].date = g_strdup (_("Meeting my soulmate on IRC"));
+	run->records = l;
 }
 
 static void
@@ -231,10 +259,15 @@ load_records (OfficeRunner *run)
 	}
 	g_free (path);
 
+	run->records = NULL;
 	for (i = GOLD; i <= BRONZE; i++) {
-		run->records[i].time = g_key_file_get_double (keyfile, cups[i], "time", NULL);
-		run->records[i].date = g_key_file_get_string (keyfile, cups[i], "date", NULL);
+		gdouble time;
+
+		time = g_key_file_get_double (keyfile, cups[i], "time", NULL);
+		run->records = g_list_prepend (run->records,
+					       new_orecord (time ? time : cup_times[i]));
 	}
+	run->records = g_list_reverse (run->records);
 	g_key_file_free (keyfile);
 }
 
@@ -279,64 +312,101 @@ count_timeout (OfficeRunner *run)
 	return TRUE;
 }
 
-static void
-set_records_page (OfficeRunner *run)
+static int
+record_compare_func (ORecord *a,
+		     ORecord *b)
 {
-	guint i;
-
-	for (i = GOLD; i <= BRONZE; i++) {
-		char *text, *widget;
-
-		widget = g_strdup_printf ("%s_time_label", cups[i]);
-		text = elapsed_to_text (run->records[i].time);
-		gtk_label_set_text (LWID(widget), text);
-		g_free (text);
-		g_free (widget);
-
-		widget = g_strdup_printf ("%s_date_label", cups[i]);
-		gtk_label_set_text (LWID(widget), run->records[i].date);
-		g_free (widget);
-	}
+	return (a->time > b->time);
 }
 
 static gboolean
-is_new_record (OfficeRunner *run)
+is_new_record (OfficeRunner *run,
+	       int          *new_pos)
 {
+	ORecord *o;
 	guint i, cup;
 	gboolean new_record;
+	GList *l;
+
+#if 0
 	GDateTime *dt;
 	GTimeZone *tz;
+	char *date;
+#endif
 
 	new_record = FALSE;
 
-	for (i = GOLD; i <= BRONZE; i++) {
-		if (run->elapsed < run->records[i].time) {
+#if 0
+	/* Unused */
+	tz = g_time_zone_new_local ();
+	dt = g_date_time_new_now (tz);
+	date = g_date_time_format (dt, "%c");
+	g_date_time_unref (dt);
+	g_time_zone_unref (tz);
+	g_free (date);
+#endif
+	o = new_orecord (run->elapsed);
+	run->records = g_list_insert_sorted (run->records, o, (GCompareFunc) record_compare_func);
+	g_message ("Elapsed: %lf", o->time);
+	for (l = run->records, i = GOLD; l != NULL; l = l->next, i++)
+		g_message ("\t%d = %lf", i, ((ORecord *) l->data)->time);
+
+	*new_pos = 0;
+	for (l = run->records, i = GOLD; i <= BRONZE; l = l->next, i++) {
+		ORecord *o = l->data;
+		if (run->elapsed == o->time && i <= BRONZE) {
 			new_record = TRUE;
-			cup = i;
+			*new_pos = i;
 			break;
 		}
 	}
 
-	if (new_record == FALSE)
-		return new_record;
-
-	for (i = BRONZE; i > cup; i--) {
-		run->records[i].time = run->records[i - 1].time;
-		g_free (run->records[i].date);
-		run->records[i].date = g_strdup (run->records[i - 1].date);
+	/* Trim the list */
+	l = g_list_nth (run->records, BRONZE + 1);
+	if (l) {
+		l->prev->next = NULL;
+		g_list_free_full (l, (GDestroyNotify) free_orecord);
 	}
 
-	run->records[cup].time = run->elapsed;
-
-	tz = g_time_zone_new_local ();
-	dt = g_date_time_new_now (tz);
-	run->records[cup].date = g_date_time_format (dt, "%c");
-	g_date_time_unref (dt);
-	g_time_zone_unref (tz);
+	if (new_record == FALSE)
+		return FALSE;
 
 	run->dirty_records = TRUE;
 
-	return new_record;
+	return TRUE;
+}
+
+static void
+set_records_page (OfficeRunner *run)
+{
+	const char *text;
+	char *cur_time, *time_text;
+	gboolean new_record;
+	int cup;
+
+	if (run->elapsed >= MAX_TIME) {
+		text = _("Took too long, sorry!");
+	} else {
+		new_record = is_new_record (run, &cup);
+		if (new_record) {
+			char *str;
+			text = _(cup_str[cup]);
+			str = g_strdup_printf ("trophy-%s", cups[cup]);
+			gtk_image_set_from_icon_name (IWID ("trophy_image"),
+						      str, run->large_icon_size);
+			g_free (str);
+		} else
+			text = _("Too slow for the podium");
+	}
+	gtk_label_set_text (LWID ("result_label"), text);
+
+	time_text = elapsed_to_text (run->elapsed);
+	cur_time = g_strdup_printf (_("You managed to finish the route in <b>%s</b>."),
+				time_text);
+	gtk_label_set_markup (LWID ("current_time_label"), cur_time);
+	g_free (cur_time);
+
+	/* FIXME: change the labels to match the mockups */
 }
 
 static void
@@ -360,8 +430,6 @@ switch_to_page (OfficeRunner *run,
 		break;
 			   }
 	case SCORES_PAGE: {
-		char *text;
-
 		run->elapsed = g_timer_elapsed (run->timer, NULL);
 		g_timer_destroy (run->timer);
 		run->timer = NULL;
@@ -371,15 +439,6 @@ switch_to_page (OfficeRunner *run,
 		run->timeout = 0;
 
 		label = N_("Try Again");
-		if (run->elapsed >= MAX_TIME) {
-			text = g_strdup (_("Took too long, sorry!"));
-		} else {
-			text = elapsed_to_text (run->elapsed);
-			if (is_new_record (run))
-				gtk_label_set_text (LWID("mark_label"), _("New Record!"));
-		}
-		gtk_label_set_text (GTK_LABEL (run->your_time_label), text);
-		g_free (text);
 
 		set_records_page (run);
 
@@ -427,9 +486,12 @@ new_runner (void)
 	gtk_widget_set_no_show_all (WID ("time_image"), TRUE);
 	gtk_widget_hide (WID ("time_image"));
 
-	gtk_image_set_from_icon_name (IWID("gold_image"), "trophy-gold", GTK_ICON_SIZE_DIALOG);
-	gtk_image_set_from_icon_name (IWID("silver_image"), "trophy-silver", GTK_ICON_SIZE_DIALOG);
-	gtk_image_set_from_icon_name (IWID("bronze_image"), "trophy-bronze", GTK_ICON_SIZE_DIALOG);
+	run->large_icon_size = gtk_icon_size_register ("large", 256, 256);
+	gtk_image_set_from_icon_name (IWID("trophy_image"), "trophy-silver", run->large_icon_size);
+
+	/* FIXME: Add "better time" advice */
+	gtk_widget_set_no_show_all (WID ("better_time_label"), TRUE);
+	gtk_widget_hide (WID ("better_time_label"));
 
 	g_signal_connect (run->window, "delete-event",
 			  G_CALLBACK (window_delete_event_cb), run);

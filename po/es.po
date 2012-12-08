@@ -1,0 +1,84 @@
+# Spanish translation for office-runner.
+# Copyright (C) 2012 office-runner's COPYRIGHT HOLDER
+# This file is distributed under the same license as the office-runner package.
+# Daniel Mustieles <daniel.mustieles@gmail.com>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: office-runner master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=office-"
+"runner&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2012-12-05 10:08+0000\n"
+"PO-Revision-Date: 2012-12-08 17:59+0100\n"
+"Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
+"Language-Team: Español; Castellano <gnome-es-list@gnome.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 2.91.5\n"
+
+#: ../src/office-runner.c:172
+msgid "Running!"
+msgstr "¡Corriendo!"
+
+#: ../src/office-runner.c:208
+msgid "Payrise! Ha, no. Severance package!"
+msgstr "¡Aumento de sueldo! Ja, no. ¡Paquete de indemnización!"
+
+#: ../src/office-runner.c:211
+msgid "Solving existential questions"
+msgstr "Resolviendo cuestiones existenciales"
+
+#: ../src/office-runner.c:214
+msgid "Meeting my soulmate on IRC"
+msgstr "Conocer a mi alma gemela en el IRC"
+
+#: ../src/office-runner.c:352 ../src/office-runner.ui.h:8
+msgid "Run!"
+msgstr "¡Correr!"
+
+#: ../src/office-runner.c:357
+msgid "Done!"
+msgstr "¡Hecho!"
+
+#: ../src/office-runner.c:373
+msgid "Try Again"
+msgstr "Intentarlo de nuevo"
+
+#: ../src/office-runner.c:375
+msgid "Took too long, sorry!"
+msgstr "¡Tardó demasiado, lo siento!"
+
+#: ../src/office-runner.c:379
+msgid "New Record!"
+msgstr "¡Nuevo récord!"
+
+#: ../src/office-runner.ui.h:1 ../src/office-runner.desktop.in.h:1
+msgid "Office Runner"
+msgstr "Corredor de oficina"
+
+#: ../src/office-runner.ui.h:2
+msgid ""
+" • Click the \"Run!\" button, and then dash to your desk or meeting.\n"
+" • You are allowed to close your laptop lid to run faster\n"
+msgstr ""
+" • Pulse el botón ¡Correr! y vaya a su escritorio o a su reunión.\n"
+" • Puede cerrar la tapa del portátil para correr más rápido\n"
+
+#: ../src/office-runner.ui.h:5
+msgid "Rules"
+msgstr "Reglas"
+
+#: ../src/office-runner.ui.h:6
+msgid "Your time:"
+msgstr "Su tiempo:"
+
+#: ../src/office-runner.ui.h:7
+msgid "High scores"
+msgstr "Puntuación más alta"
+
+#: ../src/office-runner.desktop.in.h:2
+msgid "Office game for laptop owners"
+msgstr "Juego de oficina para propietarios de portátiles"

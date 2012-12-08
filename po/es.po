@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: office-runner master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=office-"
 "runner&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-12-05 10:08+0000\n"
-"PO-Revision-Date: 2012-12-08 17:59+0100\n"
+"POT-Creation-Date: 2012-12-08 17:11+0000\n"
+"PO-Revision-Date: 2012-12-08 18:14+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español; Castellano <gnome-es-list@gnome.org>\n"
 "Language: es\n"
@@ -19,41 +19,46 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Gtranslator 2.91.5\n"
 
-#: ../src/office-runner.c:172
+#: ../src/office-runner.c:64
+msgid "Gold Trophy!"
+msgstr "¡Trofeo de oro!"
+
+#: ../src/office-runner.c:65
+msgid "Silver Trophy!"
+msgstr "¡Trofeo de plata!"
+
+#: ../src/office-runner.c:66
+msgid "Bronze Trophy!"
+msgstr "¡Trofeo de bronce!"
+
+#: ../src/office-runner.c:201
 msgid "Running!"
 msgstr "¡Corriendo!"
 
-#: ../src/office-runner.c:208
-msgid "Payrise! Ha, no. Severance package!"
-msgstr "¡Aumento de sueldo! Ja, no. ¡Paquete de indemnización!"
-
-#: ../src/office-runner.c:211
-msgid "Solving existential questions"
-msgstr "Resolviendo cuestiones existenciales"
-
-#: ../src/office-runner.c:214
-msgid "Meeting my soulmate on IRC"
-msgstr "Conocer a mi alma gemela en el IRC"
-
-#: ../src/office-runner.c:352 ../src/office-runner.ui.h:8
-msgid "Run!"
-msgstr "¡Correr!"
-
-#: ../src/office-runner.c:357
-msgid "Done!"
-msgstr "¡Hecho!"
-
-#: ../src/office-runner.c:373
-msgid "Try Again"
-msgstr "Intentarlo de nuevo"
-
-#: ../src/office-runner.c:375
+#: ../src/office-runner.c:388
 msgid "Took too long, sorry!"
 msgstr "¡Tardó demasiado, lo siento!"
 
-#: ../src/office-runner.c:379
-msgid "New Record!"
-msgstr "¡Nuevo récord!"
+#: ../src/office-runner.c:399
+msgid "Too slow for the podium"
+msgstr "Demasiado lento para el podio"
+
+#: ../src/office-runner.c:404
+#, c-format
+msgid "You managed to finish the route in <b>%s</b>."
+msgstr "Ha conseguido terminar el circuito en <b>%s</b>."
+
+#: ../src/office-runner.c:422 ../src/office-runner.ui.h:6
+msgid "Run!"
+msgstr "¡Correr!"
+
+#: ../src/office-runner.c:427
+msgid "Done!"
+msgstr "¡Hecho!"
+
+#: ../src/office-runner.c:441
+msgid "Try Again"
+msgstr "Intentarlo de nuevo"
 
 #: ../src/office-runner.ui.h:1 ../src/office-runner.desktop.in.h:1
 msgid "Office Runner"
@@ -71,14 +76,24 @@ msgstr ""
 msgid "Rules"
 msgstr "Reglas"
 
-#: ../src/office-runner.ui.h:6
-msgid "Your time:"
-msgstr "Su tiempo:"
-
-#: ../src/office-runner.ui.h:7
-msgid "High scores"
-msgstr "Puntuación más alta"
-
 #: ../src/office-runner.desktop.in.h:2
 msgid "Office game for laptop owners"
 msgstr "Juego de oficina para propietarios de portátiles"
+
+#~ msgid "Payrise! Ha, no. Severance package!"
+#~ msgstr "¡Aumento de sueldo! Ja, no. ¡Paquete de indemnización!"
+
+#~ msgid "Solving existential questions"
+#~ msgstr "Resolviendo cuestiones existenciales"
+
+#~ msgid "Meeting my soulmate on IRC"
+#~ msgstr "Conocer a mi alma gemela en el IRC"
+
+#~ msgid "New Record!"
+#~ msgstr "¡Nuevo récord!"
+
+#~ msgid "Your time:"
+#~ msgstr "Su tiempo:"
+
+#~ msgid "High scores"
+#~ msgstr "Puntuación más alta"

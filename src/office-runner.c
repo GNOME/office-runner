@@ -272,7 +272,7 @@ load_records (OfficeRunner *run)
 }
 
 static char *
-elapsed_to_text (gdouble elapsed)
+elapsed_to_countdown (gdouble elapsed)
 {
 	int seconds;
 	char *label;
@@ -286,6 +286,47 @@ elapsed_to_text (gdouble elapsed)
 				 (int) elapsed);
 
 	return label;
+}
+
+static char *
+elapsed_to_text (gdouble elapsed)
+{
+	int seconds;
+	char *label;
+
+	seconds = floorl (elapsed);
+	elapsed = (elapsed - (gdouble) seconds) * 100;
+
+	label = g_strdup_printf (_("%d.%02d seconds"),
+				 seconds,
+				 (int) elapsed);
+
+	return label;
+}
+
+static int
+find_time (ORecord *o,
+	   gdouble *time)
+{
+	if (o->time == *time)
+		return 0;
+	return -1;
+}
+
+static char *
+time_to_better_time_text (OfficeRunner *run)
+{
+	GList *l;
+	ORecord *o;
+
+	g_debug ("Looking for %lf in better times", run->elapsed);
+
+	l = g_list_find_custom (run->records, &run->elapsed, (GCompareFunc) find_time);
+	g_assert (l);
+
+	l = l->prev;
+	o = l->data;
+	return elapsed_to_text (o->time);
 }
 
 static gboolean
@@ -305,7 +346,7 @@ count_timeout (OfficeRunner *run)
 		elapsed = 0.0;
 	}
 
-	label = elapsed_to_text (elapsed);
+	label = elapsed_to_countdown (elapsed);
 	gtk_label_set_text (GTK_LABEL (run->time_label), label);
 	g_free (label);
 
@@ -361,13 +402,6 @@ is_new_record (OfficeRunner *run,
 		}
 	}
 
-	/* Trim the list */
-	l = g_list_nth (run->records, BRONZE + 1);
-	if (l) {
-		l->prev->next = NULL;
-		g_list_free_full (l, (GDestroyNotify) free_orecord);
-	}
-
 	if (new_record == FALSE)
 		return FALSE;
 
@@ -377,36 +411,88 @@ is_new_record (OfficeRunner *run,
 }
 
 static void
+trim_records_list (OfficeRunner *run)
+{
+	GList *l;
+
+	l = g_list_nth (run->records, BRONZE + 1);
+	if (l) {
+		l->prev->next = NULL;
+		g_list_free_full (l, (GDestroyNotify) free_orecord);
+	}
+}
+
+static void
 set_records_page (OfficeRunner *run)
 {
 	const char *text;
 	char *cur_time, *time_text;
+	char *better_time_text;
 	gboolean new_record;
 	int cup;
 
 	if (run->elapsed >= MAX_TIME) {
 		text = _("Took too long, sorry!");
+		gtk_label_set_text (LWID ("result_label"), text);
+		gtk_widget_hide (WID ("current_time_label"));
+		gtk_widget_hide (WID ("better_time_label"));
+		return;
+	}
+
+	time_text = elapsed_to_text (run->elapsed);
+	better_time_text = NULL;
+	new_record = is_new_record (run, &cup);
+	if (new_record) {
+		char *str, *better_time;
+
+		text = _(cup_str[cup]);
+		str = g_strdup_printf ("trophy-%s", cups[cup]);
+		gtk_image_set_from_icon_name (IWID ("trophy_image"),
+					      str, run->large_icon_size);
+		g_free (str);
+
+		switch (cup) {
+		case GOLD:
+			cur_time = g_strdup_printf (_("You managed to finish the route with the best time ever, <b>%s</b>."), time_text);
+			break;
+		case SILVER:
+			cur_time = g_strdup_printf (_("You managed to finish the route with the 2<span rise=\"2048\">nd</span> best time ever, <b>%s</b>."), time_text);
+			better_time = time_to_better_time_text (run);
+			better_time_text = g_strdup_printf (_("Only <b>%s</b> separate you from the gold trophy!"), better_time);
+			g_free (better_time);
+			break;
+		case BRONZE:
+			cur_time = g_strdup_printf (_("You managed to finish the route with the 3<span rise=\"2048\">rd</span> best time ever, <b>%s</b>."), time_text);
+			better_time = time_to_better_time_text (run);
+			better_time_text = g_strdup_printf (_("Only <b>%s</b> separate you from the silver trophy!"), better_time);
+			g_free (better_time);
+			break;
+		}
 	} else {
-		new_record = is_new_record (run, &cup);
-		if (new_record) {
-			char *str;
-			text = _(cup_str[cup]);
-			str = g_strdup_printf ("trophy-%s", cups[cup]);
-			gtk_image_set_from_icon_name (IWID ("trophy_image"),
-						      str, run->large_icon_size);
-			g_free (str);
-		} else
-			text = _("Too slow for the podium");
+		char *better_time;
+
+		text = _("Too slow for the podium");
+		cur_time = g_strdup_printf (_("You managed to finish the route in <b>%s</b>."),
+					    time_text);
+		better_time = time_to_better_time_text (run);
+		better_time_text = g_strdup_printf (_("Only <b>%s</b> separate you from the bronze trophy!"), better_time);;
+		g_free (better_time);
 	}
 	gtk_label_set_text (LWID ("result_label"), text);
 
-	time_text = elapsed_to_text (run->elapsed);
-	cur_time = g_strdup_printf (_("You managed to finish the route in <b>%s</b>."),
-				time_text);
+	gtk_widget_show (WID ("current_time_label"));
 	gtk_label_set_markup (LWID ("current_time_label"), cur_time);
 	g_free (cur_time);
 
-	/* FIXME: change the labels to match the mockups */
+	if (better_time_text) {
+		gtk_widget_show (WID ("better_time_label"));
+		gtk_label_set_markup (LWID ("better_time_label"), better_time_text);
+		g_free (better_time_text);
+	} else {
+		gtk_widget_hide (WID ("better_time_label"));
+	}
+
+	trim_records_list (run);
 }
 
 static void
@@ -488,10 +574,6 @@ new_runner (void)
 
 	run->large_icon_size = gtk_icon_size_register ("large", 256, 256);
 	gtk_image_set_from_icon_name (IWID("trophy_image"), "trophy-silver", run->large_icon_size);
-
-	/* FIXME: Add "better time" advice */
-	gtk_widget_set_no_show_all (WID ("better_time_label"), TRUE);
-	gtk_widget_hide (WID ("better_time_label"));
 
 	g_signal_connect (run->window, "delete-event",
 			  G_CALLBACK (window_delete_event_cb), run);

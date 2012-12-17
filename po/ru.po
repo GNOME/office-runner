@@ -1,0 +1,122 @@
+# Russian translation for office-runner.
+# Copyright (C) 2012 office-runner's COPYRIGHT HOLDER
+# This file is distributed under the same license as the office-runner package.
+# Yuri Myasoedov <omerta13@yandex.ru>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: office-runner master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=office-"
+"runner&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2012-12-16 18:47+0000\n"
+"PO-Revision-Date: 2012-12-17 14:15+0400\n"
+"Last-Translator: Yuri Myasoedov <omerta13@yandex.ru>\n"
+"Language-Team: русский <gnome-cyr@gnome.org>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"X-Generator: Gtranslator 2.91.5\n"
+
+#: ../src/office-runner.c:64
+msgid "Gold Trophy!"
+msgstr "Золото!"
+
+#: ../src/office-runner.c:65
+msgid "Silver Trophy!"
+msgstr "Серебро!"
+
+#: ../src/office-runner.c:66
+msgid "Bronze Trophy!"
+msgstr "Бронза!"
+
+#: ../src/office-runner.c:201
+msgid "Running!"
+msgstr "Бегом!"
+
+#: ../src/office-runner.c:300
+#, c-format
+msgid "%d.%02d seconds"
+msgstr "%d.%02d с"
+
+#: ../src/office-runner.c:435
+msgid "Took too long, sorry!"
+msgstr "Слишком медленно!"
+
+#: ../src/office-runner.c:456
+#, c-format
+msgid "You managed to finish the route with the best time ever, <b>%s</b>."
+msgstr "Вам удалось пройти весь путь с наилучшим временем: <b>%s</b>."
+
+#: ../src/office-runner.c:459
+#, c-format
+msgid ""
+"You managed to finish the route with the 2<span rise=\"2048\">nd</span> best "
+"time ever, <b>%s</b>."
+msgstr "Вам удалось пройти весь путь, показав 2-ое время: <b>%s</b>."
+
+#: ../src/office-runner.c:461
+#, c-format
+msgid "Only <b>%s</b> separate you from the gold trophy!"
+msgstr "<b>%s</b> отделяет вас от золотой награды!"
+
+#: ../src/office-runner.c:465
+#, c-format
+msgid ""
+"You managed to finish the route with the 3<span rise=\"2048\">rd</span> best "
+"time ever, <b>%s</b>."
+msgstr "Вам удалось пройти весь путь, показав 3-ое время: <b>%s</b>."
+
+#: ../src/office-runner.c:467
+#, c-format
+msgid "Only <b>%s</b> separate you from the silver trophy!"
+msgstr "<b>%s</b> отделяет вас от серебряной награды!"
+
+#: ../src/office-runner.c:474
+msgid "Too slow for the podium"
+msgstr "Слишком медленно для пьедестала"
+
+#: ../src/office-runner.c:475
+#, c-format
+msgid "You managed to finish the route in <b>%s</b>."
+msgstr "Вам удалось пройти весь путь за <b>%s</b>."
+
+#: ../src/office-runner.c:478
+#, c-format
+msgid "Only <b>%s</b> separate you from the bronze trophy!"
+msgstr "<b>%s</b> отделяет вас от бронзовой награды!"
+
+#: ../src/office-runner.c:508 ../src/office-runner.ui.h:6
+msgid "Run!"
+msgstr "Бегу!"
+
+#: ../src/office-runner.c:513
+msgid "Done!"
+msgstr "Выполнено!"
+
+#: ../src/office-runner.c:527
+msgid "Try Again"
+msgstr "Попробовать ещё раз"
+
+#: ../src/office-runner.ui.h:1 ../src/office-runner.desktop.in.h:1
+msgid "Office Runner"
+msgstr "Офисный спринтер"
+
+#: ../src/office-runner.ui.h:2
+msgid ""
+" • Click the \"Run!\" button, and then dash to your desk or meeting.\n"
+" • You are allowed to close your laptop lid to run faster\n"
+msgstr ""
+" • Нажмите кнопку «Бегу!» и торопитесь к своему рабочему месту или на "
+"совещание.\n"
+" • Можете закрыть крышку ноутбука, чтобы вам было удобнее.\n"
+
+#: ../src/office-runner.ui.h:5
+msgid "Rules"
+msgstr "Правила"
+
+#: ../src/office-runner.desktop.in.h:2
+msgid "Office game for laptop owners"
+msgstr "Офисная игра для владельцев ноутбуков"

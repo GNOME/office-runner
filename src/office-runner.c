@@ -20,6 +20,7 @@
 
 #include "config.h"
 
+#include <gio/gunixfdlist.h>
 #include <gtk/gtk.h>
 #include <glib/gi18n.h>
 #include <gnome-settings-daemon/gsd-enums.h>
@@ -161,8 +162,6 @@ save_records (OfficeRunner *run)
 static void
 free_runner (OfficeRunner *run)
 {
-	guint i;
-
 	if (run->timer)
 		g_timer_destroy (run->timer);
 	if (run->timeout)
@@ -228,6 +227,7 @@ window_delete_event_cb (GtkWidget    *widget,
 			OfficeRunner *run)
 {
 	gtk_main_quit ();
+	return FALSE;
 }
 
 static void
@@ -365,7 +365,7 @@ is_new_record (OfficeRunner *run,
 	       int          *new_pos)
 {
 	ORecord *o;
-	guint i, cup;
+	guint i;
 	gboolean new_record;
 	GList *l;
 
@@ -589,7 +589,6 @@ new_runner (void)
 
 int main (int argc, char **argv)
 {
-	GSettings *settings;
 	OfficeRunner *run;
 
 	bindtextdomain (GETTEXT_PACKAGE, GNOMELOCALEDIR);

@@ -471,6 +471,8 @@ set_records_page (OfficeRunner *run)
 	} else {
 		char *better_time;
 
+		gtk_image_set_from_icon_name (IWID ("trophy_image"), "face-uncertain", run->large_icon_size);
+
 		text = _("Too slow for the podium");
 		cur_time = g_strdup_printf (_("You managed to finish the route in <b>%s</b>."),
 					    time_text);

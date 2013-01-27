@@ -1,0 +1,124 @@
+# Czech translation for office-runner.
+# Copyright (C) 2013 office-runner's COPYRIGHT HOLDER
+# This file is distributed under the same license as the office-runner package.
+#
+# Marek Černocký <marek@manet.cz>, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: office-runner master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=office-"
+"runner&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2013-01-21 19:26+0000\n"
+"PO-Revision-Date: 2013-01-27 18:33+0100\n"
+"Last-Translator: Marek Černocký <marek@manet.cz>\n"
+"Language-Team: čeština <gnome-cs-list@gnome.org>\n"
+"Language: cs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Gtranslator 2.91.6\n"
+
+#: ../src/office-runner.c:65
+msgid "Gold Trophy!"
+msgstr "Zlatá medaile!"
+
+#: ../src/office-runner.c:66
+msgid "Silver Trophy!"
+msgstr "Stříbrná medaile!"
+
+#: ../src/office-runner.c:67
+msgid "Bronze Trophy!"
+msgstr "Bronzová medaile!"
+
+#: ../src/office-runner.c:200
+msgid "Running!"
+msgstr "Běží vám čas!"
+
+#: ../src/office-runner.c:300
+#, c-format
+msgid "%d.%02d seconds"
+msgstr "%d.%02d s"
+
+#: ../src/office-runner.c:435
+msgid "Took too long, sorry!"
+msgstr "Máte smůlu, bylo to příliš pomalé!"
+
+#: ../src/office-runner.c:456
+#, c-format
+msgid "You managed to finish the route with the best time ever, <b>%s</b>."
+msgstr "Povedlo se vám trasu dokončit s nejlepším časem v historii, <b>%s</b>."
+
+#: ../src/office-runner.c:459
+#, c-format
+msgid ""
+"You managed to finish the route with the 2<span rise=\"2048\">nd</span> best "
+"time ever, <b>%s</b>."
+msgstr ""
+"Povedlo se vám trasu dokončit s druhým nejlepším časem v historii, <b>%s</b>."
+
+#: ../src/office-runner.c:461
+#, c-format
+msgid "Only <b>%s</b> separate you from the gold trophy!"
+msgstr "Pouhých <b>%s</b> vás dělilo od zlaté medaile!"
+
+#: ../src/office-runner.c:465
+#, c-format
+msgid ""
+"You managed to finish the route with the 3<span rise=\"2048\">rd</span> best "
+"time ever, <b>%s</b>."
+msgstr ""
+"Povedlo se vám trasu dokončit s třetím nejlepším časem v historii, <b>%s</b>."
+
+#: ../src/office-runner.c:467
+#, c-format
+msgid "Only <b>%s</b> separate you from the silver trophy!"
+msgstr "Pouhých <b>%s</b> vás dělilo od stříbrné medaile!"
+
+#: ../src/office-runner.c:476
+msgid "Too slow for the podium"
+msgstr "Příliš pomalé na stupeň vítězů"
+
+#: ../src/office-runner.c:477
+#, c-format
+msgid "You managed to finish the route in <b>%s</b>."
+msgstr "Povedlo se vám trasu dokončit s časem <b>%s</b>."
+
+#: ../src/office-runner.c:480
+#, c-format
+msgid "Only <b>%s</b> separate you from the bronze trophy!"
+msgstr "Pouhých <b>%s</b> vás dělilo od bronzové medaile!"
+
+#: ../src/office-runner.c:510 ../src/office-runner.ui.h:6
+msgid "Run!"
+msgstr "Běž!"
+
+#: ../src/office-runner.c:515
+msgid "Done!"
+msgstr "Hotovo!"
+
+#: ../src/office-runner.c:529
+msgid "Try Again"
+msgstr "Zkusit znovu"
+
+#: ../src/office-runner.ui.h:1 ../src/office-runner.desktop.in.h:1
+msgid "Office Runner"
+msgstr "Kancelářský běžec"
+
+#: ../src/office-runner.ui.h:2
+msgid ""
+" • Click the \"Run!\" button, and then dash to your desk or meeting.\n"
+" • You are allowed to close your laptop lid to run faster\n"
+msgstr ""
+" • Zmáčkněte tlačítko „Běž!“ a utíkejte ke svému pracovišti nebo na "
+"jednání.\n"
+" • Máte dovoleno zavřít víko svého notebooku, abyste mohli běžet rychleji.\n"
+
+#: ../src/office-runner.ui.h:5
+msgid "Rules"
+msgstr "Pravidla"
+
+#: ../src/office-runner.desktop.in.h:2
+msgid "Office game for laptop owners"
+msgstr "Kancelářská hra pro majitele notebooků"

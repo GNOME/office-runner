@@ -1,4 +1,4 @@
-SUBDIRS = po src
+SUBDIRS = po icons src
 
 EXTRA_DIST =			\
 	intltool-extract.in	\

@@ -22,5 +22,15 @@ IT_PROG_INTLTOOL([0.40.0])
 
 PKG_CHECK_MODULES(OFFICE_RUNNER, gtk+-3.0 gnome-settings-daemon >= 3.0)
 
-AC_CONFIG_FILES([Makefile po/Makefile.in src/Makefile])
+AC_CONFIG_FILES([
+	Makefile
+	po/Makefile.in
+	icons/Makefile
+	icons/16x16/Makefile
+	icons/22x22/Makefile
+	icons/24x24/Makefile
+	icons/32x32/Makefile
+	icons/48x48/Makefile
+	icons/256x256/Makefile
+	src/Makefile])
 AC_OUTPUT

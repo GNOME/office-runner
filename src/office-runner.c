@@ -326,7 +326,7 @@ time_to_better_time_text (OfficeRunner *run)
 
 	l = l->prev;
 	o = l->data;
-	return elapsed_to_text (o->time);
+	return elapsed_to_text (run->elapsed - o->time);
 }
 
 static gboolean

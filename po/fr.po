@@ -1,0 +1,125 @@
+# French translation for office-runner.
+# Copyright (C) 2013 office-runner's COPYRIGHT HOLDER
+# This file is distributed under the same license as the office-runner package.
+# Alexandre Franke <alexandre.franke@gmail.com>, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: office-runner master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=office-"
+"runner&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2013-04-24 16:30+0000\n"
+"PO-Revision-Date: 2013-04-25 11:52+0200\n"
+"Last-Translator: Alexandre Franke <alexandre.franke@gmail.com>\n"
+"Language-Team: French <gnomefr@traduc.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../src/office-runner.c:65
+msgid "Gold Trophy!"
+msgstr "Trophée en or !"
+
+#: ../src/office-runner.c:66
+msgid "Silver Trophy!"
+msgstr "Trophée en argent !"
+
+#: ../src/office-runner.c:67
+msgid "Bronze Trophy!"
+msgstr "Trophée en bronze !"
+
+#: ../src/office-runner.c:200
+msgid "Running!"
+msgstr "En course !"
+
+#: ../src/office-runner.c:300
+#, c-format
+msgid "%d.%02d seconds"
+msgstr "%d.%02d secondes"
+
+#: ../src/office-runner.c:435
+msgid "Took too long, sorry!"
+msgstr "Trop long, désolé !"
+
+#: ../src/office-runner.c:456
+#, c-format
+msgid "You managed to finish the route with the best time ever, <b>%s</b>."
+msgstr "Vous avez fini la course avec le meilleur temps, <b>%s</b>."
+
+#: ../src/office-runner.c:459
+#, c-format
+msgid ""
+"You managed to finish the route with the 2<span rise=\"2048\">nd</span> best "
+"time ever, <b>%s</b>."
+msgstr ""
+"Vous avez fini la course avec le 2<span rise=\"2048\">e</span> meilleur "
+"temps, <b>%s</b>."
+
+#: ../src/office-runner.c:461
+#, c-format
+msgid "Only <b>%s</b> separate you from the gold trophy!"
+msgstr "Vous n'êtes qu'à <b>%s</b> du trophée en or !"
+
+#: ../src/office-runner.c:465
+#, c-format
+msgid ""
+"You managed to finish the route with the 3<span rise=\"2048\">rd</span> best "
+"time ever, <b>%s</b>."
+msgstr ""
+"Vous avez fini la course avec le 3<span rise=\"2048\">e</span> meilleur "
+"temps, <b>%s</b>."
+
+#: ../src/office-runner.c:467
+#, c-format
+msgid "Only <b>%s</b> separate you from the silver trophy!"
+msgstr "Vous n'êtes qu'à <b>%s</b> du trophée en argent !"
+
+#: ../src/office-runner.c:476
+msgid "Too slow for the podium"
+msgstr "Trop lent pour le podium"
+
+#: ../src/office-runner.c:477
+#, c-format
+msgid "You managed to finish the route in <b>%s</b>."
+msgstr "Vous avez fini la course en <b>%s</b>."
+
+#: ../src/office-runner.c:480
+#, c-format
+msgid "Only <b>%s</b> separate you from the bronze trophy!"
+msgstr "Vous n'êtes qu'à <b>%s</b> du trophée en bronze !"
+
+#: ../src/office-runner.c:510 ../src/office-runner.ui.h:6
+msgid "Run!"
+msgstr "Courez !"
+
+#: ../src/office-runner.c:515
+msgid "Done!"
+msgstr "Terminé !"
+
+#: ../src/office-runner.c:529
+msgid "Try Again"
+msgstr "Réessayer"
+
+#: ../src/office-runner.ui.h:1 ../src/office-runner.desktop.in.h:1
+msgid "Office Runner"
+msgstr "Course de bureau"
+
+#: ../src/office-runner.ui.h:2
+msgid ""
+" • Click the \"Run!\" button, and then dash to your desk or meeting.\n"
+" • You are allowed to close your laptop lid to run faster\n"
+msgstr ""
+" • Cliquez sur le bouton « Courez ! », puis foncez vers votre bureau ou votre "
+"réunion.\n"
+" • Vous avez le droit de rabattre l'écran de votre ordinateur portable pour "
+"courir plus vite\n"
+
+#: ../src/office-runner.ui.h:5
+msgid "Rules"
+msgstr "Règles"
+
+#: ../src/office-runner.desktop.in.h:2
+msgid "Office game for laptop owners"
+msgstr "Jeu de bureau pour les propriétaires d'ordinateurs portables"

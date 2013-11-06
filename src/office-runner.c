@@ -165,7 +165,7 @@ free_runner (OfficeRunner *run)
 	if (run->timer)
 		g_timer_destroy (run->timer);
 	if (run->timeout)
-		g_source_remove (run->timeout);
+		gtk_widget_remove_tick_callback (run->time_label, run->timeout);
 	g_object_unref (run->ui);
 	if (run->lid_switch_fd > 0)
 		close (run->lid_switch_fd);
@@ -330,8 +330,11 @@ time_to_better_time_text (OfficeRunner *run)
 }
 
 static gboolean
-count_timeout (OfficeRunner *run)
+count_tick (GtkWidget     *time_label,
+	    GdkFrameClock *clock,
+	    gpointer       user_data)
 {
+	OfficeRunner *run = user_data;
 	gdouble elapsed;
 	char *label;
 
@@ -513,8 +516,7 @@ switch_to_page (OfficeRunner *run,
 		set_running_settings (run, TRUE);
 		run->timer = g_timer_new ();
 		label = N_("Done!");
-		run->timeout = g_timeout_add (80, (GSourceFunc) count_timeout, run);
-		count_timeout (run);
+		run->timeout = gtk_widget_add_tick_callback (run->time_label, count_tick, run, NULL);
 		break;
 			   }
 	case SCORES_PAGE: {
@@ -523,7 +525,7 @@ switch_to_page (OfficeRunner *run,
 		run->timer = NULL;
 
 		set_running_settings (run, FALSE);
-		g_source_remove (run->timeout);
+		gtk_widget_remove_tick_callback (run->time_label, run->timeout);
 		run->timeout = 0;
 
 		label = N_("Try Again");
@@ -565,7 +567,7 @@ new_runner (void)
 	gtk_builder_add_from_file (run->ui, PKGDATADIR "office-runner.ui", NULL);
 	run->window = WID ("window1");
 	run->time_label = WID ("time_label");
-	count_timeout (run);
+	count_tick (NULL, NULL, run);
 	run->your_time_label = WID ("your_time_label");
 
 	/* FIXME: No running man for now */

@@ -1,3 +1,9 @@
+1.0.2:
+- More efficient drawing of the timer label
+- Fix conflicting desktop file categories
+- Fix "time to better time" calculation
+- Added French translation
+
 1.0.1:
 - Fix icons on dark backgrounds and clipping problems
 - Updated Serbian translation

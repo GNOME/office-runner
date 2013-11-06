@@ -350,7 +350,7 @@ count_timeout (OfficeRunner *run)
 	gtk_label_set_text (GTK_LABEL (run->time_label), label);
 	g_free (label);
 
-	return TRUE;
+	return G_SOURCE_CONTINUE;
 }
 
 static int

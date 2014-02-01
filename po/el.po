@@ -1,0 +1,128 @@
+# Greek translation for office-runner.
+# Copyright (C) 2014 office-runner's COPYRIGHT HOLDER
+# This file is distributed under the same license as the office-runner package.
+# Dimitris Spingos <dmtrs32@gmail.com>, 2014.
+# Dimitris Spingos (Δημήτρης Σπίγγος) <dmtrs32@gmail.com>, 2014.
+msgid ""
+msgstr ""
+"Project-Id-Version: office-runner master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=office-"
+"runner&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2013-12-19 15:56+0000\n"
+"PO-Revision-Date: 2014-01-31 09:51+0300\n"
+"Last-Translator: Dimitris Spingos (Δημήτρης Σπίγγος) <dmtrs32@gmail.com>\n"
+"Language-Team: team@lists.gnome.gr\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Virtaal 0.7.0\n"
+"X-Project-Style: gnome\n"
+
+#: ../src/office-runner.c:65
+msgid "Gold Trophy!"
+msgstr "Χρυσό βραβείο!"
+
+#: ../src/office-runner.c:66
+msgid "Silver Trophy!"
+msgstr "Ασημένιο βραβείο!"
+
+#: ../src/office-runner.c:67
+msgid "Bronze Trophy!"
+msgstr "Χάλκινο βραβείο!"
+
+#: ../src/office-runner.c:200
+msgid "Running!"
+msgstr "Εκτέλεση!"
+
+#: ../src/office-runner.c:300
+#, c-format
+msgid "%d.%02d seconds"
+msgstr "%d.%02d δευτερόλεπτα"
+
+#: ../src/office-runner.c:438
+msgid "Took too long, sorry!"
+msgstr "Συγνώμη, πήρε πολύ χρόνο!"
+
+#: ../src/office-runner.c:459
+#, c-format
+msgid "You managed to finish the route with the best time ever, <b>%s</b>."
+msgstr ""
+"Κατορθώσατε να τελειώσετε τη διαδρομή με τον καλύτερο χρόνο, <b>%s</b>."
+
+#: ../src/office-runner.c:462
+#, c-format
+msgid ""
+"You managed to finish the route with the 2<span rise=\"2048\">nd</span> best "
+"time ever, <b>%s</b>."
+msgstr ""
+"Κατορθώσατε να τελειώσετε τη διαδρομή με τον 2<span rise=\"2048\">ο</span> "
+"καλύτερο χρόνο, <b>%s</b>."
+
+#: ../src/office-runner.c:464
+#, c-format
+msgid "Only <b>%s</b> separate you from the gold trophy!"
+msgstr "Μόνο ο <b>%s</b> σας χωρίζει από το χρυσό βραβείο!"
+
+#: ../src/office-runner.c:468
+#, c-format
+msgid ""
+"You managed to finish the route with the 3<span rise=\"2048\">rd</span> best "
+"time ever, <b>%s</b>."
+msgstr ""
+"Κατορθώσατε να τελειώσετε τη διαδρομή με τον 3<span rise=\"2048\">ο</span> "
+"καλύτερο χρόνο, <b>%s</b>."
+
+#: ../src/office-runner.c:470
+#, c-format
+msgid "Only <b>%s</b> separate you from the silver trophy!"
+msgstr "Μόνο ο <b>%s</b> σας χωρίζει από το χρυσό βραβείο!"
+
+#: ../src/office-runner.c:479
+msgid "Too slow for the podium"
+msgstr "Υπερβολικά αργά για το βάθρο"
+
+#: ../src/office-runner.c:480
+#, c-format
+msgid "You managed to finish the route in <b>%s</b>."
+msgstr "Κατορθώσατε να τελειώσετε τη διαδρομή σε <b>%s</b>."
+
+#: ../src/office-runner.c:483
+#, c-format
+msgid "Only <b>%s</b> separate you from the bronze trophy!"
+msgstr "Μόνο ο <b>%s</b> σας χωρίζει από το χάλκινο βραβείο!"
+
+#: ../src/office-runner.c:513 ../src/office-runner.ui.h:6
+msgid "Run!"
+msgstr "Εκτέλεση!"
+
+#: ../src/office-runner.c:518
+msgid "Done!"
+msgstr "Έτοιμο!"
+
+#: ../src/office-runner.c:531
+msgid "Try Again"
+msgstr "Προσπαθήστε ξανά"
+
+#: ../src/office-runner.ui.h:1 ../src/office-runner.desktop.in.h:1
+msgid "Office Runner"
+msgstr "Δρομέας γραφείου"
+
+#: ../src/office-runner.ui.h:2
+msgid ""
+" • Click the \"Run!\" button, and then dash to your desk or meeting.\n"
+" • You are allowed to close your laptop lid to run faster\n"
+msgstr ""
+" • Πατήστε το πλήκτρο \"Εκτέλεση!\" και έπειτα ορμίστε στο γραφείο σας ή τη "
+"συγκέντρωση.\n"
+" • Επιτρέπεται να κλείσετε το καπάκι του φορητού υπολογιστή σας για να "
+"εκτελέσετε γρηγορότερα\n"
+
+#: ../src/office-runner.ui.h:5
+msgid "Rules"
+msgstr "Κανόνες"
+
+#: ../src/office-runner.desktop.in.h:2
+msgid "Office game for laptop owners"
+msgstr "Παιχνίδι γραφείου για κατόχους φορητού υπολογιστή"

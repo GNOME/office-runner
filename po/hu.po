@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=office-"
 "runner&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2014-07-23 22:07+0000\n"
-"PO-Revision-Date: 2014-07-24 10:08+0200\n"
+"PO-Revision-Date: 2014-07-24 10:11+0200\n"
 "Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
 "Language-Team: Hungarian <gnome-hu-list@gnome.org>\n"
 "Language: hu\n"
@@ -85,7 +85,7 @@ msgstr "Túl lassú a dobogóhoz"
 #: ../src/office-runner.c:480
 #, c-format
 msgid "You managed to finish the route in <b>%s</b>."
-msgstr "Sikerült befejeznie az útvonalat: <b>s</b>."
+msgstr "Sikerült befejeznie az útvonalat: <b>%s</b>."
 
 #: ../src/office-runner.c:483
 #, c-format
@@ -124,4 +124,5 @@ msgstr "Szabályok"
 #: ../src/office-runner.desktop.in.h:2
 msgid "Office game for laptop owners"
 msgstr "Irodai játék laptoptulajdonosoknak"
+
 

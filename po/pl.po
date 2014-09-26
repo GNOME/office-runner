@@ -4,14 +4,14 @@
 # pomóc w jego rozwijaniu i pielęgnowaniu, napisz do nas:
 # gnomepl@aviary.pl
 # -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-# Piotr Drąg <piotrdrag@gmail.com>, 2012.
-# Aviary.pl <gnomepl@aviary.pl>, 2012.
+# Piotr Drąg <piotrdrag@gmail.com>, 2012-2014.
+# Aviary.pl <gnomepl@aviary.pl>, 2012-2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: office-runner\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-12-12 22:07+0100\n"
-"PO-Revision-Date: 2012-12-12 22:08+0100\n"
+"POT-Creation-Date: 2014-09-26 13:40+0200\n"
+"PO-Revision-Date: 2014-09-26 13:44+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <gnomepl@aviary.pl>\n"
 "Language: pl\n"
@@ -23,83 +23,83 @@ msgstr ""
 "X-Poedit-Language: Polish\n"
 "X-Poedit-Country: Poland\n"
 
-#: ../src/office-runner.c:64
+#: ../src/office-runner.c:65
 msgid "Gold Trophy!"
 msgstr "Złoty puchar!"
 
-#: ../src/office-runner.c:65
+#: ../src/office-runner.c:66
 msgid "Silver Trophy!"
 msgstr "Srebrny puchar!"
 
-#: ../src/office-runner.c:66
+#: ../src/office-runner.c:67
 msgid "Bronze Trophy!"
 msgstr "Brązowy puchar!"
 
-#: ../src/office-runner.c:201
+#: ../src/office-runner.c:200
 msgid "Running!"
 msgstr "Bieganie!"
 
 #: ../src/office-runner.c:300
 #, c-format
 msgid "%d.%02d seconds"
-msgstr "%d.%02d sekund"
+msgstr "%d.%02d s"
 
-#: ../src/office-runner.c:435
+#: ../src/office-runner.c:438
 msgid "Took too long, sorry!"
 msgstr "Za wolno, bardzo nam przykro!"
 
-#: ../src/office-runner.c:456
+#: ../src/office-runner.c:459
 #, c-format
 msgid "You managed to finish the route with the best time ever, <b>%s</b>."
 msgstr "Ukończono trasę z najlepszym wynikiem, <b>%s</b>."
 
-#: ../src/office-runner.c:459
+#: ../src/office-runner.c:462
 #, c-format
 msgid ""
 "You managed to finish the route with the 2<span rise=\"2048\">nd</span> best "
 "time ever, <b>%s</b>."
 msgstr "Ukończono trasę z drugim najlepszym wynikiem, <b>%s</b>."
 
-#: ../src/office-runner.c:461
+#: ../src/office-runner.c:464
 #, c-format
 msgid "Only <b>%s</b> separate you from the gold trophy!"
 msgstr "Tylko <b>%s</b> dzieli cię od złotego pucharu!"
 
-#: ../src/office-runner.c:465
+#: ../src/office-runner.c:468
 #, c-format
 msgid ""
 "You managed to finish the route with the 3<span rise=\"2048\">rd</span> best "
 "time ever, <b>%s</b>."
 msgstr "Ukończono trasę z trzecim najlepszym wynikiem, <b>%s</b>."
 
-#: ../src/office-runner.c:467
+#: ../src/office-runner.c:470
 #, c-format
 msgid "Only <b>%s</b> separate you from the silver trophy!"
 msgstr "Tylko <b>%s</b> dzieli cię od srebrnego pucharu!"
 
-#: ../src/office-runner.c:474
+#: ../src/office-runner.c:479
 msgid "Too slow for the podium"
 msgstr "Za wolno na miejsce na podium"
 
-#: ../src/office-runner.c:475
+#: ../src/office-runner.c:480
 #, c-format
 msgid "You managed to finish the route in <b>%s</b>."
 msgstr "Ukończono trasę w <b>%s</b>."
 
-#: ../src/office-runner.c:478
+#: ../src/office-runner.c:483
 #, c-format
 msgid "Only <b>%s</b> separate you from the bronze trophy!"
 msgstr "Tylko <b>%s</b> dzieli cię od brązowego pucharu!"
 
-#: ../src/office-runner.c:508 ../src/office-runner.ui.h:6
+#: ../src/office-runner.c:513 ../src/office-runner.ui.h:6
 msgid "Run!"
 msgstr "Biegnij!"
 
-#: ../src/office-runner.c:513
+#: ../src/office-runner.c:518
 msgid "Done!"
 msgstr "Skończone!"
 
-#: ../src/office-runner.c:527
+#: ../src/office-runner.c:531
 msgid "Try Again"
 msgstr "Spróbuj ponownie"
 
@@ -123,3 +123,32 @@ msgstr "Zasady"
 #: ../src/office-runner.desktop.in.h:2
 msgid "Office game for laptop owners"
 msgstr "Gra biurowa dla właścicieli laptopów"
+
+#: ../src/office-runner.appdata.xml.in.h:1
+msgid "Close your laptop lid and start running"
+msgstr "Zamknij laptopa i zacznij biec"
+
+#: ../src/office-runner.appdata.xml.in.h:2
+msgid ""
+"<p> Office Runner is a game where tallying up the time taken to go from one "
+"place in your office to the other. </p> <p> Incidentally, it will also let "
+"you close your laptop lid without the computer going to sleep, which is "
+"useful to avoid having to reconnect to the network after your short trip. </"
+"p>"
+msgstr ""
+"<p> Office Runner jest grą w zliczanie czasu, jaki zajmuje przejście z "
+"jednego miejsca w biurze do drugiego. </p> <p> Przy okazji umożliwia ona "
+"zamknięcie pokrywy laptopa bez usypiania komputera, co jest przydatne, jeśli "
+"chcesz uniknąć rozłączenia się z sieci w czasie tak krótkiej podróży. </p>"
+
+#: ../src/office-runner.appdata.xml.in.h:3
+msgid "http://www.hadess.net/2011/09/omg-i-haz-designed-bug-fix.html"
+msgstr "http://www.hadess.net/2011/09/omg-i-haz-designed-bug-fix.html"
+
+#: ../src/office-runner.appdata.xml.in.h:4
+msgid ""
+"https://git.gnome.org/browse/office-runner/plain/src/office-runner-appdata-"
+"screenshot.jpg"
+msgstr ""
+"https://git.gnome.org/browse/office-runner/plain/src/office-runner-appdata-"
+"screenshot.jpg"

@@ -19,7 +19,12 @@ desktopdir = $(datadir)/applications
 desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
 @INTLTOOL_DESKTOP_RULE@
 
-EXTRA_DIST = $(stuff_DATA) $(desktop_in_files)
+appdata_in_files = office-runner.appdata.xml.in
+appdatadir = $(datarootdir)/appdata
+appdata_DATA = $(appdata_in_files:.xml.in=.xml)
+@INTLTOOL_XML_RULE@
+
+EXTRA_DIST = $(stuff_DATA) $(desktop_in_files) $(appdata_in_files)
 
 CLEANFILES = $(desktop_DATA)
 

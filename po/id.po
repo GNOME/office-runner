@@ -1,0 +1,149 @@
+# Indonesian translation for office-runner.
+# Copyright (C) 2014 office-runner's COPYRIGHT HOLDER
+# This file is distributed under the same license as the office-runner package.
+# Andika Triwidada <andika@gmail.com>, 2014.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: office-runner master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=office-"
+"runner&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2014-10-06 22:27+0000\n"
+"PO-Revision-Date: 2014-10-11 17:05+0700\n"
+"Last-Translator: Andika Triwidada <andika@gmail.com>\n"
+"Language-Team: Indonesian <gnome-l10n-id@googlegroups.com>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+
+#: ../src/office-runner.c:65
+msgid "Gold Trophy!"
+msgstr "Medali Emas!"
+
+#: ../src/office-runner.c:66
+msgid "Silver Trophy!"
+msgstr "Medali Perak!"
+
+#: ../src/office-runner.c:67
+msgid "Bronze Trophy!"
+msgstr "Medali Perunggu!"
+
+#: ../src/office-runner.c:200
+msgid "Running!"
+msgstr "Berlari!"
+
+#: ../src/office-runner.c:300
+#, c-format
+msgid "%d.%02d seconds"
+msgstr "%d.%02d detik"
+
+#: ../src/office-runner.c:438
+msgid "Took too long, sorry!"
+msgstr "Terlalu lama, maaf!"
+
+#: ../src/office-runner.c:459
+#, c-format
+msgid "You managed to finish the route with the best time ever, <b>%s</b>."
+msgstr "Anda berhasil menempuh rute dengan waktu terbaik, <b>%s</b>."
+
+#: ../src/office-runner.c:462
+#, c-format
+msgid ""
+"You managed to finish the route with the 2<span rise=\"2048\">nd</span> best "
+"time ever, <b>%s</b>."
+msgstr "Anda berhasil menempuh rute dengan waktu ke-2 terbaik, <b>%s</b>."
+
+#: ../src/office-runner.c:464
+#, c-format
+msgid "Only <b>%s</b> separate you from the gold trophy!"
+msgstr "Hanya <b>%s</b> yang memisahkankan Anda dari medali emas!"
+
+#: ../src/office-runner.c:468
+#, c-format
+msgid ""
+"You managed to finish the route with the 3<span rise=\"2048\">rd</span> best "
+"time ever, <b>%s</b>."
+msgstr "Anda berhasil menempuh rute dengan waktu ke-3 terbaik, <b>%s</b>."
+
+#: ../src/office-runner.c:470
+#, c-format
+msgid "Only <b>%s</b> separate you from the silver trophy!"
+msgstr "Hanya <b>%s</b> yang memisahkankan Anda dari medali perak!"
+
+#: ../src/office-runner.c:479
+msgid "Too slow for the podium"
+msgstr "Terlalu lambat untuk podium"
+
+#: ../src/office-runner.c:480
+#, c-format
+msgid "You managed to finish the route in <b>%s</b>."
+msgstr "Anda berhasil menempuh rute dalam <b>%s</b>."
+
+#: ../src/office-runner.c:483
+#, c-format
+msgid "Only <b>%s</b> separate you from the bronze trophy!"
+msgstr "Hanya <b>%s</b> yang memisahkankan Anda dari medali perunggu!"
+
+#: ../src/office-runner.c:513 ../src/office-runner.ui.h:6
+msgid "Run!"
+msgstr "Lari!"
+
+#: ../src/office-runner.c:518
+msgid "Done!"
+msgstr "Selesai!"
+
+#: ../src/office-runner.c:531
+msgid "Try Again"
+msgstr "Coba Lagi"
+
+#: ../src/office-runner.ui.h:1 ../src/office-runner.desktop.in.h:1
+msgid "Office Runner"
+msgstr "Pelari Kantor"
+
+#: ../src/office-runner.ui.h:2
+msgid ""
+" • Click the \"Run!\" button, and then dash to your desk or meeting.\n"
+" • You are allowed to close your laptop lid to run faster\n"
+msgstr ""
+" • Klik tombol \"Lari!\" lalu melesatlah ke meja atau rapat Anda.\n"
+" • Anda diizinkan menutup lid laptop Anda agar berlari lebih cepat\n"
+
+#: ../src/office-runner.ui.h:5
+msgid "Rules"
+msgstr "Aturan"
+
+#: ../src/office-runner.desktop.in.h:2
+msgid "Office game for laptop owners"
+msgstr "Permainan perkantoran bagi para pemilik laptop"
+
+#: ../src/office-runner.appdata.xml.in.h:1
+msgid "Close your laptop lid and start running"
+msgstr "Tutuplah lid laptop Anda dan mulailah berlari"
+
+#: ../src/office-runner.appdata.xml.in.h:2
+msgid ""
+"<p> Office Runner is a game where tallying up the time taken to go from one "
+"place in your office to the other. </p> <p> Incidentally, it will also let "
+"you close your laptop lid without the computer going to sleep, which is "
+"useful to avoid having to reconnect to the network after your short trip. </"
+"p>"
+msgstr ""
+"<b> Pelari Kantor adalah suatu permainan yang merekam waktu yang diperlukan "
+"untuk pergi dari satu tempat di kantor Anda ke tempat lain. </p> <p> Ini "
+"juga mengizinkan Anda menutup lid laptop Anda tanpa komputer tertidur, yang "
+"berguna untuk mencegah perlunya menyambung ulang ke jaringan setelah "
+"perjalanan singkat Anda. </p>"
+
+#: ../src/office-runner.appdata.xml.in.h:3
+msgid "http://www.hadess.net/2011/09/omg-i-haz-designed-bug-fix.html"
+msgstr "http://www.hadess.net/2011/09/omg-i-haz-designed-bug-fix.html"
+
+#: ../src/office-runner.appdata.xml.in.h:4
+msgid ""
+"https://git.gnome.org/browse/office-runner/plain/src/office-runner-appdata-"
+"screenshot.jpg"
+msgstr ""
+"https://git.gnome.org/browse/office-runner/plain/src/office-runner-appdata-"
+"screenshot.jpg"

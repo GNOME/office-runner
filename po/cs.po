@@ -1,18 +1,17 @@
 # Czech translation for office-runner.
 # Copyright (C) 2013 office-runner's COPYRIGHT HOLDER
 # This file is distributed under the same license as the office-runner package.
-#
-# Marek Černocký <marek@manet.cz>, 2013.
+# Marek Černocký <marek@manet.cz>, 2013, 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: office-runner master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=office-"
 "runner&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-01-21 19:26+0000\n"
-"PO-Revision-Date: 2013-01-27 18:33+0100\n"
+"POT-Creation-Date: 2014-09-26 10:37+0000\n"
+"PO-Revision-Date: 2014-10-31 19:15+0100\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
-"Language-Team: čeština <gnome-cs-list@gnome.org>\n"
+"Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -41,16 +40,16 @@ msgstr "Běží vám čas!"
 msgid "%d.%02d seconds"
 msgstr "%d.%02d s"
 
-#: ../src/office-runner.c:435
+#: ../src/office-runner.c:438
 msgid "Took too long, sorry!"
 msgstr "Máte smůlu, bylo to příliš pomalé!"
 
-#: ../src/office-runner.c:456
+#: ../src/office-runner.c:459
 #, c-format
 msgid "You managed to finish the route with the best time ever, <b>%s</b>."
 msgstr "Povedlo se vám trasu dokončit s nejlepším časem v historii, <b>%s</b>."
 
-#: ../src/office-runner.c:459
+#: ../src/office-runner.c:462
 #, c-format
 msgid ""
 "You managed to finish the route with the 2<span rise=\"2048\">nd</span> best "
@@ -58,12 +57,12 @@ msgid ""
 msgstr ""
 "Povedlo se vám trasu dokončit s druhým nejlepším časem v historii, <b>%s</b>."
 
-#: ../src/office-runner.c:461
+#: ../src/office-runner.c:464
 #, c-format
 msgid "Only <b>%s</b> separate you from the gold trophy!"
 msgstr "Pouhých <b>%s</b> vás dělilo od zlaté medaile!"
 
-#: ../src/office-runner.c:465
+#: ../src/office-runner.c:468
 #, c-format
 msgid ""
 "You managed to finish the route with the 3<span rise=\"2048\">rd</span> best "
@@ -71,40 +70,40 @@ msgid ""
 msgstr ""
 "Povedlo se vám trasu dokončit s třetím nejlepším časem v historii, <b>%s</b>."
 
-#: ../src/office-runner.c:467
+#: ../src/office-runner.c:470
 #, c-format
 msgid "Only <b>%s</b> separate you from the silver trophy!"
 msgstr "Pouhých <b>%s</b> vás dělilo od stříbrné medaile!"
 
-#: ../src/office-runner.c:476
+#: ../src/office-runner.c:479
 msgid "Too slow for the podium"
 msgstr "Příliš pomalé na stupeň vítězů"
 
-#: ../src/office-runner.c:477
+#: ../src/office-runner.c:480
 #, c-format
 msgid "You managed to finish the route in <b>%s</b>."
 msgstr "Povedlo se vám trasu dokončit s časem <b>%s</b>."
 
-#: ../src/office-runner.c:480
+#: ../src/office-runner.c:483
 #, c-format
 msgid "Only <b>%s</b> separate you from the bronze trophy!"
 msgstr "Pouhých <b>%s</b> vás dělilo od bronzové medaile!"
 
-#: ../src/office-runner.c:510 ../src/office-runner.ui.h:6
+#: ../src/office-runner.c:513 ../src/office-runner.ui.h:6
 msgid "Run!"
 msgstr "Běž!"
 
-#: ../src/office-runner.c:515
+#: ../src/office-runner.c:518
 msgid "Done!"
 msgstr "Hotovo!"
 
-#: ../src/office-runner.c:529
+#: ../src/office-runner.c:531
 msgid "Try Again"
 msgstr "Zkusit znovu"
 
 #: ../src/office-runner.ui.h:1 ../src/office-runner.desktop.in.h:1
 msgid "Office Runner"
-msgstr "Kancelářský běžec"
+msgstr "Běžec kancelářský"
 
 #: ../src/office-runner.ui.h:2
 msgid ""
@@ -122,3 +121,32 @@ msgstr "Pravidla"
 #: ../src/office-runner.desktop.in.h:2
 msgid "Office game for laptop owners"
 msgstr "Kancelářská hra pro majitele notebooků"
+
+#: ../src/office-runner.appdata.xml.in.h:1
+msgid "Close your laptop lid and start running"
+msgstr "Zavřete víko svého notebooku a začněte utíkat"
+
+#: ../src/office-runner.appdata.xml.in.h:2
+msgid ""
+"<p> Office Runner is a game where tallying up the time taken to go from one "
+"place in your office to the other. </p> <p> Incidentally, it will also let "
+"you close your laptop lid without the computer going to sleep, which is "
+"useful to avoid having to reconnect to the network after your short trip. </"
+"p>"
+msgstr ""
+"<p>Běžec kancelářský je hra, jejíž podstatou je měřit čas, který zabere "
+"přeběhnutí z jednoho místa kanceláře na druhé.<p> <p>Jen tak mimochodem "
+"umožňuje zavřít víko notebooku, aniž by se počítač uspal, což se hodí, "
+"abyste se nemuseli po vašem krátkém výletě znovu připojovat k síti.</p>"
+
+#: ../src/office-runner.appdata.xml.in.h:3
+msgid "http://www.hadess.net/2011/09/omg-i-haz-designed-bug-fix.html"
+msgstr "http://www.hadess.net/2011/09/omg-i-haz-designed-bug-fix.html"
+
+#: ../src/office-runner.appdata.xml.in.h:4
+msgid ""
+"https://git.gnome.org/browse/office-runner/plain/src/office-runner-appdata-"
+"screenshot.jpg"
+msgstr ""
+"https://git.gnome.org/browse/office-runner/plain/src/office-runner-appdata-"
+"screenshot.jpg"

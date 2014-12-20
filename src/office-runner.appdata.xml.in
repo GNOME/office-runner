@@ -6,20 +6,20 @@
   <id type="desktop">office-runner.desktop</id>
   <metadata_license>CC0-1.0</metadata_license>
   <_summary>Close your laptop lid and start running</_summary>
-  <_description>
-    <p>
+  <description>
+    <_p>
       Office Runner is a game where tallying up the time taken to go from one place in
       your office to the other.
-    </p>
-    <p>
+    </_p>
+    <_p>
       Incidentally, it will also let you close your laptop lid without the computer going
       to sleep, which is useful to avoid having to reconnect to the network after your
       short trip.
-    </p>
-  </_description>
-  <_url type="homepage">http://www.hadess.net/2011/09/omg-i-haz-designed-bug-fix.html</_url>
+    </_p>
+  </description>
+  <url type="homepage">http://www.hadess.net/2011/09/omg-i-haz-designed-bug-fix.html</url>
   <screenshots>
-    <_screenshot type="default">https://git.gnome.org/browse/office-runner/plain/src/office-runner-appdata-screenshot.jpg</_screenshot>
+    <screenshot type="default">https://git.gnome.org/browse/office-runner/plain/src/office-runner-appdata-screenshot.jpg</screenshot>
   </screenshots>
   <updatecontact>hadess@hadess.net</updatecontact>
 </application>

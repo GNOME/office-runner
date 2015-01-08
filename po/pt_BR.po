@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: office-runner master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=office-"
 "runner&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-12-17 10:19+0000\n"
-"PO-Revision-Date: 2013-01-01 14:00-0300\n"
+"POT-Creation-Date: 2014-12-20 12:15+0000\n"
+"PO-Revision-Date: 2015-01-08 16:09-0300\n"
 "Last-Translator: Rafael Ferreira <rafael.f.f1@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
 "Language: pt_BR\n"
@@ -17,20 +17,21 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 1.7.1\n"
 
-#: ../src/office-runner.c:64
+#: ../src/office-runner.c:65
 msgid "Gold Trophy!"
 msgstr "Troféu de ouro!"
 
-#: ../src/office-runner.c:65
+#: ../src/office-runner.c:66
 msgid "Silver Trophy!"
 msgstr "Troféu de prata!"
 
-#: ../src/office-runner.c:66
+#: ../src/office-runner.c:67
 msgid "Bronze Trophy!"
 msgstr "Troféu de bronze!"
 
-#: ../src/office-runner.c:201
+#: ../src/office-runner.c:200
 msgid "Running!"
 msgstr "Correndo!"
 
@@ -39,62 +40,62 @@ msgstr "Correndo!"
 msgid "%d.%02d seconds"
 msgstr "%d.%02d segundos"
 
-#: ../src/office-runner.c:435
+#: ../src/office-runner.c:438
 msgid "Took too long, sorry!"
 msgstr "Demorou demais, sinto muito!"
 
-#: ../src/office-runner.c:456
+#: ../src/office-runner.c:459
 #, c-format
 msgid "You managed to finish the route with the best time ever, <b>%s</b>."
 msgstr "Você terminou a rota com o melhor tempo até agora, <b>%s</b>."
 
-#: ../src/office-runner.c:459
+#: ../src/office-runner.c:462
 #, c-format
 msgid ""
 "You managed to finish the route with the 2<span rise=\"2048\">nd</span> best "
 "time ever, <b>%s</b>."
 msgstr "Você terminou a rota com o 2º melhor tempo até agora, <b>%s</b>."
 
-#: ../src/office-runner.c:461
+#: ../src/office-runner.c:464
 #, c-format
 msgid "Only <b>%s</b> separate you from the gold trophy!"
 msgstr "Apenas <b>%s</b> é o que separa você do troféu de ouro!"
 
-#: ../src/office-runner.c:465
+#: ../src/office-runner.c:468
 #, c-format
 msgid ""
 "You managed to finish the route with the 3<span rise=\"2048\">rd</span> best "
 "time ever, <b>%s</b>."
 msgstr "Você terminou a rota com o 3º melhor resultado até agora, <b>%s</b>."
 
-#: ../src/office-runner.c:467
+#: ../src/office-runner.c:470
 #, c-format
 msgid "Only <b>%s</b> separate you from the silver trophy!"
 msgstr "Apenas <b>%s</b> é o que separa você do troféu de prata!"
 
-#: ../src/office-runner.c:474
+#: ../src/office-runner.c:479
 msgid "Too slow for the podium"
 msgstr "Muito lento para o pódio"
 
-#: ../src/office-runner.c:475
+#: ../src/office-runner.c:480
 #, c-format
 msgid "You managed to finish the route in <b>%s</b>."
 msgstr "Você terminou a rota em <b>%s</b>."
 
-#: ../src/office-runner.c:478
+#: ../src/office-runner.c:483
 #, c-format
 msgid "Only <b>%s</b> separate you from the bronze trophy!"
 msgstr "Apenas <b>%s</b> é o que separa você do troféu de bronze!"
 
-#: ../src/office-runner.c:508 ../src/office-runner.ui.h:6
+#: ../src/office-runner.c:513 ../src/office-runner.ui.h:6
 msgid "Run!"
 msgstr "Correr!"
 
-#: ../src/office-runner.c:513
+#: ../src/office-runner.c:518
 msgid "Done!"
 msgstr "Pronto!"
 
-#: ../src/office-runner.c:527
+#: ../src/office-runner.c:531
 msgid "Try Again"
 msgstr "Tente novamente"
 
@@ -117,3 +118,25 @@ msgstr "Regras"
 #: ../src/office-runner.desktop.in.h:2
 msgid "Office game for laptop owners"
 msgstr "Jogo de escritório para quem tem laptop"
+
+#: ../src/office-runner.appdata.xml.in.h:1
+msgid "Close your laptop lid and start running"
+msgstr "Feche a tela do seu laptop e comece a correr"
+
+#: ../src/office-runner.appdata.xml.in.h:2
+msgid ""
+"Office Runner is a game where tallying up the time taken to go from one "
+"place in your office to the other."
+msgstr ""
+"Corrida de escritório é um jogo no qual se calcula o tempo para ir de um "
+"lugar a outro de seu escritório."
+
+#: ../src/office-runner.appdata.xml.in.h:3
+msgid ""
+"Incidentally, it will also let you close your laptop lid without the "
+"computer going to sleep, which is useful to avoid having to reconnect to the "
+"network after your short trip."
+msgstr ""
+"Incidentalmente, também permitirá fechar a tela do seu laptop sem o "
+"computador dormir, o que é útil para evitar ter que reconectar à rede após "
+"uma breve passeio."

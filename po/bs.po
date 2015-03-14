@@ -1,0 +1,146 @@
+# Bosnian translation for bosnianuniversetranslation
+# Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
+# This file is distributed under the same license as the bosnianuniversetranslation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bosnianuniversetranslation\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=office-"
+"runner&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2015-02-26 23:35+0000\n"
+"PO-Revision-Date: 2015-02-27 09:54+0100\n"
+"Last-Translator: Samir Ribic <samir.ribic@etf.unsa.ba>\n"
+"Language-Team: Bosnian <bs@li.org>\n"
+"Language: bs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2014-10-23 07:21+0000\n"
+"X-Generator: Launchpad (build 17203)\n"
+
+#: ../src/office-runner.c:65
+msgid "Gold Trophy!"
+msgstr "Zlatni trofej!"
+
+#: ../src/office-runner.c:66
+msgid "Silver Trophy!"
+msgstr "Srebreni trofej!"
+
+#: ../src/office-runner.c:67
+msgid "Bronze Trophy!"
+msgstr "Bronzani trofej!"
+
+#: ../src/office-runner.c:200
+msgid "Running!"
+msgstr "Trči!"
+
+#: ../src/office-runner.c:300
+#, c-format
+msgid "%d.%02d seconds"
+msgstr "%d.%02d sekundi"
+
+#: ../src/office-runner.c:438
+msgid "Took too long, sorry!"
+msgstr "Predugo vam je trebalo, izvinite!"
+
+#: ../src/office-runner.c:459
+#, c-format
+msgid "You managed to finish the route with the best time ever, <b>%s</b>."
+msgstr "Uspjeli ste da završite rutu s najboljim vremenom do sad, <b>%s</b>."
+
+#: ../src/office-runner.c:462
+#, c-format
+msgid ""
+"You managed to finish the route with the 2<span rise=\"2048\">nd</span> best "
+"time ever, <b>%s</b>."
+msgstr ""
+"Uspjeli ste da završite rutu sa 2<span rise=\"2048\">.</span> najboljim "
+"vremenom do sad, <b>%s</b>."
+
+#: ../src/office-runner.c:464
+#, c-format
+msgid "Only <b>%s</b> separate you from the gold trophy!"
+msgstr "Samo <b>%s</b> vas razdvaja od zlatnog trofeja!"
+
+#: ../src/office-runner.c:468
+#, c-format
+msgid ""
+"You managed to finish the route with the 3<span rise=\"2048\">rd</span> best "
+"time ever, <b>%s</b>."
+msgstr ""
+"Uspjeli ste da završite rutu sa 3<span rise=\"2048\">.</span> najboljim "
+"vremenom do sad, <b>%s</b>."
+
+#: ../src/office-runner.c:470
+#, c-format
+msgid "Only <b>%s</b> separate you from the silver trophy!"
+msgstr "Samo <b>%s</b> vas razdvaja od srebrenog trofeja!"
+
+#: ../src/office-runner.c:479
+msgid "Too slow for the podium"
+msgstr "Presporo za podij"
+
+#: ../src/office-runner.c:480
+#, c-format
+msgid "You managed to finish the route in <b>%s</b>."
+msgstr "Uspjeli ste da završite rutu u <b>%s</b>."
+
+#: ../src/office-runner.c:483
+#, c-format
+msgid "Only <b>%s</b> separate you from the bronze trophy!"
+msgstr "Samo <b>%s</b> vas razdvaja od bronzanog trofeja!"
+
+#: ../src/office-runner.c:513 ../src/office-runner.ui.h:6
+msgid "Run!"
+msgstr "Trči!"
+
+#: ../src/office-runner.c:518
+msgid "Done!"
+msgstr "Završeno!"
+
+#: ../src/office-runner.c:531
+msgid "Try Again"
+msgstr "Pokušaj ponovo"
+
+#: ../src/office-runner.ui.h:1 ../src/office-runner.desktop.in.h:1
+msgid "Office Runner"
+msgstr "Office Runner"
+
+#: ../src/office-runner.ui.h:2
+msgid ""
+" • Click the \"Run!\" button, and then dash to your desk or meeting.\n"
+" • You are allowed to close your laptop lid to run faster\n"
+msgstr ""
+" •Pritisnite \"Trči!\" dugme, i letite prema svom stolu ili sastanku.\n"
+" •Dozvoljeno je da zatvorite svoj laptop da trčite brže\n"
+
+#: ../src/office-runner.ui.h:5
+msgid "Rules"
+msgstr "Pravila"
+
+#: ../src/office-runner.desktop.in.h:2
+msgid "Office game for laptop owners"
+msgstr "Uredska igra za posjednike laptopa"
+
+#: ../src/office-runner.appdata.xml.in.h:1
+msgid "Close your laptop lid and start running"
+msgstr "Zatvorite poklopac laptopa i potrčite"
+
+#: ../src/office-runner.appdata.xml.in.h:2
+msgid ""
+"Office Runner is a game where tallying up the time taken to go from one "
+"place in your office to the other."
+msgstr ""
+"Office Runner is je igra u kojoj se mjeri vrijeme da prećete iz jednog "
+"mjesta u uredu na drugo."
+
+#: ../src/office-runner.appdata.xml.in.h:3
+msgid ""
+"Incidentally, it will also let you close your laptop lid without the "
+"computer going to sleep, which is useful to avoid having to reconnect to the "
+"network after your short trip."
+msgstr ""
+" Između ostalog, omogućuje vam da zatvorite poklopac laptopa bez "
+"uspavljivanja računara, što je korisno da izbjegnete ponovno povezivanje "
+"nakon kraćeg puta. "

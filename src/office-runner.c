@@ -23,7 +23,6 @@
 #include <gio/gunixfdlist.h>
 #include <gtk/gtk.h>
 #include <glib/gi18n.h>
-#include <gnome-settings-daemon/gsd-enums.h>
 #include <math.h>
 
 #define LOGIND_DBUS_NAME                       "org.freedesktop.login1"

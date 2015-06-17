@@ -24,6 +24,7 @@
 #include <gtk/gtk.h>
 #include <glib/gi18n.h>
 #include <math.h>
+#include <upower.h>
 
 #define LOGIND_DBUS_NAME                       "org.freedesktop.login1"
 #define LOGIND_DBUS_PATH                       "/org/freedesktop/login1"
@@ -74,6 +75,8 @@ typedef struct {
 typedef struct {
 	GDBusConnection *connection;
 	int lid_switch_fd;
+	UpClient *client;
+	guint reenable_block_id;
 
 	GtkBuilder *ui;
 	GtkWidget *window;
@@ -166,6 +169,9 @@ free_runner (OfficeRunner *run)
 	if (run->timeout)
 		gtk_widget_remove_tick_callback (run->time_label, run->timeout);
 	g_object_unref (run->ui);
+	if (run->reenable_block_id > 0)
+		g_source_remove (run->reenable_block_id);
+	g_clear_object (&run->client);
 	if (run->lid_switch_fd > 0)
 		close (run->lid_switch_fd);
 	g_object_unref (run->connection);
@@ -179,6 +185,25 @@ free_runner (OfficeRunner *run)
 	g_free (run);
 }
 
+static gboolean
+reenable_block_timeout_cb (gpointer user_data)
+{
+	OfficeRunner *run = user_data;
+
+	set_running_settings (run, TRUE);
+	run->reenable_block_id = 0;
+	return G_SOURCE_REMOVE;
+}
+
+static void
+disable_block_timeout (OfficeRunner *run)
+{
+	if (run->reenable_block_id > 0) {
+		g_source_remove (run->reenable_block_id);
+		run->reenable_block_id = 0;
+	}
+}
+
 static void
 set_running_settings (OfficeRunner *run,
 		      gboolean      running)
@@ -189,14 +214,18 @@ set_running_settings (OfficeRunner *run,
 		gint idx;
 		GError *error = NULL;
 
-		g_assert (run->lid_switch_fd == -1);
+		if (run->lid_switch_fd != -1) {
+			g_debug ("Already blocked");
+			return;
+		}
+		g_debug ("Blocking lid action");
 
 		ret = g_dbus_connection_call_with_unix_fd_list_sync (run->connection,
 								     LOGIND_DBUS_NAME,
 								     LOGIND_DBUS_PATH,
 								     LOGIND_DBUS_INTERFACE,
 								     "Inhibit",
-								     g_variant_new ("(ssss)", "handle-lid-switch", g_get_user_name(), _("Running!"), "block"),
+								     g_variant_new ("(ssss)", "handle-lid-switch", g_get_user_name(), _("Office Runner is running"), "block"),
 								     NULL,
 								     G_DBUS_CALL_FLAGS_NONE,
 								     -1,
@@ -213,10 +242,14 @@ set_running_settings (OfficeRunner *run,
 		g_object_unref (fd_list);
 		g_variant_unref (ret);
 	} else {
-		g_assert (run->lid_switch_fd > 0);
+		if (run->lid_switch_fd != -1) {
+			close (run->lid_switch_fd);
+			run->lid_switch_fd = -1;
 
-		close (run->lid_switch_fd);
-		run->lid_switch_fd = -1;
+			g_debug ("Unblocking lid action");
+		} else {
+			g_debug ("Already released the blocking inhibitor");
+		}
 	}
 }
 
@@ -503,19 +536,19 @@ static void
 switch_to_page (OfficeRunner *run,
 		int           page)
 {
-	const char *label = NULL;
-
 	gtk_notebook_set_current_page (GTK_NOTEBOOK (run->notebook), page);
 
 	switch (page) {
 	case RUN_PAGE:
-		label = N_("Run!");
+		set_running_settings (run, TRUE);
+		gtk_label_set_text (GTK_LABEL (WID ("run_button_label")), _("Run!"));
 		break;
 	case RUNNING_PAGE: {
 		set_running_settings (run, TRUE);
+		disable_block_timeout (run);
 		run->timer = g_timer_new ();
-		label = N_("Done!");
 		run->timeout = gtk_widget_add_tick_callback (run->time_label, count_tick, run, NULL);
+		gtk_label_set_text (GTK_LABEL (WID ("run_button_label")), _("Done!"));
 		break;
 			   }
 	case SCORES_PAGE: {
@@ -523,20 +556,19 @@ switch_to_page (OfficeRunner *run,
 		g_timer_destroy (run->timer);
 		run->timer = NULL;
 
-		set_running_settings (run, FALSE);
 		gtk_widget_remove_tick_callback (run->time_label, run->timeout);
 		run->timeout = 0;
 
-		label = N_("Try Again");
-
+		gtk_label_set_text (GTK_LABEL (WID ("run_button_label")), _("Try Again"));
 		set_records_page (run);
+
+		/* This should be enough time for the machine to go to sleep */
+		set_running_settings (run, FALSE);
+		run->reenable_block_id = g_timeout_add_seconds (3, reenable_block_timeout_cb, run);
 
 		break;
 			  }
 	}
-
-	gtk_label_set_text (GTK_LABEL (WID ("run_button_label")),
-			    label);
 }
 
 static void
@@ -552,6 +584,43 @@ run_button_clicked_cb (GtkWidget    *button,
 	switch_to_page (run, page);
 }
 
+static void
+lid_is_closed_cb (GObject    *gobject,
+		  GParamSpec *pspec,
+		  gpointer    user_data)
+{
+	OfficeRunner *run = user_data;
+	int page;
+	gboolean lid_is_closed;
+
+	g_object_get (gobject, "lid-is-closed", &lid_is_closed, NULL);
+
+	page = gtk_notebook_get_current_page (GTK_NOTEBOOK (run->notebook));
+
+	g_message ("lid is closed %d current_page %d", lid_is_closed, page);
+
+	switch (page) {
+	case RUN_PAGE:
+		if (lid_is_closed) {
+			g_debug ("Switching from run page to running page (lid closed)");
+			run_button_clicked_cb (NULL, run);
+		}
+		break;
+	case RUNNING_PAGE:
+		if (!lid_is_closed) {
+			g_debug ("Switching from running page to scores page (lid open)");
+			run_button_clicked_cb (NULL, run);
+		}
+		break;
+	case SCORES_PAGE:
+		if (lid_is_closed && run->lid_switch_fd != -1) {
+			g_debug ("Switching from scores page to running page");
+			run_button_clicked_cb (NULL, run);
+		}
+		break;
+	}
+}
+
 static OfficeRunner *
 new_runner (void)
 {
@@ -561,6 +630,9 @@ new_runner (void)
 	run->connection = g_bus_get_sync (G_BUS_TYPE_SYSTEM,
 					  NULL, NULL);
 	run->lid_switch_fd = -1;
+	run->client = up_client_new ();
+	g_signal_connect (G_OBJECT (run->client), "notify::lid-is-closed",
+			  G_CALLBACK (lid_is_closed_cb), run);
 
 	run->ui = gtk_builder_new ();
 	gtk_builder_add_from_file (run->ui, PKGDATADIR "office-runner.ui", NULL);
@@ -586,6 +658,9 @@ new_runner (void)
 	run->notebook = WID ("notebook1");
 
 	load_records (run);
+
+	/* Start the blocking here */
+	switch_to_page (run, RUN_PAGE);
 
 	return run;
 }

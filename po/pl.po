@@ -4,14 +4,14 @@
 # pomóc w jego rozwijaniu i pielęgnowaniu, napisz do nas:
 # gnomepl@aviary.pl
 # -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-# Piotr Drąg <piotrdrag@gmail.com>, 2012-2014.
-# Aviary.pl <gnomepl@aviary.pl>, 2012-2014.
+# Piotr Drąg <piotrdrag@gmail.com>, 2012-2015.
+# Aviary.pl <gnomepl@aviary.pl>, 2012-2015.
 msgid ""
 msgstr ""
 "Project-Id-Version: office-runner\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-21 20:18+0100\n"
-"PO-Revision-Date: 2014-12-21 20:19+0100\n"
+"POT-Creation-Date: 2015-06-18 18:58+0200\n"
+"PO-Revision-Date: 2015-06-18 19:00+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <gnomepl@aviary.pl>\n"
 "Language: pl\n"
@@ -35,71 +35,71 @@ msgstr "Srebrny puchar!"
 msgid "Bronze Trophy!"
 msgstr "Brązowy puchar!"
 
-#: ../src/office-runner.c:200
-msgid "Running!"
-msgstr "Bieganie!"
+#: ../src/office-runner.c:228
+msgid "Office Runner is running"
+msgstr "Office Runner jest uruchomiony"
 
-#: ../src/office-runner.c:300
+#: ../src/office-runner.c:332
 #, c-format
 msgid "%d.%02d seconds"
 msgstr "%d.%02d s"
 
-#: ../src/office-runner.c:438
+#: ../src/office-runner.c:470
 msgid "Took too long, sorry!"
 msgstr "Za wolno, bardzo nam przykro!"
 
-#: ../src/office-runner.c:459
+#: ../src/office-runner.c:491
 #, c-format
 msgid "You managed to finish the route with the best time ever, <b>%s</b>."
 msgstr "Ukończono trasę z najlepszym wynikiem, <b>%s</b>."
 
-#: ../src/office-runner.c:462
+#: ../src/office-runner.c:494
 #, c-format
 msgid ""
 "You managed to finish the route with the 2<span rise=\"2048\">nd</span> best "
 "time ever, <b>%s</b>."
 msgstr "Ukończono trasę z drugim najlepszym wynikiem, <b>%s</b>."
 
-#: ../src/office-runner.c:464
+#: ../src/office-runner.c:496
 #, c-format
 msgid "Only <b>%s</b> separate you from the gold trophy!"
 msgstr "Tylko <b>%s</b> dzieli cię od złotego pucharu!"
 
-#: ../src/office-runner.c:468
+#: ../src/office-runner.c:500
 #, c-format
 msgid ""
 "You managed to finish the route with the 3<span rise=\"2048\">rd</span> best "
 "time ever, <b>%s</b>."
 msgstr "Ukończono trasę z trzecim najlepszym wynikiem, <b>%s</b>."
 
-#: ../src/office-runner.c:470
+#: ../src/office-runner.c:502
 #, c-format
 msgid "Only <b>%s</b> separate you from the silver trophy!"
 msgstr "Tylko <b>%s</b> dzieli cię od srebrnego pucharu!"
 
-#: ../src/office-runner.c:479
+#: ../src/office-runner.c:511
 msgid "Too slow for the podium"
 msgstr "Za wolno na miejsce na podium"
 
-#: ../src/office-runner.c:480
+#: ../src/office-runner.c:512
 #, c-format
 msgid "You managed to finish the route in <b>%s</b>."
 msgstr "Ukończono trasę w <b>%s</b>."
 
-#: ../src/office-runner.c:483
+#: ../src/office-runner.c:515
 #, c-format
 msgid "Only <b>%s</b> separate you from the bronze trophy!"
 msgstr "Tylko <b>%s</b> dzieli cię od brązowego pucharu!"
 
-#: ../src/office-runner.c:513 ../src/office-runner.ui.h:6
+#: ../src/office-runner.c:544 ../src/office-runner.ui.h:6
 msgid "Run!"
 msgstr "Biegnij!"
 
-#: ../src/office-runner.c:518
+#: ../src/office-runner.c:551
 msgid "Done!"
 msgstr "Skończone!"
 
-#: ../src/office-runner.c:531
+#: ../src/office-runner.c:562
 msgid "Try Again"
 msgstr "Spróbuj ponownie"
 

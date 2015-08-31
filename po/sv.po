@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: office-runner master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=office-"
 "runner&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-04-17 11:20+0000\n"
-"PO-Revision-Date: 2015-05-06 00:18+0100\n"
-"Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
+"POT-Creation-Date: 2015-06-17 16:57+0000\n"
+"PO-Revision-Date: 2015-08-22 08:59+0100\n"
+"Last-Translator: Josef Andersson <josef.andersson@fripost.org>\n"
 "Language-Team: Swedish <gnome-se-list@gnome.org>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.7.6\n"
+"X-Generator: Poedit 1.7.5\n"
 
 #: ../src/office-runner.c:65
 msgid "Gold Trophy!"
@@ -31,71 +31,71 @@ msgstr "Silverpokal!"
 msgid "Bronze Trophy!"
 msgstr "Bronspokal!"
 
-#: ../src/office-runner.c:200
-msgid "Running!"
-msgstr "Springer!"
+#: ../src/office-runner.c:228
+msgid "Office Runner is running"
+msgstr "Office Runner körs"
 
-#: ../src/office-runner.c:300
+#: ../src/office-runner.c:332
 #, c-format
 msgid "%d.%02d seconds"
 msgstr "%d,%02d sekunder"
 
-#: ../src/office-runner.c:438
+#: ../src/office-runner.c:470
 msgid "Took too long, sorry!"
 msgstr "Tog tyvärr för lång tid!"
 
-#: ../src/office-runner.c:459
+#: ../src/office-runner.c:491
 #, c-format
 msgid "You managed to finish the route with the best time ever, <b>%s</b>."
 msgstr "Du slutförde rutten på den bästa tiden någonsin, <b>%s</b>."
 
-#: ../src/office-runner.c:462
+#: ../src/office-runner.c:494
 #, c-format
 msgid ""
 "You managed to finish the route with the 2<span rise=\"2048\">nd</span> best "
 "time ever, <b>%s</b>."
 msgstr "Du slutförde rutten på den näst bästa tiden någonsin, <b>%s</b>."
 
-#: ../src/office-runner.c:464
+#: ../src/office-runner.c:496
 #, c-format
 msgid "Only <b>%s</b> separate you from the gold trophy!"
 msgstr "Endast <b>%s</b> från guldpokalen!"
 
-#: ../src/office-runner.c:468
+#: ../src/office-runner.c:500
 #, c-format
 msgid ""
 "You managed to finish the route with the 3<span rise=\"2048\">rd</span> best "
 "time ever, <b>%s</b>."
 msgstr "Du slutförde rutten på den tredje bästa tiden någonsin, <b>%s</b>."
 
-#: ../src/office-runner.c:470
+#: ../src/office-runner.c:502
 #, c-format
 msgid "Only <b>%s</b> separate you from the silver trophy!"
 msgstr "Endast <b>%s</b> från silverpokalen!"
 
-#: ../src/office-runner.c:479
+#: ../src/office-runner.c:511
 msgid "Too slow for the podium"
 msgstr "För långsam för prispallen"
 
-#: ../src/office-runner.c:480
+#: ../src/office-runner.c:512
 #, c-format
 msgid "You managed to finish the route in <b>%s</b>."
 msgstr "Du slutförde rutten på <b>%s</b>."
 
-#: ../src/office-runner.c:483
+#: ../src/office-runner.c:515
 #, c-format
 msgid "Only <b>%s</b> separate you from the bronze trophy!"
 msgstr "Endast <b>%s</b> från bronspokalen!"
 
-#: ../src/office-runner.c:513 ../src/office-runner.ui.h:6
+#: ../src/office-runner.c:544 ../src/office-runner.ui.h:6
 msgid "Run!"
 msgstr "Spring!"
 
-#: ../src/office-runner.c:518
+#: ../src/office-runner.c:551
 msgid "Done!"
 msgstr "Klar!"
 
-#: ../src/office-runner.c:531
+#: ../src/office-runner.c:562
 msgid "Try Again"
 msgstr "Försök igen"
 
@@ -141,3 +141,6 @@ msgstr ""
 "Händelsevis låter det dig också stänga locket på din bärbara dator utan att "
 "din dator försätts i strömsparläge, vilket är praktiskt för att undvika att "
 "behöva ansluta till nätverket på nytt efter din korta färd."
+
+#~ msgid "Running!"
+#~ msgstr "Springer!"

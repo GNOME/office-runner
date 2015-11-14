@@ -1,0 +1,144 @@
+# Portuguese translation for office-runner.
+# Copyright (C) 2015 office-runner's COPYRIGHT HOLDER
+# This file is distributed under the same license as the office-runner package.
+# Tiago S. <almosthumane@portugalmail.pt>, 2015.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: office-runner master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=office-"
+"runner&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2015-10-31 01:50+0000\n"
+"PO-Revision-Date: 2015-11-14 10:54+0100\n"
+"Last-Translator: Pedro Albuquerque <palbuquerque73@gmail.com>\n"
+"Language-Team: Portuguese <gnome_pt@yahoogroups.com>\n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.5.4\n"
+
+#: ../src/office-runner.c:65
+msgid "Gold Trophy!"
+msgstr "Taça de ouro!"
+
+#: ../src/office-runner.c:66
+msgid "Silver Trophy!"
+msgstr "Taça de prata!"
+
+#: ../src/office-runner.c:67
+msgid "Bronze Trophy!"
+msgstr "Taça de bronze!"
+
+#: ../src/office-runner.c:228
+msgid "Office Runner is running"
+msgstr "O Corredor de escritório está em execução"
+
+#: ../src/office-runner.c:332
+#, c-format
+msgid "%d.%02d seconds"
+msgstr "%d.%02d segundos"
+
+#: ../src/office-runner.c:470
+msgid "Took too long, sorry!"
+msgstr "Demorou demasiado tempo, lamentamos!"
+
+#: ../src/office-runner.c:491
+#, c-format
+msgid "You managed to finish the route with the best time ever, <b>%s</b>."
+msgstr "Conseguiu terminar a rota no melhor tempo de sempre, <b>%s</b>."
+
+#: ../src/office-runner.c:494
+#, c-format
+msgid ""
+"You managed to finish the route with the 2<span rise=\"2048\">nd</span> best "
+"time ever, <b>%s</b>."
+msgstr ""
+"Conseguiu terminar a rota no segundo melhor tempo de sempre, <b>%s</b>."
+
+#: ../src/office-runner.c:496
+#, c-format
+msgid "Only <b>%s</b> separate you from the gold trophy!"
+msgstr "Só <b>%s</b> o separam da taça de ouro!"
+
+#: ../src/office-runner.c:500
+#, c-format
+msgid ""
+"You managed to finish the route with the 3<span rise=\"2048\">rd</span> best "
+"time ever, <b>%s</b>."
+msgstr ""
+"Conseguiu terminar a rota no terceiro melhor tempo de sempre, <b>%s</b>."
+
+#: ../src/office-runner.c:502
+#, c-format
+msgid "Only <b>%s</b> separate you from the silver trophy!"
+msgstr "Só <b>%s</b> o separam da taça de prata!"
+
+#: ../src/office-runner.c:511
+msgid "Too slow for the podium"
+msgstr "Demasiado lento para o pódio"
+
+#: ../src/office-runner.c:512
+#, c-format
+msgid "You managed to finish the route in <b>%s</b>."
+msgstr "Conseguiu terminar a rota em <b>%s</b>."
+
+#: ../src/office-runner.c:515
+#, c-format
+msgid "Only <b>%s</b> separate you from the bronze trophy!"
+msgstr "Só <b>%s</b> o separam da taça de bronze!"
+
+#: ../src/office-runner.c:544 ../src/office-runner.ui.h:6
+msgid "Run!"
+msgstr "Corra!"
+
+#: ../src/office-runner.c:551
+msgid "Done!"
+msgstr "Feito!"
+
+#: ../src/office-runner.c:562
+msgid "Try Again"
+msgstr "Tente novamente"
+
+#: ../src/office-runner.ui.h:1 ../src/office-runner.desktop.in.h:1
+msgid "Office Runner"
+msgstr "Corredor de escritório"
+
+#: ../src/office-runner.ui.h:2
+msgid ""
+" • Click the \"Run!\" button, and then dash to your desk or meeting.\n"
+" • You are allowed to close your laptop lid to run faster\n"
+msgstr ""
+"• Clique em Corra! e vá para a sua secretária ou reunião.\n"
+"• Pode fechar a tampa do portátil para correr mais rápido\n"
+
+#: ../src/office-runner.ui.h:5
+msgid "Rules"
+msgstr "Regras"
+
+#: ../src/office-runner.desktop.in.h:2
+msgid "Office game for laptop owners"
+msgstr "Jogo de escritório para donos de portáteis"
+
+#: ../src/office-runner.appdata.xml.in.h:1
+msgid "Close your laptop lid and start running"
+msgstr "Feche a tampa do seu portátil e comece a correr"
+
+#: ../src/office-runner.appdata.xml.in.h:2
+msgid ""
+"Office Runner is a game where tallying up the time taken to go from one "
+"place in your office to the other."
+msgstr ""
+"Corredor de escritório é um jogo onde se conta o tempo que leva a chegar de "
+"um ponto do seu escritório a outro."
+
+#: ../src/office-runner.appdata.xml.in.h:3
+msgid ""
+"Incidentally, it will also let you close your laptop lid without the "
+"computer going to sleep, which is useful to avoid having to reconnect to the "
+"network after your short trip."
+msgstr ""
+"Como consequência, isto leva-o a fechar a tampa do seu portátil sem que o "
+"computador entre em suspensão, o que pode ser útil por evitar que tenha de "
+"voltar a ligar à rede após a sua viagem curta."

@@ -1,14 +1,14 @@
 # Serbian translation for office-runner.
 # Copyright (C) 2013 office-runner's COPYRIGHT HOLDER
 # This file is distributed under the same license as the office-runner package.
-# Miroslav Nikolić <miroslavnikolic@rocketmail.com>, 2013—2014.
+# Miroslav Nikolić <miroslavnikolic@rocketmail.com>, 2013—2016.
 msgid ""
 msgstr ""
 "Project-Id-Version: office-runner master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=office-"
 "runner&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-12-20 12:15+0000\n"
-"PO-Revision-Date: 2014-12-27 16:13+0200\n"
+"POT-Creation-Date: 2015-06-17 16:57+0000\n"
+"PO-Revision-Date: 2016-01-03 15:53+0200\n"
 "Last-Translator: Miroslav Nikolić <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: Serbian <gnom@prevod.org>\n"
 "Language: sr\n"
@@ -31,25 +31,26 @@ msgstr "Srebrna medalja!"
 msgid "Bronze Trophy!"
 msgstr "Bronzana medalja!"
 
-#: ../src/office-runner.c:200
-msgid "Running!"
-msgstr "Trčim!"
+#: ../src/office-runner.c:228
+#| msgid "Office Runner"
+msgid "Office Runner is running"
+msgstr "Kancelarijski trkač je pokrenut"
 
-#: ../src/office-runner.c:300
+#: ../src/office-runner.c:332
 #, c-format
 msgid "%d.%02d seconds"
 msgstr "%d.%02d sekunde"
 
-#: ../src/office-runner.c:438
+#: ../src/office-runner.c:470
 msgid "Took too long, sorry!"
 msgstr "Predugo je to trajalo, izvinite!"
 
-#: ../src/office-runner.c:459
+#: ../src/office-runner.c:491
 #, c-format
 msgid "You managed to finish the route with the best time ever, <b>%s</b>."
 msgstr "Završili ste sa najboljim vremenom do sada, <b>%s</b>."
 
-#: ../src/office-runner.c:462
+#: ../src/office-runner.c:494
 #, c-format
 msgid ""
 "You managed to finish the route with the 2<span rise=\"2048\">nd</span> best "
@@ -58,12 +59,12 @@ msgstr ""
 "Završili ste sa 2<span rise=\"2048\">-im</span> najboljim vremenom do sada, "
 "<b>%s</b>."
 
-#: ../src/office-runner.c:464
+#: ../src/office-runner.c:496
 #, c-format
 msgid "Only <b>%s</b> separate you from the gold trophy!"
 msgstr "Samo <b>%s</b> vas deli od zlatne medalje!"
 
-#: ../src/office-runner.c:468
+#: ../src/office-runner.c:500
 #, c-format
 msgid ""
 "You managed to finish the route with the 3<span rise=\"2048\">rd</span> best "
@@ -72,34 +73,34 @@ msgstr ""
 "Završili ste sa 3<span rise=\"2048\">-im</span> najboljim vremenom do sada, "
 "<b>%s</b>."
 
-#: ../src/office-runner.c:470
+#: ../src/office-runner.c:502
 #, c-format
 msgid "Only <b>%s</b> separate you from the silver trophy!"
 msgstr "Samo <b>%s</b> vas deli od srebrne medalje!"
 
-#: ../src/office-runner.c:479
+#: ../src/office-runner.c:511
 msgid "Too slow for the podium"
 msgstr "Previše sporo za postolje"
 
-#: ../src/office-runner.c:480
+#: ../src/office-runner.c:512
 #, c-format
 msgid "You managed to finish the route in <b>%s</b>."
 msgstr "Završili ste za <b>%s</b>."
 
-#: ../src/office-runner.c:483
+#: ../src/office-runner.c:515
 #, c-format
 msgid "Only <b>%s</b> separate you from the bronze trophy!"
 msgstr "Samo <b>%s</b> vas deli od bronzane medalje!"
 
-#: ../src/office-runner.c:513 ../src/office-runner.ui.h:6
+#: ../src/office-runner.c:544 ../src/office-runner.ui.h:6
 msgid "Run!"
 msgstr "Trči!"
 
-#: ../src/office-runner.c:518
+#: ../src/office-runner.c:551
 msgid "Done!"
 msgstr "Gotovo!"
 
-#: ../src/office-runner.c:531
+#: ../src/office-runner.c:562
 msgid "Try Again"
 msgstr "Pokušaj ponovo"
 
@@ -138,12 +139,6 @@ msgstr ""
 "stignete od jednog mesta u vašoj kancelariji do drugog."
 
 #: ../src/office-runner.appdata.xml.in.h:3
-#| msgid ""
-#| "<p> Office Runner is a game where tallying up the time taken to go from "
-#| "one place in your office to the other. </p> <p> Incidentally, it will "
-#| "also let you close your laptop lid without the computer going to sleep, "
-#| "which is useful to avoid having to reconnect to the network after your "
-#| "short trip. </p>"
 msgid ""
 "Incidentally, it will also let you close your laptop lid without the "
 "computer going to sleep, which is useful to avoid having to reconnect to the "
@@ -152,6 +147,9 @@ msgstr ""
 "Isto tako, dopušta vam da zatvorite poklopac vašeg prenosnog računara a da "
 "se isti ne uspava, što je korisno jer time izbegavate ponovno povezivanje na "
 "mrežu nakon vašeg kratkog izleta."
+
+#~ msgid "Running!"
+#~ msgstr "Trčim!"
 
 #~ msgid "http://www.hadess.net/2011/09/omg-i-haz-designed-bug-fix.html"
 #~ msgstr "http://www.hadess.net/2011/09/omg-i-haz-designed-bug-fix.html"

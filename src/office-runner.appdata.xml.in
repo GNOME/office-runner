@@ -22,4 +22,5 @@
     <screenshot type="default">https://git.gnome.org/browse/office-runner/plain/src/office-runner-appdata-screenshot.jpg</screenshot>
   </screenshots>
   <updatecontact>hadess@hadess.net</updatecontact>
+  <project_group>GNOME</project_group>
 </application>

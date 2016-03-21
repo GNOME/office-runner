@@ -1,0 +1,147 @@
+# Occitan translation for office-runner.
+# Copyright (C) 2013 office-runner's COPYRIGHT HOLDER
+# This file is distributed under the same license as the office-runner package.
+# Cédric Valmary (totenoc.eu) <cvalmary@yahoo.fr>, 2016.
+msgid ""
+msgstr ""
+"Project-Id-Version: office-runner master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=office-"
+"runner&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2015-06-17 16:57+0000\n"
+"PO-Revision-Date: 2016-03-21 17:51+0200\n"
+"Last-Translator: Cédric Valmary (totenoc.eu) <cvalmary@yahoo.fr>\n"
+"Language-Team: Tot En Òc\n"
+"Language: oc\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Virtaal 0.7.1\n"
+"X-Project-Style: gnome\n"
+
+#: ../src/office-runner.c:65
+msgid "Gold Tròphy!"
+msgstr "Trofèu d'aur !"
+
+#: ../src/office-runner.c:66
+msgid "Silver Tròphy!"
+msgstr "Trofèu d'argent !"
+
+#: ../src/office-runner.c:67
+msgid "Bronze Tròphy!"
+msgstr "Trofèu de bronze !"
+
+#: ../src/office-runner.c:228
+#| msgid "Office Runner"
+msgid "Office Runner is running"
+msgstr ""
+
+#: ../src/office-runner.c:332
+#, c-format
+msgid "%d.%02d seconds"
+msgstr "%d.%02d segondas"
+
+#: ../src/office-runner.c:470
+msgid "Took too long, sorry!"
+msgstr "Tròp long, o planhèm !"
+
+#: ../src/office-runner.c:491
+#, c-format
+msgid "You managed to finish the route with the best time ever, <b>%s</b>."
+msgstr "Avètz acabat la corsa amb lo melhor temps, <b>%s</b>."
+
+#: ../src/office-runner.c:494
+#, c-format
+msgid ""
+"You managed to finish the route with the 2<span rise=\"2048\">nd</span> best "
+"time ever, <b>%s</b>."
+msgstr ""
+"Avètz acabat la corsa amb lo 2<span rise=\"2048\">nd</span> melhor temps, "
+"<b>%s</b>."
+
+#: ../src/office-runner.c:496
+#, c-format
+msgid "Only <b>%s</b> separate you from the gold tròphy!"
+msgstr "Sètz pas qu'a <b>%s</b> del trofèu d'aur !"
+
+#: ../src/office-runner.c:500
+#, c-format
+msgid ""
+"You managed to finish the route with the 3<span rise=\"2048\">rd</span> best "
+"time ever, <b>%s</b>."
+msgstr ""
+"Avètz acabat la corsa amb lo 3<span rise=\"2048\">en</span> melhor temps, "
+"<b>%s</b>."
+
+#: ../src/office-runner.c:502
+#, c-format
+msgid "Only <b>%s</b> separate you from the silver tròphy!"
+msgstr "Sètz pas qu'a <b>%s</b> del trofèu d'argent !"
+
+#: ../src/office-runner.c:511
+msgid "Too slow for the podium"
+msgstr "Tròp lent pel podium"
+
+#: ../src/office-runner.c:512
+#, c-format
+msgid "You managed to finish the route in <b>%s</b>."
+msgstr "Avètz acabat la corsa en <b>%s</b>."
+
+#: ../src/office-runner.c:515
+#, c-format
+msgid "Only <b>%s</b> separate you from the bronze tròphy!"
+msgstr "Sètz pas qu'a <b>%s</b> del trofèu de bronze !"
+
+#: ../src/office-runner.c:544 ../src/office-runner.ui.h:6
+msgid "Run!"
+msgstr "Corrètz !"
+
+#: ../src/office-runner.c:551
+msgid "Done!"
+msgstr "Acabat !"
+
+#: ../src/office-runner.c:562
+msgid "Try Again"
+msgstr "Ensajatz tornamai"
+
+#: ../src/office-runner.ui.h:1 ../src/office-runner.desktop.in.h:1
+msgid "Office Runner"
+msgstr "Corsa de burèu"
+
+#: ../src/office-runner.ui.h:2
+msgid ""
+" • Click the \"Run!\" button, and then dash to your desk or meeting.\n"
+" • You are allowed to close your laptop lid to run faster\n"
+msgstr ""
+" • Clicatz sul boton « Courez ! », puèi corrètz cap a vòstre burèu o vòstra "
+"reünion.\n"
+" • Avètz lo drech de rabatre l'ecran de vòstre ordenador portable per córrer "
+"mai viste\n"
+
+#: ../src/office-runner.ui.h:5
+msgid "Rules"
+msgstr "Règlas"
+
+#: ../src/office-runner.desktop.in.h:2
+msgid "Office game for laptop owners"
+msgstr "Jòc de burèu pels proprietaris d'ordenadors portables"
+
+#: ../src/office-runner.appdata.xml.in.h:1
+msgid "Close your laptop lid and start running"
+msgstr ""
+
+#: ../src/office-runner.appdata.xml.in.h:2
+msgid ""
+"Office Runner is a game where tallying up the time taken to go from one "
+"place in your office to the other."
+msgstr ""
+
+#: ../src/office-runner.appdata.xml.in.h:3
+msgid ""
+"Incidentally, it will also let you close your laptop lid without the "
+"computer going to sleep, which is useful to avoid having to reconnect to the "
+"network after your short trip."
+msgstr ""
+
+#~ msgid "Running!"
+#~ msgstr "En corse !"

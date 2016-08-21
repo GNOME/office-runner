@@ -1,27 +1,23 @@
-# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-# Aviary.pl
-# Jeśli masz jakiekolwiek uwagi odnoszące się do tłumaczenia lub chcesz
-# pomóc w jego rozwijaniu i pielęgnowaniu, napisz do nas:
-# gnomepl@aviary.pl
-# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-# Piotr Drąg <piotrdrag@gmail.com>, 2012-2015.
-# Aviary.pl <gnomepl@aviary.pl>, 2012-2015.
+# Polish translation for office-runner.
+# Copyright © 2012-2016 the office-runner authors.
+# This file is distributed under the same license as the office-runner package.
+# Piotr Drąg <piotrdrag@gmail.com>, 2012-2016.
+# Aviary.pl <community-poland@mozilla.org>, 2012-2016.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: office-runner\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-02 02:57+0200\n"
-"PO-Revision-Date: 2015-09-02 02:58+0200\n"
+"POT-Creation-Date: 2016-08-21 16:04+0200\n"
+"PO-Revision-Date: 2016-08-21 16:05+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
-"Language-Team: Polish <gnomepl@aviary.pl>\n"
+"Language-Team: Polish <community-poland@mozilla.org>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Poedit-Language: Polish\n"
-"X-Poedit-Country: Poland\n"
 
 #: ../src/office-runner.c:65
 msgid "Gold Trophy!"
@@ -51,14 +47,14 @@ msgstr "Za wolno, bardzo nam przykro!"
 #: ../src/office-runner.c:491
 #, c-format
 msgid "You managed to finish the route with the best time ever, <b>%s</b>."
-msgstr "Ukończono trasę z najlepszym wynikiem, <b>%s</b>."
+msgstr "Ukończono trasę z najlepszym wynikiem, <b>%s</b>."
 
 #: ../src/office-runner.c:494
 #, c-format
 msgid ""
 "You managed to finish the route with the 2<span rise=\"2048\">nd</span> best "
 "time ever, <b>%s</b>."
-msgstr "Ukończono trasę z drugim najlepszym wynikiem, <b>%s</b>."
+msgstr "Ukończono trasę z drugim najlepszym wynikiem, <b>%s</b>."
 
 #: ../src/office-runner.c:496
 #, c-format
@@ -70,7 +66,7 @@ msgstr "Tylko <b>%s</b> dzieli cię od złotego pucharu!"
 msgid ""
 "You managed to finish the route with the 3<span rise=\"2048\">rd</span> best "
 "time ever, <b>%s</b>."
-msgstr "Ukończono trasę z trzecim najlepszym wynikiem, <b>%s</b>."
+msgstr "Ukończono trasę z trzecim najlepszym wynikiem, <b>%s</b>."
 
 #: ../src/office-runner.c:502
 #, c-format
@@ -84,7 +80,7 @@ msgstr "Za wolno na miejsce na podium"
 #: ../src/office-runner.c:512
 #, c-format
 msgid "You managed to finish the route in <b>%s</b>."
-msgstr "Ukończono trasę w <b>%s</b>."
+msgstr "Ukończono trasę w <b>%s</b>."
 
 #: ../src/office-runner.c:515
 #, c-format
@@ -112,7 +108,7 @@ msgid ""
 " • Click the \"Run!\" button, and then dash to your desk or meeting.\n"
 " • You are allowed to close your laptop lid to run faster\n"
 msgstr ""
-" • Kliknij przycisk „Biegnij!”, a następnie pomknij do swojego biurka lub na "
+" • Kliknij przycisk „Biegnij!”, a następnie pomknij do swojego biurka lub na "
 "spotkanie.\n"
 " • Możesz zamknąć pokrywę laptopa, aby biec szybciej\n"
 
@@ -126,15 +122,15 @@ msgstr "Gra biurowa dla właścicieli laptopów"
 
 #: ../src/office-runner.appdata.xml.in.h:1
 msgid "Close your laptop lid and start running"
-msgstr "Zamknij laptopa i zacznij biec"
+msgstr "Zamknij laptopa i zacznij biec"
 
 #: ../src/office-runner.appdata.xml.in.h:2
 msgid ""
 "Office Runner is a game where tallying up the time taken to go from one "
 "place in your office to the other."
 msgstr ""
-"Office Runner jest grą w zliczanie czasu, jaki zajmuje przejście z jednego "
-"miejsca w biurze do drugiego."
+"Office Runner jest grą w zliczanie czasu, jaki zajmuje przejście z jednego "
+"miejsca w biurze do drugiego."
 
 #: ../src/office-runner.appdata.xml.in.h:3
 msgid ""
@@ -143,5 +139,5 @@ msgid ""
 "network after your short trip."
 msgstr ""
 "Przy okazji umożliwia ona zamknięcie pokrywy laptopa bez usypiania "
-"komputera, co jest przydatne, jeśli chcesz uniknąć rozłączenia się z sieci w "
-"czasie tak krótkiej podróży."
+"komputera, co jest przydatne, jeśli chcesz uniknąć rozłączenia się z sieci "
+"w czasie tak krótkiej podróży."

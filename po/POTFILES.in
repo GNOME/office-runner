@@ -1,4 +1,4 @@
 src/office-runner.c
-[type: gettext/glade] src/office-runner.ui
-[type: gettext/ini] src/office-runner.desktop.in
+src/office-runner.ui
+src/office-runner.desktop.in
 src/office-runner.appdata.xml.in

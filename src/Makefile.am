@@ -17,12 +17,14 @@ stuffdir = $(pkgdatadir)
 desktop_in_files = office-runner.desktop.in
 desktopdir = $(datadir)/applications
 desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
-@INTLTOOL_DESKTOP_RULE@
+office-runner.desktop: office-runner.desktop.in
+	$(AM_V_GEN) $(MSGFMT) --desktop --template $< -d $(top_srcdir)/po -o $@
 
 appdata_in_files = office-runner.appdata.xml.in
 appdatadir = $(datarootdir)/appdata
 appdata_DATA = $(appdata_in_files:.xml.in=.xml)
-@INTLTOOL_XML_RULE@
+$(appdata_DATA): $(appdata_in_files)
+	$(AM_V_GEN) $(MSGFMT) --xml --template $< -d $(top_srcdir)/po -o $@
 
 EXTRA_DIST = $(stuff_DATA) $(desktop_in_files) $(appdata_in_files)
 

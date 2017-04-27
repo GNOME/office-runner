@@ -18,7 +18,8 @@ dnl Add the languages which your application supports to po/LINGUAS
 GETTEXT_PACKAGE=office-runner
 AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE, ["$GETTEXT_PACKAGE"], [Define to the Gettext package name])
 AC_SUBST(GETTEXT_PACKAGE)
-IT_PROG_INTLTOOL([0.40.0])
+AM_GNU_GETTEXT_VERSION([0.19.8])
+AM_GNU_GETTEXT([external])
 
 PKG_CHECK_MODULES(OFFICE_RUNNER, gtk+-3.0 >= 3.8 upower-glib >= 0.99.0)
 

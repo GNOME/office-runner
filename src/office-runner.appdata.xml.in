@@ -6,17 +6,17 @@
   <id type="desktop">office-runner.desktop</id>
   <name>Office Runner</name>
   <metadata_license>CC0-1.0</metadata_license>
-  <_summary>Close your laptop lid and start running</_summary>
+  <summary>Close your laptop lid and start running</summary>
   <description>
-    <_p>
+    <p>
       Office Runner is a game where tallying up the time taken to go from one place in
       your office to the other.
-    </_p>
-    <_p>
+    </p>
+    <p>
       Incidentally, it will also let you close your laptop lid without the computer going
       to sleep, which is useful to avoid having to reconnect to the network after your
       short trip.
-    </_p>
+    </p>
   </description>
   <url type="homepage">http://www.hadess.net/2011/09/omg-i-haz-designed-bug-fix.html</url>
   <screenshots>

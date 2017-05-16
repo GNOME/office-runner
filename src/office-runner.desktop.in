@@ -1,7 +1,8 @@
 [Desktop Entry]
-_Name=Office Runner
-_Comment=Office game for laptop owners
+Name=Office Runner
+Comment=Office game for laptop owners
 Exec=office-runner
+# Translators: Do NOT translate or transliterate this text (this is an icon file name)!
 Icon=office-runner
 Terminal=false
 Type=Application

@@ -2,8 +2,9 @@
 <!-- Copyright 2014 William Moreno Reyes <williamjmorenor@gmail.com>
      Copyright 2014 Bastien Nocera <hadess@hadess.net> -->
 
-<application>
+<component type="desktop">
   <id type="desktop">office-runner.desktop</id>
+  <name>Office Runner</name>
   <metadata_license>CC0-1.0</metadata_license>
   <_summary>Close your laptop lid and start running</_summary>
   <description>
@@ -24,4 +25,4 @@
   <updatecontact>hadess@hadess.net</updatecontact>
   <project_group>GNOME</project_group>
   <translation type="gettext">office-runner</translation>
-</application>
+</component>

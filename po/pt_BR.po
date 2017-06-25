@@ -1,14 +1,13 @@
 # Brazilian Portuguese translation for office-runner.
-# Copyright (C) 2013 office-runner's COPYRIGHT HOLDER
+# Copyright (C) 2017 office-runner's COPYRIGHT HOLDER
 # This file is distributed under the same license as the office-runner package.
-# Rafael Fontenelle <rafaelff@gnome.org>, 2013, 2016.
+# Rafael Fontenelle <rafaelff@gnome.org>, 2013, 2016, 2017.
 msgid ""
 msgstr ""
 "Project-Id-Version: office-runner master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product"
-"=office-runner&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-06-17 16:57+0000\n"
-"PO-Revision-Date: 2016-03-18 04:44-0200\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-16 12:23+0000\n"
+"PO-Revision-Date: 2017-06-25 16:15-0200\n"
 "Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
 "Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
 "Language: pt_BR\n"
@@ -16,96 +15,97 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Virtaal 0.7.1\n"
+"X-Generator: Virtaal 1.0.0-beta1\n"
 "X-Project-Style: gnome\n"
 
-#: ../src/office-runner.c:65
+#: src/office-runner.c:65
 msgid "Gold Trophy!"
 msgstr "Troféu de ouro!"
 
-#: ../src/office-runner.c:66
+#: src/office-runner.c:66
 msgid "Silver Trophy!"
 msgstr "Troféu de prata!"
 
-#: ../src/office-runner.c:67
+#: src/office-runner.c:67
 msgid "Bronze Trophy!"
 msgstr "Troféu de bronze!"
 
 # Este é um aviso de que a corrida está acontecendo. Traduzi como Correndo,
 # pois "Corrida está correndo" seria óbivo -- Rafael Fontenelle
-#: ../src/office-runner.c:228
+#: src/office-runner.c:228
 msgid "Office Runner is running"
 msgstr "Correndo"
 
-#: ../src/office-runner.c:332
+#: src/office-runner.c:332
 #, c-format
 msgid "%d.%02d seconds"
 msgstr "%d.%02d segundos"
 
-#: ../src/office-runner.c:470
+#: src/office-runner.c:470
 msgid "Took too long, sorry!"
 msgstr "Demorou demais, sinto muito!"
 
-#: ../src/office-runner.c:491
+#: src/office-runner.c:491
 #, c-format
 msgid "You managed to finish the route with the best time ever, <b>%s</b>."
 msgstr "Você terminou a rota com o melhor tempo até agora, <b>%s</b>."
 
-#: ../src/office-runner.c:494
+#: src/office-runner.c:494
 #, c-format
 msgid ""
 "You managed to finish the route with the 2<span rise=\"2048\">nd</span> best "
 "time ever, <b>%s</b>."
 msgstr "Você terminou a rota com o 2º melhor tempo até agora, <b>%s</b>."
 
-#: ../src/office-runner.c:496
+#: src/office-runner.c:496
 #, c-format
 msgid "Only <b>%s</b> separate you from the gold trophy!"
 msgstr "Apenas <b>%s</b> é o que separa você do troféu de ouro!"
 
-#: ../src/office-runner.c:500
+#: src/office-runner.c:500
 #, c-format
 msgid ""
 "You managed to finish the route with the 3<span rise=\"2048\">rd</span> best "
 "time ever, <b>%s</b>."
 msgstr "Você terminou a rota com o 3º melhor resultado até agora, <b>%s</b>."
 
-#: ../src/office-runner.c:502
+#: src/office-runner.c:502
 #, c-format
 msgid "Only <b>%s</b> separate you from the silver trophy!"
 msgstr "Apenas <b>%s</b> é o que separa você do troféu de prata!"
 
-#: ../src/office-runner.c:511
+#: src/office-runner.c:511
 msgid "Too slow for the podium"
 msgstr "Muito lento para o pódio"
 
-#: ../src/office-runner.c:512
+#: src/office-runner.c:512
 #, c-format
 msgid "You managed to finish the route in <b>%s</b>."
 msgstr "Você terminou a rota em <b>%s</b>."
 
-#: ../src/office-runner.c:515
+#: src/office-runner.c:515
 #, c-format
 msgid "Only <b>%s</b> separate you from the bronze trophy!"
 msgstr "Apenas <b>%s</b> é o que separa você do troféu de bronze!"
 
-#: ../src/office-runner.c:544 ../src/office-runner.ui.h:6
+#: src/office-runner.c:544 src/office-runner.ui:269
 msgid "Run!"
 msgstr "Correr!"
 
-#: ../src/office-runner.c:551
+#: src/office-runner.c:551
 msgid "Done!"
 msgstr "Pronto!"
 
-#: ../src/office-runner.c:562
+#: src/office-runner.c:562
 msgid "Try Again"
 msgstr "Tente novamente"
 
-#: ../src/office-runner.ui.h:1 ../src/office-runner.desktop.in.h:1
+#: src/office-runner.ui:7 src/office-runner.desktop.in:3
+#: src/office-runner.appdata.xml.in:7
 msgid "Office Runner"
 msgstr "Corrida de escritório"
 
-#: ../src/office-runner.ui.h:2
+#: src/office-runner.ui:51
 msgid ""
 " • Click the \"Run!\" button, and then dash to your desk or meeting.\n"
 " • You are allowed to close your laptop lid to run faster\n"
@@ -113,19 +113,25 @@ msgstr ""
 " • Clique no botão \"Correr!\", e então dispare para sua mesa ou reunião.\n"
 " • Você não pode fechar a tela do seu laptop para correr mais rápido\n"
 
-#: ../src/office-runner.ui.h:5
+#: src/office-runner.ui:67
 msgid "Rules"
 msgstr "Regras"
 
-#: ../src/office-runner.desktop.in.h:2
+#: src/office-runner.desktop.in:4
 msgid "Office game for laptop owners"
 msgstr "Jogo de escritório para quem tem laptop"
 
-#: ../src/office-runner.appdata.xml.in.h:1
+#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
+#: src/office-runner.desktop.in:7
+#| msgid "Office Runner"
+msgid "office-runner"
+msgstr "office-runner"
+
+#: src/office-runner.appdata.xml.in:9
 msgid "Close your laptop lid and start running"
 msgstr "Feche a tela do seu laptop e comece a correr"
 
-#: ../src/office-runner.appdata.xml.in.h:2
+#: src/office-runner.appdata.xml.in:11
 msgid ""
 "Office Runner is a game where tallying up the time taken to go from one "
 "place in your office to the other."
@@ -133,7 +139,7 @@ msgstr ""
 "Corrida de escritório é um jogo no qual se calcula o tempo para ir de um "
 "lugar a outro de seu escritório."
 
-#: ../src/office-runner.appdata.xml.in.h:3
+#: src/office-runner.appdata.xml.in:15
 msgid ""
 "Incidentally, it will also let you close your laptop lid without the "
 "computer going to sleep, which is useful to avoid having to reconnect to the "

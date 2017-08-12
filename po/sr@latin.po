@@ -1,16 +1,15 @@
 # Serbian translation for office-runner.
-# Copyright (C) 2013 office-runner's COPYRIGHT HOLDER
+# Copyright © 2013 office-runner's COPYRIGHT HOLDER
 # This file is distributed under the same license as the office-runner package.
-# Miroslav Nikolić <miroslavnikolic@rocketmail.com>, 2013—2016.
+# Miroslav Nikolić <miroslavnikolic@rocketmail.com>, 2013—2017.
 msgid ""
 msgstr ""
 "Project-Id-Version: office-runner master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=office-"
-"runner&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-06-17 16:57+0000\n"
-"PO-Revision-Date: 2016-01-03 15:53+0200\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-16 12:23+0000\n"
+"PO-Revision-Date: 2017-08-12 21:40+0200\n"
 "Last-Translator: Miroslav Nikolić <miroslavnikolic@rocketmail.com>\n"
-"Language-Team: Serbian <gnom@prevod.org>\n"
+"Language-Team: srpski <gnome-sr@googlegroups.org>\n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,38 +18,37 @@ msgstr ""
 "n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Project-Style: gnome\n"
 
-#: ../src/office-runner.c:65
+#: src/office-runner.c:65
 msgid "Gold Trophy!"
 msgstr "Zlatna medalja!"
 
-#: ../src/office-runner.c:66
+#: src/office-runner.c:66
 msgid "Silver Trophy!"
 msgstr "Srebrna medalja!"
 
-#: ../src/office-runner.c:67
+#: src/office-runner.c:67
 msgid "Bronze Trophy!"
 msgstr "Bronzana medalja!"
 
-#: ../src/office-runner.c:228
-#| msgid "Office Runner"
+#: src/office-runner.c:228
 msgid "Office Runner is running"
 msgstr "Kancelarijski trkač je pokrenut"
 
-#: ../src/office-runner.c:332
+#: src/office-runner.c:332
 #, c-format
 msgid "%d.%02d seconds"
 msgstr "%d.%02d sekunde"
 
-#: ../src/office-runner.c:470
+#: src/office-runner.c:470
 msgid "Took too long, sorry!"
 msgstr "Predugo je to trajalo, izvinite!"
 
-#: ../src/office-runner.c:491
+#: src/office-runner.c:491
 #, c-format
 msgid "You managed to finish the route with the best time ever, <b>%s</b>."
 msgstr "Završili ste sa najboljim vremenom do sada, <b>%s</b>."
 
-#: ../src/office-runner.c:494
+#: src/office-runner.c:494
 #, c-format
 msgid ""
 "You managed to finish the route with the 2<span rise=\"2048\">nd</span> best "
@@ -59,12 +57,12 @@ msgstr ""
 "Završili ste sa 2<span rise=\"2048\">-im</span> najboljim vremenom do sada, "
 "<b>%s</b>."
 
-#: ../src/office-runner.c:496
+#: src/office-runner.c:496
 #, c-format
 msgid "Only <b>%s</b> separate you from the gold trophy!"
 msgstr "Samo <b>%s</b> vas deli od zlatne medalje!"
 
-#: ../src/office-runner.c:500
+#: src/office-runner.c:500
 #, c-format
 msgid ""
 "You managed to finish the route with the 3<span rise=\"2048\">rd</span> best "
@@ -73,42 +71,43 @@ msgstr ""
 "Završili ste sa 3<span rise=\"2048\">-im</span> najboljim vremenom do sada, "
 "<b>%s</b>."
 
-#: ../src/office-runner.c:502
+#: src/office-runner.c:502
 #, c-format
 msgid "Only <b>%s</b> separate you from the silver trophy!"
 msgstr "Samo <b>%s</b> vas deli od srebrne medalje!"
 
-#: ../src/office-runner.c:511
+#: src/office-runner.c:511
 msgid "Too slow for the podium"
 msgstr "Previše sporo za postolje"
 
-#: ../src/office-runner.c:512
+#: src/office-runner.c:512
 #, c-format
 msgid "You managed to finish the route in <b>%s</b>."
 msgstr "Završili ste za <b>%s</b>."
 
-#: ../src/office-runner.c:515
+#: src/office-runner.c:515
 #, c-format
 msgid "Only <b>%s</b> separate you from the bronze trophy!"
 msgstr "Samo <b>%s</b> vas deli od bronzane medalje!"
 
-#: ../src/office-runner.c:544 ../src/office-runner.ui.h:6
+#: src/office-runner.c:544 src/office-runner.ui:269
 msgid "Run!"
 msgstr "Trči!"
 
-#: ../src/office-runner.c:551
+#: src/office-runner.c:551
 msgid "Done!"
 msgstr "Gotovo!"
 
-#: ../src/office-runner.c:562
+#: src/office-runner.c:562
 msgid "Try Again"
 msgstr "Pokušaj ponovo"
 
-#: ../src/office-runner.ui.h:1 ../src/office-runner.desktop.in.h:1
+#: src/office-runner.ui:7 src/office-runner.desktop.in:3
+#: src/office-runner.appdata.xml.in:7
 msgid "Office Runner"
 msgstr "Kancelarijski trkač"
 
-#: ../src/office-runner.ui.h:2
+#: src/office-runner.ui:51
 msgid ""
 " • Click the \"Run!\" button, and then dash to your desk or meeting.\n"
 " • You are allowed to close your laptop lid to run faster\n"
@@ -118,19 +117,25 @@ msgstr ""
 " • Dozvoljeno vam je da zatvorite poklopac vašeg prenosnog računara da biste "
 "trčali brže\n"
 
-#: ../src/office-runner.ui.h:5
+#: src/office-runner.ui:67
 msgid "Rules"
 msgstr "Pravila"
 
-#: ../src/office-runner.desktop.in.h:2
+#: src/office-runner.desktop.in:4
 msgid "Office game for laptop owners"
 msgstr "Kancelarijska igra za vlasnike prenosnih računara"
 
-#: ../src/office-runner.appdata.xml.in.h:1
+#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
+#: src/office-runner.desktop.in:7
+#| msgid "Office Runner"
+msgid "office-runner"
+msgstr "office-runner"
+
+#: src/office-runner.appdata.xml.in:9
 msgid "Close your laptop lid and start running"
 msgstr "Spustite poklopac prenosnog računara i počnite da trčite"
 
-#: ../src/office-runner.appdata.xml.in.h:2
+#: src/office-runner.appdata.xml.in:11
 msgid ""
 "Office Runner is a game where tallying up the time taken to go from one "
 "place in your office to the other."
@@ -138,7 +143,7 @@ msgstr ""
 "Kancelarijski trkač je igra za odbrojavanje vremena koje vam je potrebno da "
 "stignete od jednog mesta u vašoj kancelariji do drugog."
 
-#: ../src/office-runner.appdata.xml.in.h:3
+#: src/office-runner.appdata.xml.in:15
 msgid ""
 "Incidentally, it will also let you close your laptop lid without the "
 "computer going to sleep, which is useful to avoid having to reconnect to the "

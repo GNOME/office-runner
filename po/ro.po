@@ -1,0 +1,152 @@
+# Romanian translation for office-runner.
+# Copyright (C) 2018 office-runner's COPYRIGHT HOLDER
+# This file is distributed under the same license as the office-runner package.
+# Floren <>, 2018.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: office-runner master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-03-13 20:57+0000\n"
+"PO-Revision-Date: 2018-04-08 18:37+0300\n"
+"Language-Team: Romanian <gnomero-list@lists.sourceforge.net>\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);;\n"
+"Last-Translator: Florentina Mușat <florentina.musat.28@gmail.com>\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#: src/office-runner.c:65
+msgid "Gold Trophy!"
+msgstr "Trofeu de aur!"
+
+#: src/office-runner.c:66
+msgid "Silver Trophy!"
+msgstr "Trofeu de argint!"
+
+#: src/office-runner.c:67
+msgid "Bronze Trophy!"
+msgstr "Trofeu de bronz!"
+
+#: src/office-runner.c:228
+msgid "Office Runner is running"
+msgstr "Alergător de birou rulează"
+
+#: src/office-runner.c:332
+#, c-format
+msgid "%d.%02d seconds"
+msgstr "%d.%02d secunde"
+
+#: src/office-runner.c:470
+msgid "Took too long, sorry!"
+msgstr "A durat prea mult!"
+
+#: src/office-runner.c:491
+#, c-format
+msgid "You managed to finish the route with the best time ever, <b>%s</b>."
+msgstr "Ați reușit să terminați ruta cu cel mai bun timp vreodată, <b>%s</b>."
+
+#: src/office-runner.c:494
+#, c-format
+msgid ""
+"You managed to finish the route with the 2<span rise=\"2048\">nd</span> best "
+"time ever, <b>%s</b>."
+msgstr ""
+"Ați reușit să terminați ruta cu al 2-<span rise=\"2048\">lea</span> cel mai "
+"bun timp vreodată, <b>%s</b>."
+
+#: src/office-runner.c:496
+#, c-format
+msgid "Only <b>%s</b> separate you from the gold trophy!"
+msgstr "Doar <b>%s</b> vă separă de trofeul de aur!"
+
+#: src/office-runner.c:500
+#, c-format
+msgid ""
+"You managed to finish the route with the 3<span rise=\"2048\">rd</span> best "
+"time ever, <b>%s</b>."
+msgstr ""
+"Ați reușit să terminați ruta cu al 3-<span rise=\"2048\">lea</span> cel mai "
+"bun timp vreodată, <b>%s</b>."
+
+#: src/office-runner.c:502
+#, c-format
+msgid "Only <b>%s</b> separate you from the silver trophy!"
+msgstr "Doar <b>%s</b> vă separă de trofeul de argint!"
+
+#: src/office-runner.c:511
+msgid "Too slow for the podium"
+msgstr "Prea lent pentru podium"
+
+#: src/office-runner.c:512
+#, c-format
+msgid "You managed to finish the route in <b>%s</b>."
+msgstr "Ați reușit să terminați ruta în <b>%s</b>."
+
+#: src/office-runner.c:515
+#, c-format
+msgid "Only <b>%s</b> separate you from the bronze trophy!"
+msgstr "Doar <b>%s</b> vă separă de trofeul de bronz!"
+
+#: src/office-runner.c:544 src/office-runner.ui:269
+msgid "Run!"
+msgstr "Alergați!"
+
+#: src/office-runner.c:551
+msgid "Done!"
+msgstr "Gata!"
+
+#: src/office-runner.c:562
+msgid "Try Again"
+msgstr "Încercați din nou"
+
+#: src/office-runner.ui:7 src/office-runner.desktop.in:3
+#: src/office-runner.appdata.xml.in:7
+msgid "Office Runner"
+msgstr "Alergător de birou"
+
+#: src/office-runner.ui:51
+msgid ""
+" • Click the \"Run!\" button, and then dash to your desk or meeting.\n"
+" • You are allowed to close your laptop lid to run faster\n"
+msgstr ""
+" • Apăsați butonul „Alergați”, apoi alergați spre birou sau ședință.\n"
+" • Puteți închide capacul de laptop pentru a alerga mai rapid\n"
+
+#: src/office-runner.ui:67
+msgid "Rules"
+msgstr "Reguli"
+
+#: src/office-runner.desktop.in:4
+msgid "Office game for laptop owners"
+msgstr "Joc de birou pentru deținătorii de laptop"
+
+#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
+#: src/office-runner.desktop.in:7
+msgid "office-runner"
+msgstr "office-runner"
+
+#: src/office-runner.appdata.xml.in:9
+msgid "Close your laptop lid and start running"
+msgstr "Închideți capacul de laptop și începeți să alergați"
+
+#: src/office-runner.appdata.xml.in:11
+msgid ""
+"Office Runner is a game where tallying up the time taken to go from one "
+"place in your office to the other."
+msgstr ""
+"Alergător de birou este un joc în care se înregistrează timpul necesar "
+"pentru a merge dintr-un loc în altul la birou."
+
+#: src/office-runner.appdata.xml.in:15
+msgid ""
+"Incidentally, it will also let you close your laptop lid without the "
+"computer going to sleep, which is useful to avoid having to reconnect to the "
+"network after your short trip."
+msgstr ""
+"Întâmplător, jocul permite să închideți capacul de laptop fără să se "
+"declanșeze starea de repaus a calculatorului, lucru util pentru a evita "
+"reconectarea la rețea după scurta călătorie."

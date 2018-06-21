@@ -24,7 +24,6 @@
 #include <gtk/gtk.h>
 #include <glib/gi18n.h>
 #include <math.h>
-#include <upower.h>
 
 #define LOGIND_DBUS_NAME                       "org.freedesktop.login1"
 #define LOGIND_DBUS_PATH                       "/org/freedesktop/login1"
@@ -74,9 +73,13 @@ typedef struct {
 
 typedef struct {
 	GDBusConnection *connection;
-	int lid_switch_fd;
-	UpClient *client;
 	guint reenable_block_id;
+
+	/* Lid switch */
+	GCancellable *cancellable;
+	guint upower_watch_id;
+	GDBusProxy *upower_proxy;
+	int lid_switch_fd;
 
 	GtkBuilder *ui;
 	GtkWidget *window;
@@ -164,6 +167,10 @@ save_records (OfficeRunner *run)
 static void
 free_runner (OfficeRunner *run)
 {
+	if (run->cancellable) {
+		g_cancellable_cancel (run->cancellable);
+		g_object_unref (run->cancellable);
+	}
 	if (run->timer)
 		g_timer_destroy (run->timer);
 	if (run->timeout)
@@ -171,7 +178,9 @@ free_runner (OfficeRunner *run)
 	g_object_unref (run->ui);
 	if (run->reenable_block_id > 0)
 		g_source_remove (run->reenable_block_id);
-	g_clear_object (&run->client);
+	if (run->upower_watch_id > 0)
+		g_bus_unwatch_name (run->upower_watch_id);
+	g_clear_object (&run->upower_proxy);
 	if (run->lid_switch_fd > 0)
 		close (run->lid_switch_fd);
 	g_object_unref (run->connection);
@@ -585,15 +594,24 @@ run_button_clicked_cb (GtkWidget    *button,
 }
 
 static void
-lid_is_closed_cb (GObject    *gobject,
-		  GParamSpec *pspec,
+lid_is_closed_cb (GDBusProxy *proxy,
+		  GVariant   *changed_properties,
+		  GStrv       invalidated_properties,
 		  gpointer    user_data)
 {
 	OfficeRunner *run = user_data;
 	int page;
+	GVariant *v;
 	gboolean lid_is_closed;
 
-	g_object_get (gobject, "lid-is-closed", &lid_is_closed, NULL);
+	v = g_variant_lookup_value (changed_properties,
+				    "LidIsClosed",
+				    G_VARIANT_TYPE_BOOLEAN);
+	if (!v)
+		return;
+
+	lid_is_closed = g_variant_get_boolean (v);
+	g_variant_unref (v);
 
 	page = gtk_notebook_get_current_page (GTK_NOTEBOOK (run->notebook));
 
@@ -621,6 +639,60 @@ lid_is_closed_cb (GObject    *gobject,
 	}
 }
 
+static void
+upower_ready_cb (GObject      *source_object,
+		 GAsyncResult *res,
+		 gpointer      user_data)
+{
+	OfficeRunner *run;
+	GDBusProxy *proxy;
+	GError *error = NULL;
+	GVariant *v;
+
+	proxy = g_dbus_proxy_new_finish (res, &error);
+	if (!proxy) {
+		if (!g_error_matches (error, G_IO_ERROR, G_IO_ERROR_CANCELLED))
+			g_warning ("Failed to create UPower proxy: %s", error->message);
+		g_error_free (error);
+		return;
+	}
+
+	run = user_data;
+	run->upower_proxy = proxy;
+
+	g_signal_connect (proxy, "g-properties-changed",
+			  G_CALLBACK (lid_is_closed_cb), run);
+}
+
+static void
+upower_appeared (GDBusConnection *connection,
+		 const gchar     *name,
+		 const gchar     *name_owner,
+		 gpointer         user_data)
+{
+	OfficeRunner *run = user_data;
+
+	g_dbus_proxy_new (connection,
+			  G_DBUS_PROXY_FLAGS_NONE,
+			  NULL,
+			  "org.freedesktop.UPower",
+			  "/org/freedesktop/UPower",
+			  "org.freedesktop.UPower",
+			  run->cancellable,
+			  upower_ready_cb,
+			  run);
+}
+
+static void
+upower_vanished (GDBusConnection *connection,
+		 const gchar     *name,
+		 gpointer         user_data)
+{
+	OfficeRunner *run = user_data;
+
+	g_clear_object (&run->upower_proxy);
+}
+
 static OfficeRunner *
 new_runner (void)
 {
@@ -630,9 +702,13 @@ new_runner (void)
 	run->connection = g_bus_get_sync (G_BUS_TYPE_SYSTEM,
 					  NULL, NULL);
 	run->lid_switch_fd = -1;
-	run->client = up_client_new ();
-	g_signal_connect (G_OBJECT (run->client), "notify::lid-is-closed",
-			  G_CALLBACK (lid_is_closed_cb), run);
+	run->upower_watch_id = g_bus_watch_name (G_BUS_TYPE_SYSTEM,
+						 "org.freedesktop.UPower",
+						 G_BUS_NAME_WATCHER_FLAGS_NONE,
+						 upower_appeared,
+						 upower_vanished,
+						 run,
+						 NULL);
 
 	run->ui = gtk_builder_new ();
 	gtk_builder_add_from_file (run->ui, PKGDATADIR "office-runner.ui", NULL);

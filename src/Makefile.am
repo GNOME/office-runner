@@ -20,7 +20,7 @@ desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
 office-runner.desktop: office-runner.desktop.in
 	$(AM_V_GEN) $(MSGFMT) --desktop --template $< -d $(top_srcdir)/po -o $@
 
-appdata_in_files = office-runner.appdata.xml.in
+appdata_in_files = org.gnome.OfficeRunner.appdata.xml.in
 appdatadir = $(datarootdir)/appdata
 appdata_DATA = $(appdata_in_files:.xml.in=.xml)
 $(appdata_DATA): $(appdata_in_files)

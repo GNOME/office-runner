@@ -1,4 +1,4 @@
 src/office-runner.c
 src/office-runner.ui
 src/office-runner.desktop.in
-src/office-runner.appdata.xml.in
+src/org.gnome.OfficeRunner.appdata.xml.in

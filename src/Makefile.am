@@ -14,10 +14,10 @@ stuff_DATA =				\
 	pause.wav
 stuffdir = $(pkgdatadir)
 
-desktop_in_files = office-runner.desktop.in
+desktop_in_files = org.gnome.OfficeRunner.desktop.in
 desktopdir = $(datadir)/applications
 desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
-office-runner.desktop: office-runner.desktop.in
+org.gnome.OfficeRunner.desktop: org.gnome.OfficeRunner.desktop.in
 	$(AM_V_GEN) $(MSGFMT) --desktop --template $< -d $(top_srcdir)/po -o $@
 
 appdata_in_files = org.gnome.OfficeRunner.appdata.xml.in

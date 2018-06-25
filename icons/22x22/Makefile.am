@@ -1,5 +1,5 @@
 icondir = $(datadir)/icons/hicolor/22x22/apps
-icon_DATA = office-runner.png
+icon_DATA = org.gnome.OfficeRunner.png
 
 EXTRA_DIST = $(icon_DATA)
 

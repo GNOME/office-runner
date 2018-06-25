@@ -3,7 +3,7 @@
      Copyright 2014 Bastien Nocera <hadess@hadess.net> -->
 
 <component type="desktop">
-  <id type="desktop">office-runner.desktop</id>
+  <id type="desktop">org.gnome.OfficeRunner.desktop</id>
   <name>Office Runner</name>
   <metadata_license>CC0-1.0</metadata_license>
   <summary>Close your laptop lid and start running</summary>

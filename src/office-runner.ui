@@ -119,6 +119,7 @@
                     <property name="label" translatable="no">00:00.00</property>
                     <attributes>
                       <attribute name="scale" value="10"/>
+                      <attribute name="font-features" value="tnum 1"/>
                     </attributes>
                   </object>
                   <packing>

@@ -1,14 +1,14 @@
 # Czech translation for office-runner.
 # Copyright (C) 2013 office-runner's COPYRIGHT HOLDER
 # This file is distributed under the same license as the office-runner package.
-# Marek Černocký <marek@manet.cz>, 2013, 2014, 2017.
+# Marek Černocký <marek@manet.cz>, 2013, 2014, 2017, 2018.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: office-runner master\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-16 12:23+0000\n"
-"PO-Revision-Date: 2017-06-25 22:47+0200\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/office-runner/issues\n"
+"POT-Creation-Date: 2018-06-25 09:31+0000\n"
+"PO-Revision-Date: 2018-07-11 11:09+0200\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -18,37 +18,37 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Gtranslator 2.91.6\n"
 
-#: src/office-runner.c:65
+#: src/office-runner.c:64
 msgid "Gold Trophy!"
 msgstr "Zlatá medaile!"
 
-#: src/office-runner.c:66
+#: src/office-runner.c:65
 msgid "Silver Trophy!"
 msgstr "Stříbrná medaile!"
 
-#: src/office-runner.c:67
+#: src/office-runner.c:66
 msgid "Bronze Trophy!"
 msgstr "Bronzová medaile!"
 
-#: src/office-runner.c:228
+#: src/office-runner.c:237
 msgid "Office Runner is running"
 msgstr "Běžec kancelářský běží"
 
-#: src/office-runner.c:332
+#: src/office-runner.c:341
 #, c-format
 msgid "%d.%02d seconds"
 msgstr "%d.%02d s"
 
-#: src/office-runner.c:470
+#: src/office-runner.c:479
 msgid "Took too long, sorry!"
 msgstr "Máte smůlu, bylo to příliš pomalé!"
 
-#: src/office-runner.c:491
+#: src/office-runner.c:500
 #, c-format
 msgid "You managed to finish the route with the best time ever, <b>%s</b>."
 msgstr "Povedlo se vám trasu dokončit s nejlepším časem v historii, <b>%s</b>."
 
-#: src/office-runner.c:494
+#: src/office-runner.c:503
 #, c-format
 msgid ""
 "You managed to finish the route with the 2<span rise=\"2048\">nd</span> best "
@@ -56,12 +56,12 @@ msgid ""
 msgstr ""
 "Povedlo se vám trasu dokončit s druhým nejlepším časem v historii, <b>%s</b>."
 
-#: src/office-runner.c:496
+#: src/office-runner.c:505
 #, c-format
 msgid "Only <b>%s</b> separate you from the gold trophy!"
 msgstr "Pouhých <b>%s</b> vás dělilo od zlaté medaile!"
 
-#: src/office-runner.c:500
+#: src/office-runner.c:509
 #, c-format
 msgid ""
 "You managed to finish the route with the 3<span rise=\"2048\">rd</span> best "
@@ -69,39 +69,39 @@ msgid ""
 msgstr ""
 "Povedlo se vám trasu dokončit s třetím nejlepším časem v historii, <b>%s</b>."
 
-#: src/office-runner.c:502
+#: src/office-runner.c:511
 #, c-format
 msgid "Only <b>%s</b> separate you from the silver trophy!"
 msgstr "Pouhých <b>%s</b> vás dělilo od stříbrné medaile!"
 
-#: src/office-runner.c:511
+#: src/office-runner.c:520
 msgid "Too slow for the podium"
 msgstr "Příliš pomalé na stupeň vítězů"
 
-#: src/office-runner.c:512
+#: src/office-runner.c:521
 #, c-format
 msgid "You managed to finish the route in <b>%s</b>."
 msgstr "Povedlo se vám trasu dokončit s časem <b>%s</b>."
 
-#: src/office-runner.c:515
+#: src/office-runner.c:524
 #, c-format
 msgid "Only <b>%s</b> separate you from the bronze trophy!"
 msgstr "Pouhých <b>%s</b> vás dělilo od bronzové medaile!"
 
-#: src/office-runner.c:544 src/office-runner.ui:269
+#: src/office-runner.c:553 src/office-runner.ui:269
 msgid "Run!"
 msgstr "Běž!"
 
-#: src/office-runner.c:551
+#: src/office-runner.c:560
 msgid "Done!"
 msgstr "Hotovo!"
 
-#: src/office-runner.c:562
+#: src/office-runner.c:571
 msgid "Try Again"
 msgstr "Zkusit znovu"
 
-#: src/office-runner.ui:7 src/office-runner.desktop.in:3
-#: src/office-runner.appdata.xml.in:7
+#: src/office-runner.ui:7 src/org.gnome.OfficeRunner.desktop.in:3
+#: src/org.gnome.OfficeRunner.appdata.xml.in:7
 msgid "Office Runner"
 msgstr "Běžec kancelářský"
 
@@ -118,20 +118,20 @@ msgstr ""
 msgid "Rules"
 msgstr "Pravidla"
 
-#: src/office-runner.desktop.in:4
+#: src/org.gnome.OfficeRunner.desktop.in:4
 msgid "Office game for laptop owners"
 msgstr "Kancelářská hra pro majitele notebooků"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: src/office-runner.desktop.in:7
-msgid "office-runner"
-msgstr "office-runner"
+#: src/org.gnome.OfficeRunner.desktop.in:7
+msgid "org.gnome.OfficeRunner"
+msgstr "org.gnome.OfficeRunner"
 
-#: src/office-runner.appdata.xml.in:9
+#: src/org.gnome.OfficeRunner.appdata.xml.in:9
 msgid "Close your laptop lid and start running"
 msgstr "Zavřete víko svého notebooku a začněte utíkat"
 
-#: src/office-runner.appdata.xml.in:11
+#: src/org.gnome.OfficeRunner.appdata.xml.in:13
 msgid ""
 "Office Runner is a game where tallying up the time taken to go from one "
 "place in your office to the other."
@@ -139,7 +139,7 @@ msgstr ""
 "Běžec kancelářský je hra, jejíž podstatou je měřit čas, který zabere "
 "přeběhnutí z jednoho místa kanceláře na druhé."
 
-#: src/office-runner.appdata.xml.in:15
+#: src/org.gnome.OfficeRunner.appdata.xml.in:17
 msgid ""
 "Incidentally, it will also let you close your laptop lid without the "
 "computer going to sleep, which is useful to avoid having to reconnect to the "

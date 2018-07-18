@@ -1,14 +1,14 @@
 # Swedish translation for office-runner.
-# Copyright © 2015, 2017 office-runner's COPYRIGHT HOLDER
+# Copyright © 2015, 2017, 2018 office-runner's COPYRIGHT HOLDER
 # This file is distributed under the same license as the office-runner package.
-# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2015, 2017.
+# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2015, 2017, 2018.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: office-runner master\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-16 12:23+0000\n"
-"PO-Revision-Date: 2017-05-22 09:35+0200\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/office-runner/issues\n"
+"POT-Creation-Date: 2018-06-25 09:31+0000\n"
+"PO-Revision-Date: 2018-07-18 13:43+0200\n"
 "Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
@@ -16,90 +16,90 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.8.11\n"
+"X-Generator: Poedit 2.0.8\n"
 
-#: src/office-runner.c:65
+#: src/office-runner.c:64
 msgid "Gold Trophy!"
 msgstr "Guldpokal!"
 
-#: src/office-runner.c:66
+#: src/office-runner.c:65
 msgid "Silver Trophy!"
 msgstr "Silverpokal!"
 
-#: src/office-runner.c:67
+#: src/office-runner.c:66
 msgid "Bronze Trophy!"
 msgstr "Bronspokal!"
 
-#: src/office-runner.c:228
+#: src/office-runner.c:237
 msgid "Office Runner is running"
 msgstr "Office Runner körs"
 
-#: src/office-runner.c:332
+#: src/office-runner.c:341
 #, c-format
 msgid "%d.%02d seconds"
 msgstr "%d,%02d sekunder"
 
-#: src/office-runner.c:470
+#: src/office-runner.c:479
 msgid "Took too long, sorry!"
 msgstr "Tog tyvärr för lång tid!"
 
-#: src/office-runner.c:491
+#: src/office-runner.c:500
 #, c-format
 msgid "You managed to finish the route with the best time ever, <b>%s</b>."
 msgstr "Du slutförde rutten på den bästa tiden någonsin, <b>%s</b>."
 
-#: src/office-runner.c:494
+#: src/office-runner.c:503
 #, c-format
 msgid ""
 "You managed to finish the route with the 2<span rise=\"2048\">nd</span> best "
 "time ever, <b>%s</b>."
 msgstr "Du slutförde rutten på den näst bästa tiden någonsin, <b>%s</b>."
 
-#: src/office-runner.c:496
+#: src/office-runner.c:505
 #, c-format
 msgid "Only <b>%s</b> separate you from the gold trophy!"
 msgstr "Endast <b>%s</b> från guldpokalen!"
 
-#: src/office-runner.c:500
+#: src/office-runner.c:509
 #, c-format
 msgid ""
 "You managed to finish the route with the 3<span rise=\"2048\">rd</span> best "
 "time ever, <b>%s</b>."
 msgstr "Du slutförde rutten på den tredje bästa tiden någonsin, <b>%s</b>."
 
-#: src/office-runner.c:502
+#: src/office-runner.c:511
 #, c-format
 msgid "Only <b>%s</b> separate you from the silver trophy!"
 msgstr "Endast <b>%s</b> från silverpokalen!"
 
-#: src/office-runner.c:511
+#: src/office-runner.c:520
 msgid "Too slow for the podium"
 msgstr "För långsam för prispallen"
 
-#: src/office-runner.c:512
+#: src/office-runner.c:521
 #, c-format
 msgid "You managed to finish the route in <b>%s</b>."
 msgstr "Du slutförde rutten på <b>%s</b>."
 
-#: src/office-runner.c:515
+#: src/office-runner.c:524
 #, c-format
 msgid "Only <b>%s</b> separate you from the bronze trophy!"
 msgstr "Endast <b>%s</b> från bronspokalen!"
 
-#: src/office-runner.c:544 src/office-runner.ui:269
+#: src/office-runner.c:553 src/office-runner.ui:269
 msgid "Run!"
 msgstr "Spring!"
 
-#: src/office-runner.c:551
+#: src/office-runner.c:560
 msgid "Done!"
 msgstr "Klar!"
 
-#: src/office-runner.c:562
+#: src/office-runner.c:571
 msgid "Try Again"
 msgstr "Försök igen"
 
-#: src/office-runner.ui:7 src/office-runner.desktop.in:3
-#: src/office-runner.appdata.xml.in:7
+#: src/office-runner.ui:7 src/org.gnome.OfficeRunner.desktop.in:3
+#: src/org.gnome.OfficeRunner.appdata.xml.in:7
 msgid "Office Runner"
 msgstr "Office Runner"
 
@@ -116,21 +116,21 @@ msgstr ""
 msgid "Rules"
 msgstr "Regler"
 
-#: src/office-runner.desktop.in:4
+#: src/org.gnome.OfficeRunner.desktop.in:4
 msgid "Office game for laptop owners"
 msgstr "Kontorsspel för ägare av bärbara datorer"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: src/office-runner.desktop.in:7
+#: src/org.gnome.OfficeRunner.desktop.in:7
 #| msgid "Office Runner"
-msgid "office-runner"
-msgstr "office-runner"
+msgid "org.gnome.OfficeRunner"
+msgstr "org.gnome.OfficeRunner"
 
-#: src/office-runner.appdata.xml.in:9
+#: src/org.gnome.OfficeRunner.appdata.xml.in:9
 msgid "Close your laptop lid and start running"
 msgstr "Stäng locket på din bärbara dator och börja springa"
 
-#: src/office-runner.appdata.xml.in:11
+#: src/org.gnome.OfficeRunner.appdata.xml.in:13
 msgid ""
 "Office Runner is a game where tallying up the time taken to go from one "
 "place in your office to the other."
@@ -138,7 +138,7 @@ msgstr ""
 "Office Runner är ett spel som räknar tiden det tar att ta sig från en plats "
 "i ditt kontor till en annan."
 
-#: src/office-runner.appdata.xml.in:15
+#: src/org.gnome.OfficeRunner.appdata.xml.in:17
 msgid ""
 "Incidentally, it will also let you close your laptop lid without the "
 "computer going to sleep, which is useful to avoid having to reconnect to the "
@@ -147,6 +147,10 @@ msgstr ""
 "Händelsevis låter det dig också stänga locket på din bärbara dator utan att "
 "din dator försätts i strömsparläge, vilket är praktiskt för att undvika att "
 "behöva ansluta till nätverket på nytt efter din korta färd."
+
+#~| msgid "Office Runner"
+#~ msgid "office-runner"
+#~ msgstr "office-runner"
 
 #~ msgid "Running!"
 #~ msgstr "Springer!"

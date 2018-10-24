@@ -1,3 +1,10 @@
+1.0.3:
+- Add AppData file
+- Remove gnome-settings-daemon and upower-glib dependencies
+- Start counter when lid gets closed
+- Use tabular numbers for the timer label so that the counter
+  doesn't flicker when updating
+
 1.0.2:
 - More efficient drawing of the timer label
 - Fix conflicting desktop file categories

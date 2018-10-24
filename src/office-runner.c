@@ -615,8 +615,6 @@ lid_is_closed_cb (GDBusProxy *proxy,
 
 	page = gtk_notebook_get_current_page (GTK_NOTEBOOK (run->notebook));
 
-	g_message ("lid is closed %d current_page %d", lid_is_closed, page);
-
 	switch (page) {
 	case RUN_PAGE:
 		if (lid_is_closed) {

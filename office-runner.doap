@@ -6,7 +6,7 @@
 	<name xml:lang="en">office-runner</name>
 	<shortdesc xml:lang="en">Office game for laptop owners</shortdesc>
 	<bug-database rdf:resource="https://gitlab.gnome.org/GNOME/office-runner/issues/" />
-	<category rdf:resource="http://api.gnome.org/doap-extensions#desktop" />
+	<!-- <category rdf:resource="http://api.gnome.org/doap-extensions#desktop" /> -->
 	<maintainer>
 		<foaf:Person>
 			<foaf:name>Bastien Nocera</foaf:name>

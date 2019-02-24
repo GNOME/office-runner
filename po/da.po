@@ -1,0 +1,145 @@
+# Danish translation for office-runner.
+# Copyright (C) 2019 office-runner's COPYRIGHT HOLDER
+# This file is distributed under the same license as the office-runner package.
+# scootergrisen, 2019.
+msgid ""
+msgstr ""
+"Project-Id-Version: office-runner master\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/office-runner/issues\n"
+"POT-Creation-Date: 2019-01-26 23:48+0000\n"
+"PO-Revision-Date: 2019-02-10 10:19+0200\n"
+"Last-Translator: scootergrisen\n"
+"Language-Team: Danish\n"
+"Language: da\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: src/office-runner.c:64
+msgid "Gold Trophy!"
+msgstr "Guldtrofæ!"
+
+#: src/office-runner.c:65
+msgid "Silver Trophy!"
+msgstr "Sølvtrofæ!"
+
+#: src/office-runner.c:66
+msgid "Bronze Trophy!"
+msgstr "Bronzetrofæ!"
+
+#: src/office-runner.c:237
+msgid "Office Runner is running"
+msgstr "Kontorløber kører"
+
+#: src/office-runner.c:341
+#, c-format
+msgid "%d.%02d seconds"
+msgstr "%d.%02d sekunder"
+
+#: src/office-runner.c:479
+msgid "Took too long, sorry!"
+msgstr "Beklager, det tog for lang tid!"
+
+#: src/office-runner.c:500
+#, c-format
+msgid "You managed to finish the route with the best time ever, <b>%s</b>."
+msgstr "Du fuldførte ruten i den bedste tid nogensinde, <b>%s</b>."
+
+#: src/office-runner.c:503
+#, c-format
+msgid ""
+"You managed to finish the route with the 2<span rise=\"2048\">nd</span> best "
+"time ever, <b>%s</b>."
+msgstr "Du fuldførte ruten i den næstbedste tid nogensinde, <b>%s</b>."
+
+#: src/office-runner.c:505
+#, c-format
+msgid "Only <b>%s</b> separate you from the gold trophy!"
+msgstr "Der er kun <b>%s</b> mellem dig og guldtrofæet!"
+
+#: src/office-runner.c:509
+#, c-format
+msgid ""
+"You managed to finish the route with the 3<span rise=\"2048\">rd</span> best "
+"time ever, <b>%s</b>."
+msgstr "Du fuldførte ruten i den tredjebedste tid nogensinde, <b>%s</b>."
+
+#: src/office-runner.c:511
+#, c-format
+msgid "Only <b>%s</b> separate you from the silver trophy!"
+msgstr "Der er kun <b>%s</b> mellem dig og sølvtrofæet!"
+
+#: src/office-runner.c:520
+msgid "Too slow for the podium"
+msgstr "For langsomt til at komme på podiet"
+
+#: src/office-runner.c:521
+#, c-format
+msgid "You managed to finish the route in <b>%s</b>."
+msgstr "Du fuldførte ruten på <b>%s</b>."
+
+#: src/office-runner.c:524
+#, c-format
+msgid "Only <b>%s</b> separate you from the bronze trophy!"
+msgstr "Der er kun <b>%s</b> mellem dig og bronzetrofæet!"
+
+#: src/office-runner.c:553 src/office-runner.ui:270
+msgid "Run!"
+msgstr "Løb!"
+
+#: src/office-runner.c:560
+msgid "Done!"
+msgstr "Færdig!"
+
+#: src/office-runner.c:571
+msgid "Try Again"
+msgstr "Prøv igen"
+
+#: src/office-runner.ui:7 src/org.gnome.OfficeRunner.desktop.in:3
+#: src/org.gnome.OfficeRunner.appdata.xml.in:7
+msgid "Office Runner"
+msgstr "Kontorløber"
+
+#: src/office-runner.ui:51
+msgid ""
+" • Click the \"Run!\" button, and then dash to your desk or meeting.\n"
+" • You are allowed to close your laptop lid to run faster\n"
+msgstr ""
+" • Klik på “Løb”-knappen og skynd dig til dit skrivebord eller møde.\n"
+" • Du må gerne lukke låget på din bærbare, så du kan løbe hurtigere\n"
+
+#: src/office-runner.ui:67
+msgid "Rules"
+msgstr "Regler"
+
+#: src/org.gnome.OfficeRunner.desktop.in:4
+msgid "Office game for laptop owners"
+msgstr "Kontorspil til dem der har en bærbar"
+
+#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
+#: src/org.gnome.OfficeRunner.desktop.in:7
+msgid "org.gnome.OfficeRunner"
+msgstr "org.gnome.OfficeRunner"
+
+#: src/org.gnome.OfficeRunner.appdata.xml.in:9
+msgid "Close your laptop lid and start running"
+msgstr "Luk låget på din bærbare og løb"
+
+#: src/org.gnome.OfficeRunner.appdata.xml.in:13
+msgid ""
+"Office Runner is a game where tallying up the time taken to go from one "
+"place in your office to the other."
+msgstr ""
+"Kontorløber er et spil som tæller hvor lang tid det tager at komme fra et "
+"sted i dit kontor til et andet."
+
+#: src/org.gnome.OfficeRunner.appdata.xml.in:17
+msgid ""
+"Incidentally, it will also let you close your laptop lid without the "
+"computer going to sleep, which is useful to avoid having to reconnect to the "
+"network after your short trip."
+msgstr ""
+"Den lader dig i øvrigt også lukke låget på din bærbare uden at computeren "
+"sover, så forbindelsen til netværket ikke skal oprettes igen efter din korte "
+"tur."

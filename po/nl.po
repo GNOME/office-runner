@@ -1,54 +1,54 @@
 # Dutch translation for office-runner.
 # Copyright (C) 2018 office-runner's COPYRIGHT HOLDER
 # This file is distributed under the same license as the office-runner package.
-# Nathan Follens <nthn@unseen.is>, 2018.
+# Nathan Follens <nthn@unseen.is>, 2018-2019.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: office-runner master\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-16 18:52+0000\n"
-"PO-Revision-Date: 2018-03-13 21:55+0100\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/office-runner/issues\n"
+"POT-Creation-Date: 2018-06-25 09:31+0000\n"
+"PO-Revision-Date: 2019-02-26 13:15+0100\n"
+"Last-Translator: Nathan Follens <nthn@unseen.is>\n"
 "Language-Team: Dutch <gnome-nl-list@gnome.org>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Last-Translator: Nathan Follens <nthn@unseen.is>\n"
-"X-Generator: Poedit 2.0.6\n"
+"X-Generator: Poedit 2.2.1\n"
 
-#: src/office-runner.c:65
+#: src/office-runner.c:64
 msgid "Gold Trophy!"
 msgstr "Gouden trofee!"
 
-#: src/office-runner.c:66
+#: src/office-runner.c:65
 msgid "Silver Trophy!"
 msgstr "Zilveren trofee!"
 
-#: src/office-runner.c:67
+#: src/office-runner.c:66
 msgid "Bronze Trophy!"
 msgstr "Bronzen trofee!"
 
-#: src/office-runner.c:228
+#: src/office-runner.c:237
 msgid "Office Runner is running"
 msgstr "Kantoorracer wordt uitgevoerd"
 
-#: src/office-runner.c:332
+#: src/office-runner.c:341
 #, c-format
 msgid "%d.%02d seconds"
 msgstr "%d.%02d seconden"
 
-#: src/office-runner.c:470
+#: src/office-runner.c:479
 msgid "Took too long, sorry!"
 msgstr "Duurde te lang, sorry!"
 
-#: src/office-runner.c:491
+#: src/office-runner.c:500
 #, c-format
 msgid "You managed to finish the route with the best time ever, <b>%s</b>."
 msgstr "U heeft de route afgelegd met de beste tijd aller tijden, <b>%s</b>."
 
-#: src/office-runner.c:494
+#: src/office-runner.c:503
 #, c-format
 msgid ""
 "You managed to finish the route with the 2<span rise=\"2048\">nd</span> best "
@@ -57,12 +57,12 @@ msgstr ""
 "U heeft de route afgelegd met de 2<span rise=\"2048\">de</span> beste tijd "
 "aller tijden, <b>%s</b>."
 
-#: src/office-runner.c:496
+#: src/office-runner.c:505
 #, c-format
 msgid "Only <b>%s</b> separate you from the gold trophy!"
 msgstr "Enkel <b>%s</b> staat u nog in de weg voor de gouden trofee!"
 
-#: src/office-runner.c:500
+#: src/office-runner.c:509
 #, c-format
 msgid ""
 "You managed to finish the route with the 3<span rise=\"2048\">rd</span> best "
@@ -71,39 +71,39 @@ msgstr ""
 "U heeft de route afgelegd met de 3<span rise=\"2048\">de</span> beste tijd "
 "aller tijden, <b>%s</b>."
 
-#: src/office-runner.c:502
+#: src/office-runner.c:511
 #, c-format
 msgid "Only <b>%s</b> separate you from the silver trophy!"
 msgstr "Enkel <b>%s</b> staat u nog in de weg voor de zilveren trofee!"
 
-#: src/office-runner.c:511
+#: src/office-runner.c:520
 msgid "Too slow for the podium"
 msgstr "Te traag voor het podium"
 
-#: src/office-runner.c:512
+#: src/office-runner.c:521
 #, c-format
 msgid "You managed to finish the route in <b>%s</b>."
 msgstr "U heeft de route afgelegd in <b>%s</b>."
 
-#: src/office-runner.c:515
+#: src/office-runner.c:524
 #, c-format
 msgid "Only <b>%s</b> separate you from the bronze trophy!"
 msgstr "Enkel <b>%s</b> staat u nog in de weg voor de bronzen trofee!"
 
-#: src/office-runner.c:544 src/office-runner.ui:269
+#: src/office-runner.c:553 src/office-runner.ui:269
 msgid "Run!"
 msgstr "Start!"
 
-#: src/office-runner.c:551
+#: src/office-runner.c:560
 msgid "Done!"
 msgstr "Klaar!"
 
-#: src/office-runner.c:562
+#: src/office-runner.c:571
 msgid "Try Again"
 msgstr "Probeer het opnieuw"
 
-#: src/office-runner.ui:7 src/office-runner.desktop.in:3
-#: src/office-runner.appdata.xml.in:7
+#: src/office-runner.ui:7 src/org.gnome.OfficeRunner.desktop.in:3
+#: src/org.gnome.OfficeRunner.appdata.xml.in:7
 msgid "Office Runner"
 msgstr "Kantoorracer"
 
@@ -119,20 +119,21 @@ msgstr ""
 msgid "Rules"
 msgstr "Regels"
 
-#: src/office-runner.desktop.in:4
+#: src/org.gnome.OfficeRunner.desktop.in:4
 msgid "Office game for laptop owners"
 msgstr "Bureauspel voor laptopgebruikers"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: src/office-runner.desktop.in:7
-msgid "office-runner"
-msgstr "office-runner"
+#: src/org.gnome.OfficeRunner.desktop.in:7
+#| msgid "Office Runner"
+msgid "org.gnome.OfficeRunner"
+msgstr "org.gnome.OfficeRunner"
 
-#: src/office-runner.appdata.xml.in:9
+#: src/org.gnome.OfficeRunner.appdata.xml.in:9
 msgid "Close your laptop lid and start running"
 msgstr "Sluit uw laptop en begin te lopen"
 
-#: src/office-runner.appdata.xml.in:11
+#: src/org.gnome.OfficeRunner.appdata.xml.in:13
 msgid ""
 "Office Runner is a game where tallying up the time taken to go from one "
 "place in your office to the other."
@@ -140,7 +141,7 @@ msgstr ""
 "Kantoorracer is een spel met de tijd die u spendeert aan van de ene plaats "
 "op uw kantoor naar de andere te gaan."
 
-#: src/office-runner.appdata.xml.in:15
+#: src/org.gnome.OfficeRunner.appdata.xml.in:17
 msgid ""
 "Incidentally, it will also let you close your laptop lid without the "
 "computer going to sleep, which is useful to avoid having to reconnect to the "
@@ -149,3 +150,6 @@ msgstr ""
 "Het laat toe dat u uw laptop sluit zonder dat deze in slaapmodus gaat, wat "
 "erg handig is als u niet opnieuw verbinding wilt maken met het netwerk na uw "
 "korte reis."
+
+#~ msgid "office-runner"
+#~ msgstr "office-runner"

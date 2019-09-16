@@ -5,50 +5,51 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: office-runner master\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-16 12:23+0000\n"
-"PO-Revision-Date: 2017-08-12 21:40+0200\n"
-"Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/office-runner/issues\n"
+"POT-Creation-Date: 2018-06-25 09:31+0000\n"
+"PO-Revision-Date: 2019-09-16 08:31+0200\n"
+"Last-Translator: Марко М. Костић <marko.m.kostic@gmail.com>\n"
 "Language-Team: српски <gnome-sr@googlegroups.org>\n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=n==1? 3 : n%10==1 && n%100!=11 ? 0 : "
-"n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=4; plural=n==1? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Project-Style: gnome\n"
+"X-Generator: Poedit 2.2.3\n"
 
-#: src/office-runner.c:65
+#: src/office-runner.c:64
 msgid "Gold Trophy!"
 msgstr "Златна медаља!"
 
-#: src/office-runner.c:66
+#: src/office-runner.c:65
 msgid "Silver Trophy!"
 msgstr "Сребрна медаља!"
 
-#: src/office-runner.c:67
+#: src/office-runner.c:66
 msgid "Bronze Trophy!"
 msgstr "Бронзана медаља!"
 
-#: src/office-runner.c:228
+#: src/office-runner.c:237
 msgid "Office Runner is running"
 msgstr "Канцеларијски тркач је покренут"
 
-#: src/office-runner.c:332
+#: src/office-runner.c:341
 #, c-format
 msgid "%d.%02d seconds"
 msgstr "%d.%02d секунде"
 
-#: src/office-runner.c:470
+#: src/office-runner.c:479
 msgid "Took too long, sorry!"
 msgstr "Предуго је то трајало, извините!"
 
-#: src/office-runner.c:491
+#: src/office-runner.c:500
 #, c-format
 msgid "You managed to finish the route with the best time ever, <b>%s</b>."
 msgstr "Завршили сте са најбољим временом до сада, <b>%s</b>."
 
-#: src/office-runner.c:494
+#: src/office-runner.c:503
 #, c-format
 msgid ""
 "You managed to finish the route with the 2<span rise=\"2048\">nd</span> best "
@@ -57,12 +58,12 @@ msgstr ""
 "Завршили сте са 2<span rise=\"2048\">-им</span> најбољим временом до сада, "
 "<b>%s</b>."
 
-#: src/office-runner.c:496
+#: src/office-runner.c:505
 #, c-format
 msgid "Only <b>%s</b> separate you from the gold trophy!"
 msgstr "Само <b>%s</b> вас дели од златне медаље!"
 
-#: src/office-runner.c:500
+#: src/office-runner.c:509
 #, c-format
 msgid ""
 "You managed to finish the route with the 3<span rise=\"2048\">rd</span> best "
@@ -71,39 +72,39 @@ msgstr ""
 "Завршили сте са 3<span rise=\"2048\">-им</span> најбољим временом до сада, "
 "<b>%s</b>."
 
-#: src/office-runner.c:502
+#: src/office-runner.c:511
 #, c-format
 msgid "Only <b>%s</b> separate you from the silver trophy!"
 msgstr "Само <b>%s</b> вас дели од сребрне медаље!"
 
-#: src/office-runner.c:511
+#: src/office-runner.c:520
 msgid "Too slow for the podium"
 msgstr "Превише споро за постоље"
 
-#: src/office-runner.c:512
+#: src/office-runner.c:521
 #, c-format
 msgid "You managed to finish the route in <b>%s</b>."
 msgstr "Завршили сте за <b>%s</b>."
 
-#: src/office-runner.c:515
+#: src/office-runner.c:524
 #, c-format
 msgid "Only <b>%s</b> separate you from the bronze trophy!"
 msgstr "Само <b>%s</b> вас дели од бронзане медаље!"
 
-#: src/office-runner.c:544 src/office-runner.ui:269
+#: src/office-runner.c:553 src/office-runner.ui:269
 msgid "Run!"
 msgstr "Трчи!"
 
-#: src/office-runner.c:551
+#: src/office-runner.c:560
 msgid "Done!"
 msgstr "Готово!"
 
-#: src/office-runner.c:562
+#: src/office-runner.c:571
 msgid "Try Again"
 msgstr "Покушај поново"
 
-#: src/office-runner.ui:7 src/office-runner.desktop.in:3
-#: src/office-runner.appdata.xml.in:7
+#: src/office-runner.ui:7 src/org.gnome.OfficeRunner.desktop.in:3
+#: src/org.gnome.OfficeRunner.appdata.xml.in:7
 msgid "Office Runner"
 msgstr "Канцеларијски тркач"
 
@@ -121,21 +122,20 @@ msgstr ""
 msgid "Rules"
 msgstr "Правила"
 
-#: src/office-runner.desktop.in:4
+#: src/org.gnome.OfficeRunner.desktop.in:4
 msgid "Office game for laptop owners"
 msgstr "Канцеларијска игра за власнике преносних рачунара"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: src/office-runner.desktop.in:7
-#| msgid "Office Runner"
-msgid "office-runner"
-msgstr "office-runner"
+#: src/org.gnome.OfficeRunner.desktop.in:7
+msgid "org.gnome.OfficeRunner"
+msgstr "org.gnome.OfficeRunner"
 
-#: src/office-runner.appdata.xml.in:9
+#: src/org.gnome.OfficeRunner.appdata.xml.in:9
 msgid "Close your laptop lid and start running"
 msgstr "Спустите поклопац преносног рачунара и почните да трчите"
 
-#: src/office-runner.appdata.xml.in:11
+#: src/org.gnome.OfficeRunner.appdata.xml.in:13
 msgid ""
 "Office Runner is a game where tallying up the time taken to go from one "
 "place in your office to the other."
@@ -143,7 +143,7 @@ msgstr ""
 "Канцеларијски тркач је игра за одбројавање времена које вам је потребно да "
 "стигнете од једног места у вашој канцеларији до другог."
 
-#: src/office-runner.appdata.xml.in:15
+#: src/org.gnome.OfficeRunner.appdata.xml.in:17
 msgid ""
 "Incidentally, it will also let you close your laptop lid without the "
 "computer going to sleep, which is useful to avoid having to reconnect to the "
@@ -152,6 +152,10 @@ msgstr ""
 "Исто тако, допушта вам да затворите поклопац вашег преносног рачунара а да "
 "се исти не успава, што је корисно јер тиме избегавате поновно повезивање на "
 "мрежу након вашег кратког излета."
+
+#~| msgid "Office Runner"
+#~ msgid "office-runner"
+#~ msgstr "office-runner"
 
 #~ msgid "Running!"
 #~ msgstr "Трчим!"

@@ -1,0 +1,133 @@
+# Basque translation for office-runner.
+# Copyright (C) 2019 office-runner's COPYRIGHT HOLDER
+# This file is distributed under the same license as the office-runner package.
+# Asier Sarasua Garmendia <asier.sarasua@gmail.com>, 2019.
+#
+msgid ""
+msgstr "Project-Id-Version: office-runner master\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/office-runner/issues\n"
+"POT-Creation-Date: 2019-10-13 18:35+0000\n"
+"PO-Revision-Date: 2019-10-18 10:00+0100\n"
+"Last-Translator: Asier Sarasua Garmendia <asier.sarasua@gmail.com>\n"
+"Language-Team: Basque <librezale@librezale.eus>\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/office-runner.c:64
+msgid "Gold Trophy!"
+msgstr "Urrezko saria!"
+
+#: src/office-runner.c:65
+msgid "Silver Trophy!"
+msgstr "Zilarrezko saria!"
+
+#: src/office-runner.c:66
+msgid "Bronze Trophy!"
+msgstr "Brontzezko saria!"
+
+#: src/office-runner.c:237
+msgid "Office Runner is running"
+msgstr "Office Runner abian da"
+
+#: src/office-runner.c:341
+#, c-format
+msgid "%d.%02d seconds"
+msgstr "%d.%02d segundo"
+
+#: src/office-runner.c:479
+msgid "Took too long, sorry!"
+msgstr "Denbora gehiegi!"
+
+#: src/office-runner.c:500
+#, c-format
+msgid "You managed to finish the route with the best time ever, <b>%s</b>."
+msgstr "Inoizko denborarik onena egin duzu ibilbidea amaitzeko, <b>%s</b>."
+
+#: src/office-runner.c:503
+#, c-format
+msgid ""
+"You managed to finish the route with the 2<span rise=\"2048\">nd</span> best "
+"time ever, <b>%s</b>."
+msgstr "Inoizko bigarren denborarik onena egin duzu ibilbidea amaitzeko, <b>%s</b>."
+
+#: src/office-runner.c:505
+#, c-format
+msgid "Only <b>%s</b> separate you from the gold trophy!"
+msgstr "Urrezko sariak baino <b>%s</b> gehiago soilik egin dituzu!"
+
+#: src/office-runner.c:509
+#, c-format
+msgid ""
+"You managed to finish the route with the 3<span rise=\"2048\">rd</span> best "
+"time ever, <b>%s</b>."
+msgstr "Inoizko hirugarren denborarik onena egin duzu ibilbidea amaitzeko, <b>%s</b>."
+
+#: src/office-runner.c:511
+#, c-format
+msgid "Only <b>%s</b> separate you from the silver trophy!"
+msgstr "Zilarrezko sariak baino <b>%s</b> gehiago soilik egin dituzu!"
+
+#: src/office-runner.c:520
+msgid "Too slow for the podium"
+msgstr "Motelegia podiumera igotzeko"
+
+#: src/office-runner.c:521
+#, c-format
+msgid "You managed to finish the route in <b>%s</b>."
+msgstr "Ibilbidea amaitzeko <b>%s</b> behar izan dituzu."
+
+#: src/office-runner.c:524
+#, c-format
+msgid "Only <b>%s</b> separate you from the bronze trophy!"
+msgstr "Brontzezko sariak baino <b>%s</b> gehiago soilik egin dituzu!"
+
+#: src/office-runner.c:553 src/office-runner.ui:270
+msgid "Run!"
+msgstr "Egin korrika!"
+
+#: src/office-runner.c:560
+msgid "Done!"
+msgstr "Eginda!"
+
+#: src/office-runner.c:571
+msgid "Try Again"
+msgstr "Saiatu berriro"
+
+#: src/office-runner.ui:7 src/org.gnome.OfficeRunner.desktop.in:3
+#: src/org.gnome.OfficeRunner.appdata.xml.in:7
+msgid "Office Runner"
+msgstr "Office Runner"
+
+#: src/office-runner.ui:51
+msgid ""
+" • Click the \"Run!\" button, and then dash to your desk or meeting.\n"
+" • You are allowed to close your laptop lid to run faster\n"
+msgstr " • Egin klik \"Egin korrika!\" botoian eta joan lastera zure mahaira edo bilerara.\n"
+"• Zure eramangarria estali dezakezu azkarrago egiteko korrika\n"
+
+#: src/office-runner.ui:67
+msgid "Rules"
+msgstr "Arauak"
+
+#: src/org.gnome.OfficeRunner.desktop.in:4
+msgid "Office game for laptop owners"
+msgstr "Bulegoko jokoa eramangarrien jabeentzako"
+
+#: src/org.gnome.OfficeRunner.appdata.xml.in:9
+msgid "Close your laptop lid and start running"
+msgstr "Itxi zure eramangarriaren tapa eta hasi korrika"
+
+#: src/org.gnome.OfficeRunner.appdata.xml.in:13
+msgid ""
+"Office Runner is a game where tallying up the time taken to go from one "
+"place in your office to the other."
+msgstr "Office Runner bulego toki batetik beste batera joateko behar den denbora neurtzen duen joko bat da."
+
+#: src/org.gnome.OfficeRunner.appdata.xml.in:17
+msgid ""
+"Incidentally, it will also let you close your laptop lid without the "
+"computer going to sleep, which is useful to avoid having to reconnect to the "
+"network after your short trip."
+msgstr "Zure eramangarriaren tapa ordenagailua eseki gabe ixtea ahalbidetzen du. Hori erabilgarria da sarera berriro konektatu behar ez izateko zure bidaia laburra egin ondoren."

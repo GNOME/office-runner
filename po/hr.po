@@ -1,0 +1,143 @@
+# Croatian translation for office-runner.
+# Copyright (C) 2020 office-runner's COPYRIGHT HOLDER
+# This file is distributed under the same license as the office-runner package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: office-runner master\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/office-runner/issues\n"
+"POT-Creation-Date: 2020-03-03 06:43+0000\n"
+"PO-Revision-Date: 2020-09-15 20:58+0200\n"
+"Language-Team: Croatian <hr@li.org>\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Last-Translator: gogo <trebelnik2@gmail.com>\n"
+"X-Generator: Poedit 2.3\n"
+
+#: src/office-runner.c:64
+msgid "Gold Trophy!"
+msgstr "Zlatni pehar!"
+
+#: src/office-runner.c:65
+msgid "Silver Trophy!"
+msgstr "Srebrni pehar!"
+
+#: src/office-runner.c:66
+msgid "Bronze Trophy!"
+msgstr "Brončani pehar!"
+
+#: src/office-runner.c:237
+msgid "Office Runner is running"
+msgstr "Uredski trkač je pokrenut"
+
+#: src/office-runner.c:341
+#, c-format
+msgid "%d.%02d seconds"
+msgstr "%d.%02d sekunda"
+
+#: src/office-runner.c:479
+msgid "Took too long, sorry!"
+msgstr "Nažalost, predugo je potrajalo!"
+
+#: src/office-runner.c:500
+#, c-format
+msgid "You managed to finish the route with the best time ever, <b>%s</b>."
+msgstr "Uspjeli ste završiti rutu s najboljim vremenom ikad, <b>%s</b>."
+
+#: src/office-runner.c:503
+#, c-format
+msgid ""
+"You managed to finish the route with the 2<span rise=\"2048\">nd</span> best "
+"time ever, <b>%s</b>."
+msgstr "Uspjeli ste završiti rutu s drugim najboljim vremenom ikad, <b>%s</b>."
+
+#: src/office-runner.c:505
+#, c-format
+msgid "Only <b>%s</b> separate you from the gold trophy!"
+msgstr "Samo <b>%s</b> vas je dijelilo do zlatnog pehara!"
+
+#: src/office-runner.c:509
+#, c-format
+msgid ""
+"You managed to finish the route with the 3<span rise=\"2048\">rd</span> best "
+"time ever, <b>%s</b>."
+msgstr "Uspjeli ste završiti rutu s trećim najboljim vremenom ikad, <b>%s</b>."
+
+#: src/office-runner.c:511
+#, c-format
+msgid "Only <b>%s</b> separate you from the silver trophy!"
+msgstr "Samo <b>%s</b> vas je dijelilo do srebrnog pehara!"
+
+#: src/office-runner.c:520
+msgid "Too slow for the podium"
+msgstr "Presporo za postolje"
+
+#: src/office-runner.c:521
+#, c-format
+msgid "You managed to finish the route in <b>%s</b>."
+msgstr "Uspjeli ste završiti rutu za <b>%s</b>."
+
+#: src/office-runner.c:524
+#, c-format
+msgid "Only <b>%s</b> separate you from the bronze trophy!"
+msgstr "Samo <b>%s</b> vas je dijelilo do brončanog pehara!"
+
+#: src/office-runner.c:553 src/office-runner.ui:270
+msgid "Run!"
+msgstr "_Trči!"
+
+#: src/office-runner.c:560
+msgid "Done!"
+msgstr "Završeno!"
+
+#: src/office-runner.c:571
+msgid "Try Again"
+msgstr "Pokušaj ponovno"
+
+#: src/office-runner.ui:7 src/org.gnome.OfficeRunner.desktop.in:3
+#: src/org.gnome.OfficeRunner.appdata.xml.in:7
+msgid "Office Runner"
+msgstr "Uredski trkač"
+
+#: src/office-runner.ui:51
+msgid ""
+" • Click the \"Run!\" button, and then dash to your desk or meeting.\n"
+" • You are allowed to close your laptop lid to run faster\n"
+msgstr ""
+" • Kliknite na \"Trči!\" tipku, a zatim trknite do svog stola ili sastanka.\n"
+" • Možete zatvoriti svoj poklopac prijenosnika kako bi trčali brže\n"
+
+#: src/office-runner.ui:67
+msgid "Rules"
+msgstr "Pravila"
+
+#: src/org.gnome.OfficeRunner.desktop.in:4
+msgid "Office game for laptop owners"
+msgstr "Uredska igra za vlasnike prijenosnih računala"
+
+#: src/org.gnome.OfficeRunner.appdata.xml.in:9
+msgid "Close your laptop lid and start running"
+msgstr "Zatvorite poklopac svojeg prijenosnog računala i potrčite"
+
+#: src/org.gnome.OfficeRunner.appdata.xml.in:13
+msgid ""
+"Office Runner is a game where tallying up the time taken to go from one "
+"place in your office to the other."
+msgstr ""
+"Office Runner je igra u kojoj se zbraja vrijeme potrebno za prelazak s "
+"jednog mjesta u vašem uredu na drugo."
+
+#: src/org.gnome.OfficeRunner.appdata.xml.in:17
+msgid ""
+"Incidentally, it will also let you close your laptop lid without the "
+"computer going to sleep, which is useful to avoid having to reconnect to the "
+"network after your short trip."
+msgstr ""
+"Usput, omogućit će vam i zatvaranje poklopca prijenosnog računala bez da "
+"računalo ide u stanje mirovanja, što je korisno kako biste izbjegli ponovno "
+"povezivanje s mrežom nakon vašeg kratkog izbivanja."

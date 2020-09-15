@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: office-runner master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/office-runner/issues\n"
 "POT-Creation-Date: 2020-03-03 06:43+0000\n"
-"PO-Revision-Date: 2020-09-15 20:58+0200\n"
+"PO-Revision-Date: 2020-09-15 21:01+0200\n"
 "Language-Team: Croatian <hr@li.org>\n"
 "Language: hr\n"
 "MIME-Version: 1.0\n"
@@ -93,7 +93,7 @@ msgstr "_Trči!"
 
 #: src/office-runner.c:560
 msgid "Done!"
-msgstr "Završeno!"
+msgstr "Stani!"
 
 #: src/office-runner.c:571
 msgid "Try Again"
@@ -129,7 +129,7 @@ msgid ""
 "Office Runner is a game where tallying up the time taken to go from one "
 "place in your office to the other."
 msgstr ""
-"Office Runner je igra u kojoj se zbraja vrijeme potrebno za prelazak s "
+"Uredski trkač je igra u kojoj se zbraja vrijeme potrebno za prelazak s "
 "jednog mjesta u vašem uredu na drugo."
 
 #: src/org.gnome.OfficeRunner.appdata.xml.in:17

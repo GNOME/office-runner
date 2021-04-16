@@ -1,0 +1,141 @@
+# Chinese (China) translation for office-runner.
+# Copyright (C) 2015 office-runner's COPYRIGHT HOLDER
+# This file is distributed under the same license as the office-runner package.
+# liushuyu <liushuyu_011@126.com>, 2015.
+# Dingzhong Chen <wsxy162@gmail.com>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: office-runner master\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/office-runner/issues\n"
+"POT-Creation-Date: 2019-05-07 07:34+0000\n"
+"PO-Revision-Date: 2020-10-19 22:15+0800\n"
+"Last-Translator: Dingzhong Chen <wsxy162@gmail.com>\n"
+"Language-Team: Chinese - China <i18n-zh@googlegroups.com>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Gtranslator 3.36.0\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+
+#: src/office-runner.c:64
+msgid "Gold Trophy!"
+msgstr "金奖杯！"
+
+#: src/office-runner.c:65
+msgid "Silver Trophy!"
+msgstr "银奖杯！"
+
+#: src/office-runner.c:66
+msgid "Bronze Trophy!"
+msgstr "铜奖杯！"
+
+# 可能原句有双关的意思，程序正跑着和Runner正跑着。所以我就翻译成这样。
+#: src/office-runner.c:237
+msgid "Office Runner is running"
+msgstr "“办公跑者”正跑着"
+
+#: src/office-runner.c:341
+#, c-format
+msgid "%d.%02d seconds"
+msgstr "%d.%02d 秒"
+
+#: src/office-runner.c:479
+msgid "Took too long, sorry!"
+msgstr "抱歉，花的时间太长了！"
+
+#: src/office-runner.c:500
+#, c-format
+msgid "You managed to finish the route with the best time ever, <b>%s</b>."
+msgstr "这是你成功完成该路线的最佳成绩：<b>%s</b>。"
+
+#: src/office-runner.c:503
+#, c-format
+msgid ""
+"You managed to finish the route with the 2<span rise=\"2048\">nd</span> best "
+"time ever, <b>%s</b>."
+msgstr "这是你完成该路径第二好的成绩：<b>%s</b>。"
+
+#: src/office-runner.c:505
+#, c-format
+msgid "Only <b>%s</b> separate you from the gold trophy!"
+msgstr "你距离金奖杯只差 <b>%s</b>！"
+
+#: src/office-runner.c:509
+#, c-format
+msgid ""
+"You managed to finish the route with the 3<span rise=\"2048\">rd</span> best "
+"time ever, <b>%s</b>."
+msgstr "这是你完成该路径第三好的成绩：<b>%s</b>。"
+
+#: src/office-runner.c:511
+#, c-format
+msgid "Only <b>%s</b> separate you from the silver trophy!"
+msgstr "你距离银奖杯只差 <b>%s</b>！"
+
+#: src/office-runner.c:520
+msgid "Too slow for the podium"
+msgstr "速度太慢，不足以登上领奖台"
+
+#: src/office-runner.c:521
+#, c-format
+msgid "You managed to finish the route in <b>%s</b>."
+msgstr "你成功以 <b>%s</b>完成了该路径。"
+
+#: src/office-runner.c:524
+#, c-format
+msgid "Only <b>%s</b> separate you from the bronze trophy!"
+msgstr "你距离铜奖杯只差 <b>%s</b>！"
+
+#: src/office-runner.c:553 src/office-runner.ui:270
+msgid "Run!"
+msgstr "开跑！"
+
+#: src/office-runner.c:560
+msgid "Done!"
+msgstr "完成！"
+
+#: src/office-runner.c:571
+msgid "Try Again"
+msgstr "重试"
+
+#: src/office-runner.ui:7 src/org.gnome.OfficeRunner.desktop.in:3
+#: src/org.gnome.OfficeRunner.appdata.xml.in:7
+msgid "Office Runner"
+msgstr "办公跑者"
+
+#: src/office-runner.ui:51
+msgid ""
+" • Click the \"Run!\" button, and then dash to your desk or meeting.\n"
+" • You are allowed to close your laptop lid to run faster\n"
+msgstr ""
+" • 点击“开跑！”按钮，然后冲到你的书桌或会议。\n"
+" • 允许你关闭笔记型电脑上盖，可以跑得更快\n"
+
+#: src/office-runner.ui:67
+msgid "Rules"
+msgstr "规则"
+
+#: src/org.gnome.OfficeRunner.desktop.in:4
+msgid "Office game for laptop owners"
+msgstr "为笔记本电脑拥有者设计的办公室游戏"
+
+#: src/org.gnome.OfficeRunner.appdata.xml.in:9
+msgid "Close your laptop lid and start running"
+msgstr "合上您的笔记本电脑盖子并开始跑"
+
+#: src/org.gnome.OfficeRunner.appdata.xml.in:13
+msgid ""
+"Office Runner is a game where tallying up the time taken to go from one "
+"place in your office to the other."
+msgstr "“办公跑者”是个计算你从一个办公室到另一个办公室所需时间的游戏。"
+
+#: src/org.gnome.OfficeRunner.appdata.xml.in:17
+msgid ""
+"Incidentally, it will also let you close your laptop lid without the "
+"computer going to sleep, which is useful to avoid having to reconnect to the "
+"network after your short trip."
+msgstr ""
+"顺便说一下，它也可以让你关闭笔记本上盖但不让你的电脑休眠。这很实用，可以让你"
+"避免短途旅行后不得不重新连接网络的麻烦。"

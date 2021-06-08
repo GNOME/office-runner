@@ -24,6 +24,9 @@
   <screenshots>
     <screenshot type="default">https://git.gnome.org/browse/office-runner/plain/src/office-runner-appdata-screenshot.jpg</screenshot>
   </screenshots>
+  <releases>
+    <release version="1.0.3" date="2018-10-24"/>
+  </releases>
   <updatecontact>hadess@hadess.net</updatecontact>
   <project_group>GNOME</project_group>
   <translation type="gettext">office-runner</translation>

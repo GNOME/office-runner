@@ -6,105 +6,105 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: office-runner master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=office-"
-"runner&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-12-16 18:47+0000\n"
-"PO-Revision-Date: 2012-12-17 14:15+0400\n"
-"Last-Translator: Yuri Myasoedov <omerta13@yandex.ru>\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/office-runner/issues\n"
+"POT-Creation-Date: 2020-09-15 19:01+0000\n"
+"PO-Revision-Date: 2022-05-15 08:49+1000\n"
+"Last-Translator: Ser82-png <sw@atrus.ru>\n"
 "Language-Team: русский <gnome-cyr@gnome.org>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
-"X-Generator: Gtranslator 2.91.5\n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Poedit 2.3\n"
 
-#: ../src/office-runner.c:64
+#: src/office-runner.c:64
 msgid "Gold Trophy!"
 msgstr "Золото!"
 
-#: ../src/office-runner.c:65
+#: src/office-runner.c:65
 msgid "Silver Trophy!"
 msgstr "Серебро!"
 
-#: ../src/office-runner.c:66
+#: src/office-runner.c:66
 msgid "Bronze Trophy!"
 msgstr "Бронза!"
 
-#: ../src/office-runner.c:201
-msgid "Running!"
-msgstr "Бегом!"
+#: src/office-runner.c:237
+msgid "Office Runner is running"
+msgstr "«Офисный спринтер» запушен"
 
-#: ../src/office-runner.c:300
+#: src/office-runner.c:341
 #, c-format
 msgid "%d.%02d seconds"
 msgstr "%d.%02d с"
 
-#: ../src/office-runner.c:435
+#: src/office-runner.c:479
 msgid "Took too long, sorry!"
 msgstr "Слишком медленно!"
 
-#: ../src/office-runner.c:456
+#: src/office-runner.c:500
 #, c-format
 msgid "You managed to finish the route with the best time ever, <b>%s</b>."
 msgstr "Вам удалось пройти весь путь с наилучшим временем: <b>%s</b>."
 
-#: ../src/office-runner.c:459
+#: src/office-runner.c:503
 #, c-format
 msgid ""
 "You managed to finish the route with the 2<span rise=\"2048\">nd</span> best "
 "time ever, <b>%s</b>."
 msgstr "Вам удалось пройти весь путь, показав 2-ое время: <b>%s</b>."
 
-#: ../src/office-runner.c:461
+#: src/office-runner.c:505
 #, c-format
 msgid "Only <b>%s</b> separate you from the gold trophy!"
 msgstr "<b>%s</b> отделяет вас от золотой награды!"
 
-#: ../src/office-runner.c:465
+#: src/office-runner.c:509
 #, c-format
 msgid ""
 "You managed to finish the route with the 3<span rise=\"2048\">rd</span> best "
 "time ever, <b>%s</b>."
 msgstr "Вам удалось пройти весь путь, показав 3-ое время: <b>%s</b>."
 
-#: ../src/office-runner.c:467
+#: src/office-runner.c:511
 #, c-format
 msgid "Only <b>%s</b> separate you from the silver trophy!"
 msgstr "<b>%s</b> отделяет вас от серебряной награды!"
 
-#: ../src/office-runner.c:474
+#: src/office-runner.c:520
 msgid "Too slow for the podium"
 msgstr "Слишком медленно для пьедестала"
 
-#: ../src/office-runner.c:475
+#: src/office-runner.c:521
 #, c-format
 msgid "You managed to finish the route in <b>%s</b>."
 msgstr "Вам удалось пройти весь путь за <b>%s</b>."
 
-#: ../src/office-runner.c:478
+#: src/office-runner.c:524
 #, c-format
 msgid "Only <b>%s</b> separate you from the bronze trophy!"
 msgstr "<b>%s</b> отделяет вас от бронзовой награды!"
 
-#: ../src/office-runner.c:508 ../src/office-runner.ui.h:6
+#: src/office-runner.c:553 src/office-runner.ui:270
 msgid "Run!"
 msgstr "Бегу!"
 
-#: ../src/office-runner.c:513
+#: src/office-runner.c:560
 msgid "Done!"
 msgstr "Выполнено!"
 
-#: ../src/office-runner.c:527
+#: src/office-runner.c:571
 msgid "Try Again"
 msgstr "Попробовать ещё раз"
 
-#: ../src/office-runner.ui.h:1 ../src/office-runner.desktop.in.h:1
+#: src/office-runner.ui:7 src/org.gnome.OfficeRunner.desktop.in:3
+#: src/org.gnome.OfficeRunner.appdata.xml.in:7
 msgid "Office Runner"
 msgstr "Офисный спринтер"
 
-#: ../src/office-runner.ui.h:2
+#: src/office-runner.ui:51
 msgid ""
 " • Click the \"Run!\" button, and then dash to your desk or meeting.\n"
 " • You are allowed to close your laptop lid to run faster\n"
@@ -113,10 +113,35 @@ msgstr ""
 "совещание.\n"
 " • Можете закрыть крышку ноутбука, чтобы вам было удобнее.\n"
 
-#: ../src/office-runner.ui.h:5
+#: src/office-runner.ui:67
 msgid "Rules"
 msgstr "Правила"
 
-#: ../src/office-runner.desktop.in.h:2
+#: src/org.gnome.OfficeRunner.desktop.in:4
 msgid "Office game for laptop owners"
 msgstr "Офисная игра для владельцев ноутбуков"
+
+#: src/org.gnome.OfficeRunner.appdata.xml.in:9
+msgid "Close your laptop lid and start running"
+msgstr "Закройте крышку ноутбука и бегите"
+
+#: src/org.gnome.OfficeRunner.appdata.xml.in:13
+msgid ""
+"Office Runner is a game where tallying up the time taken to go from one "
+"place in your office to the other."
+msgstr ""
+"«Офисный спринтер» — это игра, в которой подсчитывается время, затраченное "
+"на перемещение из одного места вашего офиса в другое."
+
+#: src/org.gnome.OfficeRunner.appdata.xml.in:17
+msgid ""
+"Incidentally, it will also let you close your laptop lid without the "
+"computer going to sleep, which is useful to avoid having to reconnect to the "
+"network after your short trip."
+msgstr ""
+"Кстати, программа также позволяет вам закрыть крышку ноутбука без перехода "
+"компьютера в спящий режим, что полезно для избежания повторного подключения "
+"к сети после короткого забега."
+
+#~ msgid "Running!"
+#~ msgstr "Бегом!"

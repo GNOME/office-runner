@@ -1,0 +1,146 @@
+# Hindi translation for office-runner.
+# Copyright (C) 2024 office-runner's COPYRIGHT HOLDER
+# This file is distributed under the same license as the office-runner package.
+# Scrambled 777 <weblate.scrambled777@simplelogin.com>, 2024.
+# Scrambled777 <weblate.scrambled777@simplelogin.com>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: office-runner master\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/office-runner/issues\n"
+"POT-Creation-Date: 2023-01-25 21:32+0000\n"
+"PO-Revision-Date: 2024-04-23 11:21+0530\n"
+"Last-Translator: Scrambled777 <weblate.scrambled777@simplelogin.com>\n"
+"Language-Team: Hindi\n"
+"Language: hi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Gtranslator 46.0\n"
+
+#: src/office-runner.c:64
+msgid "Gold Trophy!"
+msgstr "स्वर्ण ट्राफी!"
+
+#: src/office-runner.c:65
+msgid "Silver Trophy!"
+msgstr "रजत ट्रॉफी!"
+
+#: src/office-runner.c:66
+msgid "Bronze Trophy!"
+msgstr "कांस्य ट्रॉफी!"
+
+#: src/office-runner.c:237
+msgid "Office Runner is running"
+msgstr "Office Runner चल रहा है"
+
+#: src/office-runner.c:341
+#, c-format
+msgid "%d.%02d seconds"
+msgstr "%d.%02d सेकंड"
+
+#: src/office-runner.c:479
+msgid "Took too long, sorry!"
+msgstr "बहुत ज्यादा समय लग गया, क्षमा करें!"
+
+#: src/office-runner.c:500
+#, c-format
+msgid "You managed to finish the route with the best time ever, <b>%s</b>."
+msgstr "आप अब तक के सबसे अच्छे समय, <b>%s</b> के साथ मार्ग पूरा करने में कामयाब रहे।"
+
+#: src/office-runner.c:503
+#, c-format
+msgid ""
+"You managed to finish the route with the 2<span rise=\"2048\">nd</span> best "
+"time ever, <b>%s</b>."
+msgstr ""
+"आप अब तक के दू<span rise=\"2048\">सरे</span> सबसे अच्छे समय, <b>%s</b> के साथ मार्ग "
+"को पूरा करने में कामयाब रहे।"
+
+#: src/office-runner.c:505
+#, c-format
+msgid "Only <b>%s</b> separate you from the gold trophy!"
+msgstr "केवल <b>%s</b> ही आपको स्वर्ण ट्रॉफी से अलग करता है!"
+
+#: src/office-runner.c:509
+#, c-format
+msgid ""
+"You managed to finish the route with the 3<span rise=\"2048\">rd</span> best "
+"time ever, <b>%s</b>."
+msgstr ""
+"आप अब तक के ती<span raise=\"2048\">सरे</span> सबसे अच्छे समय, <b>%s</b> के साथ "
+"मार्ग को पूरा करने में कामयाब रहे।"
+
+#: src/office-runner.c:511
+#, c-format
+msgid "Only <b>%s</b> separate you from the silver trophy!"
+msgstr "केवल <b>%s</b> ही आपको रजत ट्रॉफी से अलग करता है!"
+
+#: src/office-runner.c:520
+msgid "Too slow for the podium"
+msgstr "पोडियम के लिए बहुत धीमें"
+
+#: src/office-runner.c:521
+#, c-format
+msgid "You managed to finish the route in <b>%s</b>."
+msgstr "आप <b>%s</b> में मार्ग समाप्त करने में सफल रहे।"
+
+#: src/office-runner.c:524
+#, c-format
+msgid "Only <b>%s</b> separate you from the bronze trophy!"
+msgstr "केवल <b>%s</b> ही आपको कांस्य ट्रॉफी से अलग करता है!"
+
+#: src/office-runner.c:553 src/office-runner.ui:270
+msgid "Run!"
+msgstr "दौड़ें!"
+
+#: src/office-runner.c:560
+msgid "Done!"
+msgstr "संपन्न!"
+
+#: src/office-runner.c:571
+msgid "Try Again"
+msgstr "पुनः प्रयास करें"
+
+#: src/office-runner.ui:7 src/org.gnome.OfficeRunner.desktop.in:3
+#: src/org.gnome.OfficeRunner.appdata.xml.in:7
+msgid "Office Runner"
+msgstr "Office Runner"
+
+#: src/office-runner.ui:51
+msgid ""
+" • Click the \"Run!\" button, and then dash to your desk or meeting.\n"
+" • You are allowed to close your laptop lid to run faster\n"
+msgstr ""
+" • \"दौड़ें!\" बटन को दबाएं, और फिर अपनी डेस्क या मीटिंग की ओर भागें।\n"
+" • आपको तेजी से दौड़ने के लिए अपने लैपटॉप की पलक बंद करने की अनुमति है\n"
+
+#: src/office-runner.ui:67
+msgid "Rules"
+msgstr "नियम"
+
+#: src/org.gnome.OfficeRunner.desktop.in:4
+msgid "Office game for laptop owners"
+msgstr "लैपटॉप मालिकों के लिए कार्यालय खेल"
+
+#: src/org.gnome.OfficeRunner.appdata.xml.in:9
+msgid "Close your laptop lid and start running"
+msgstr "अपने लैपटॉप की पलक बंद करें और दौड़ना शुरू करें"
+
+#: src/org.gnome.OfficeRunner.appdata.xml.in:13
+msgid ""
+"Office Runner is a game where tallying up the time taken to go from one "
+"place in your office to the other."
+msgstr ""
+"Office Runner एक गेम है जिसमें आपके कार्यालय में एक स्थान से दूसरे स्थान तक जाने में लगने वाले "
+"समय का मिलान किया जाता है।"
+
+#: src/org.gnome.OfficeRunner.appdata.xml.in:17
+msgid ""
+"Incidentally, it will also let you close your laptop lid without the "
+"computer going to sleep, which is useful to avoid having to reconnect to the "
+"network after your short trip."
+msgstr ""
+"संयोग से, यह आपको कंप्यूटर को निष्क्रिय किए बिना अपने लैपटॉप की पलक बंद करने की सुविधा "
+"भी देगा, जो आपकी छोटी यात्रा के बाद नेटवर्क से दोबारा जुड़ने से बचने के लिए उपयोगी है।"

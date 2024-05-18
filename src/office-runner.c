@@ -709,7 +709,7 @@ new_runner (void)
 						 NULL);
 
 	run->ui = gtk_builder_new ();
-	gtk_builder_add_from_file (run->ui, PKGDATADIR "office-runner.ui", NULL);
+	gtk_builder_add_from_file (run->ui, PKGDATADIR "/office-runner.ui", NULL);
 	run->window = WID ("window1");
 	run->time_label = WID ("time_label");
 	count_tick (NULL, NULL, run);

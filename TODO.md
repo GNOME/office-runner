@@ -1,3 +1,5 @@
+## To Do
+
 - Sound?
 - Start the counter when the lid gets closed
   (and change the explanatory text to match)
@@ -7,6 +9,7 @@
 - Add performance graph to results
 - Add app-menu to reset the results
 
-Known bugs (aka, can I be bothered?)
+## Known bugs (aka, can I be bothered?)
+
 - saving the date/time as a string means it won't get
   retranslated if we switch languages

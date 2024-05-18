@@ -3,6 +3,9 @@
  *
  * Author: Bastien Nocera <hadess@hadess.net>
  *
+ * SPDX-FileCopyrightText: 2011  Bastien Nocera
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ *
  * Office Runner is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or

@@ -5,6 +5,7 @@ Source: https://gitlab.gnome.org/GNOME/office-runner
 
 Files: .gitlab-ci.yml
 Copyright: 2019  Bastien Nocera
+           2024  Emmanuele Bassi
 License: GPL-3.0-or-later
 
 Files: office-runner.doap

@@ -1,13 +1,32 @@
 stages:
-- test
+  - build
 
-build-fedora:
+.build-fedora-latest:
   image: fedora:latest
-  stage: test
   before_script:
-    - dnf install -y gcc redhat-rpm-config which gettext-devel gnome-common make gtk3-devel
+    - dnf install -y ${PROJECT_DEPENDENCIES}
   script:
-    - ./autogen.sh --disable-dependency-tracking
-    - make
-    - make install
+    - meson setup ${MESON_EXTRA_FLAGS} --prefix /usr _build .
+    - meson compile -C _build
+    - meson test -C _build
+    - meson install -C _build
+  artifacts:
+    when: always
+    name: "office-runner-${CI_COMMIT_REF_NAME}"
+    paths:
+      - "${CI_PROJECT_DIR}/_build/meson-logs"
 
+build:
+  extends: .build-fedora-latest
+  stage: build
+  needs: []
+  variables:
+    PROJECT_DEPENDENCIES:
+      desktop-file-utils
+      gcc
+      gettext
+      git
+      gtk3-devel
+      meson
+      ninja-build
+      redhat-rpm-config

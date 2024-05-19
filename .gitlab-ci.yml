@@ -1,4 +1,5 @@
 stages:
+  - lint
   - build
 
 .build-fedora-latest:
@@ -16,7 +17,7 @@ stages:
     paths:
       - "${CI_PROJECT_DIR}/_build/meson-logs"
 
-build:
+build-fedora:
   extends: .build-fedora-latest
   stage: build
   needs: []
@@ -30,3 +31,14 @@ build:
       meson
       ninja-build
       redhat-rpm-config
+
+reuse:
+  stage: lint
+  image: fedora:latest
+  needs: []
+  before_script:
+    - export PATH="$HOME/.local/bin:$PATH"
+    - dnf install -y python3-pip
+  script:
+    - pip install --user reuse
+    - reuse --suppress-deprecation lint

@@ -1,0 +1,29 @@
+{
+    "app-id": "org.gnome.OfficeRunner",
+    "runtime": "org.gnome.Platform",
+    "runtime-version": "master",
+    "sdk": "org.gnome.Sdk",
+    "command": "office-runner",
+    "finish-args": [
+        "--share=ipc",
+        "--socket=fallback-x11",
+        "--socket=wayland",
+        "--socket=pulseaudio",
+        "--system-talk-name=org.freedesktop.login1",
+        "--system-talk-name=org.freedesktop.UPower"
+    ],
+    "modules": [
+        {
+            "name": "office-runner",
+            "builddir": true,
+            "buildsystem": "meson",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://gitlab.gnome.org/GNOME/office-runner.git",
+                    "branch": "main"
+                }
+            ]
+        }
+    ]
+}

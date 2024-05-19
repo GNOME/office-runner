@@ -25,34 +25,34 @@ Files: TODO.md
 Copyright: 2011  Bastien Nocera
 License: GPL-3.0-or-later
 
-Files: src/office-runner.ui
+Files: data/ui/office-runner.ui
 Copyright: 2011  Bastien Nocera
 License: GPL-3.0-or-later
 
-Files: src/org.gnome.OfficeRunner.appdata.xml.in
+Files: data/org.gnome.OfficeRunner.appdata.xml.in
 Copyright: 2014  Bastien Nocera
            2016  Richard Hughes
            2017  Luis Menina
            2021  Lionir
 License: CC0-1.0
 
-Files: src/office-runner-appdata-screenshot.jpg
+Files: data/screenshots/office-runner.jpg
 Copyright: 2014  Bastien Nocera
 License: CC0-1.0
 
-Files: src/org.gnome.OfficeRunner.desktop.in
+Files: data/org.gnome.OfficeRunner.desktop.in
 Copyright: 2011  Bastien Nocera
 License: GPL-3.0-or-later
 
-Files: src/*.wav
+Files: data/sounds/*.wav
 Copyright: 2011  Bastien Nocera
 License: GPL-3.0-or-later
 
-Files: icons/source.svg
+Files: data/icons/source.svg
 Copyright: 2013  Jakub Steiner
 License: GPL-3.0-or-later
 
-Files: icons/16x16/org.gnome.OfficeRunner.png icons/22x22/org.gnome.OfficeRunner.png icons/24x24/org.gnome.OfficeRunner.png icons/32x32/org.gnome.OfficeRunner.png icons/48x48/org.gnome.OfficeRunner.png icons/256x256/org.gnome.OfficeRunner.png
+Files: data/icons/16x16/org.gnome.OfficeRunner.png data/icons/22x22/org.gnome.OfficeRunner.png data/icons/24x24/org.gnome.OfficeRunner.png data/icons/32x32/org.gnome.OfficeRunner.png data/icons/48x48/org.gnome.OfficeRunner.png data/icons/256x256/org.gnome.OfficeRunner.png
 Copyright: 2013  Jakub Steiner
 License: GPL-3.0-or-later
 

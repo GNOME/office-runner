@@ -23,7 +23,7 @@ or_pkgdatadir = get_option('prefix') / get_option('datadir') / meson.project_nam
 
 subdir('src')
 subdir('po')
-subdir('icons')
+subdir('data')
 
 gnome.post_install(
   gtk_update_icon_cache: true,

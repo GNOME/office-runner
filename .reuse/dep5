@@ -25,6 +25,10 @@ Files: TODO.md
 Copyright: 2011  Bastien Nocera
 License: GPL-3.0-or-later
 
+Files: org.gnome.OfficeRunner.json
+Copyright: 2024  Emmanuele Bassi
+License: CC0-1.0
+
 Files: data/ui/office-runner.ui
 Copyright: 2011  Bastien Nocera
 License: GPL-3.0-or-later

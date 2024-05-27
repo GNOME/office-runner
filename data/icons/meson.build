@@ -1,17 +1,13 @@
 # SPDX-FileCopyrightText: 2024 Emmanuele Bassi
 # SPDX-License-Identifier: GPL-3.0-or-later
 sizes = [
-  '16x16',
-  '22x22',
-  '24x24',
-  '32x32',
-  '48x48',
-  '256x256',
+  'scalable',
+  'symbolic'
 ]
 
-icon_png = application_id + '.png'
+icon_svg = application_id + '.svg'
 hicolor_dir = or_datadir / 'icons' / 'hicolor'
 
 foreach size: sizes
-  install_data(size / icon_png, install_dir: hicolor_dir / size / 'apps')
+  install_data(size / icon_svg, install_dir: hicolor_dir / size / 'apps')
 endforeach

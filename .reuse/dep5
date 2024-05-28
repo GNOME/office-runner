@@ -52,12 +52,8 @@ Files: data/sounds/*.wav
 Copyright: 2011  Bastien Nocera
 License: GPL-3.0-or-later
 
-Files: data/icons/source.svg
-Copyright: 2013  Jakub Steiner
-License: GPL-3.0-or-later
-
-Files: data/icons/16x16/org.gnome.OfficeRunner.png data/icons/22x22/org.gnome.OfficeRunner.png data/icons/24x24/org.gnome.OfficeRunner.png data/icons/32x32/org.gnome.OfficeRunner.png data/icons/48x48/org.gnome.OfficeRunner.png data/icons/256x256/org.gnome.OfficeRunner.png
-Copyright: 2013  Jakub Steiner
+Files: data/icons/scalable/apps/org.gnome.OfficeRunner.svg data/icons/scalable/apps/org.gnome.OfficeRunner.Devel.svg data/icons/symbolic/apps/org.gnome.OfficeRunner-symbolic.svg data/icons/org.gnome.OfficeRunner.Source.svg
+Copyright: 2024  Jakub Steiner
 License: GPL-3.0-or-later
 
 Files: po/POTFILES.in po/LINGUAS

@@ -20,7 +20,7 @@
     </p>
   </description>
   <url type="homepage">https://www.hadess.net/2011/09/omg-i-haz-designed-bug-fix.html</url>
-  <url type="bugtracker">https://gitlab.gnome.org/GNOME/office-runner/-/issues</url>
+  <url type="bugtracker">https://gitlab.gnome.org/GNOME/office-runner/-/work_items</url>
   <url type="vcs-browser">https://gitlab.gnome.org/GNOME/office-runner/</url>
   <url type="translate">https://l10n.gnome.org/module/office-runner/</url>
   <screenshots>
